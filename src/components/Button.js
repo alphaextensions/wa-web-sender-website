@@ -6,7 +6,15 @@ const sizes = {
   xl: `py-5 px-16 text-lg`
 };
 
-const Button = ({ children, className = '', size }) => {
+// const openLink = function(link) {
+//   window.open(link);
+// };
+//
+// const open_link = ({link}) => {
+//   window.open(link);
+// };
+
+const Button = ({ children, className = '', size, link }) => {
   return (
     <button
       type="button"
@@ -18,6 +26,9 @@ const Button = ({ children, className = '', size }) => {
         rounded
         text-white
     `}
+      onClick={() => {
+        window.open(link);
+      }}
     >
       {children}
     </button>

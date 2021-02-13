@@ -10,24 +10,26 @@ const Header = () => (
         <div className="w-12 mr-3">
           <LogoIcon />
         </div>
-        Lander
+        WA Web Sender
       </div>
-      <div className="flex mt-4 sm:mt-0">
-        <AnchorLink className="px-4" href="#features">
-          Features
-        </AnchorLink>
-        <AnchorLink className="px-4" href="#services">
-          Services
-        </AnchorLink>
-        <AnchorLink className="px-4" href="#stats">
-          Stats
-        </AnchorLink>
-        <AnchorLink className="px-4" href="#testimonials">
-          Testimonials
-        </AnchorLink>
-      </div>
-      <div className="hidden md:block">
-        <Button className="text-sm">Start Free Trial</Button>
+      <div className="flex flex-col sm:flex-row justify-between items-center">
+        <div className="flex mt-4 sm:mt-0">
+          <AnchorLink className="px-4" href="#features">
+            Features
+          </AnchorLink>
+          <AnchorLink className="px-4" href="#services">
+            Services
+          </AnchorLink>
+          <AnchorLink className="px-4" href="#stats">
+            Stats
+          </AnchorLink>
+          <AnchorLink className="px-4" href="#testimonials">
+            Testimonials
+          </AnchorLink>
+        </div>
+        <div className="hidden md:block">
+          <Button className="text-sm" link="https://chrome.google.com/webstore/detail/wa-web-sender/klfaghfflijdgoljefdlofkoinndmpia">Get Started</Button>
+        </div>
       </div>
     </div>
   </header>
