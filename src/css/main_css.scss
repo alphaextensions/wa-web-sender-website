@@ -1,0 +1,10 @@
+.youtube-iframe{
+  min-height: 348px;
+  margin: 24px;
+  width: 100%;
+  max-width: 560px;
+  @media screen and (max-width: 1020px) {
+    margin: 24px auto;
+    min-height: 180px;
+  }
+}

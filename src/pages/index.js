@@ -9,6 +9,17 @@ import StatsBox from '../components/StatsBox';
 import customerData from '../data/customer-data';
 import HeroImage from '../svg/HeroImage';
 import SvgCharts from '../svg/SvgCharts';
+// import '../css/main_css.scss';
+
+// undraw_attached_file_n4wm.png
+// undraw_Images_re_0kll.png
+// undraw_Spreadsheet_re_cn18.png
+// undraw_text_field_htlv.png
+import service2 from '../svg/undraw_attached_file_n4wm.png';
+// import SvgCharts from '../svg/undraw_Images_re_0kll.png';
+import service3 from '../svg/undraw_Spreadsheet_re_cn18.png';
+import service1 from '../svg/undraw_text_field_htlv.png';
+import ws from "../svg/Group 153.png";
 
 export default () => (
   <Layout>
@@ -27,7 +38,18 @@ export default () => (
           {/*<p className="mt-4 text-gray-600">Sed fermentum felis ut cursu</p>*/}
         </div>
         <div className="lg:w-1/2">
-          <HeroImage />
+          <iframe
+                  className="youtube-iframe"
+                  style={{height: '364px',
+                    width: '100%',
+                    margin: 'auto',
+                    padding: '24px'}}
+                  src="https://www.youtube.com/embed/J9RWmcpKImU"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  title="WA Web Sender Demo"
+          ></iframe>
         </div>
       </div>
     </section>
@@ -37,27 +59,81 @@ export default () => (
         <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
           <div className="flex-1 px-3">
             <Card className="mb-8">
-              <p className="font-semibold text-xl">Analysis</p>
+              <p className="font-semibold text-xl">Report</p>
               <p className="mt-4">
-                Get a detailed analysis of your campaigns and promotions to improve sales and utilize WAS to the fullest
+                Get a detailed report of your campaigns and promotions to improve sales and utilize WAS to the fullest
               </p>
             </Card>
           </div>
           <div className="flex-1 px-3">
             <Card className="mb-8">
-              <p className="font-semibold text-xl">Service Two</p>
+              <p className="font-semibold text-xl">File Attachment</p>
               <p className="mt-4">
-                An enim nullam tempor gravida donec enim ipsum blandit porta justo integer odio
-                velna vitae auctor integer.
+                You can attach and send images, document, videos, etc along with your message to your customers
               </p>
             </Card>
           </div>
           <div className="flex-1 px-3">
             <Card className="mb-8">
-              <p className="font-semibold text-xl">Service Three</p>
+              <p className="font-semibold text-xl">No need to save contacts</p>
               <p className="mt-4">
-                An enim nullam tempor gravida donec enim ipsum blandit porta justo integer odio
-                velna vitae auctor integer.
+                You can send messages to contacts without saving them
+              </p>
+            </Card>
+          </div>
+        </div>
+      </div>
+      <div className="container mx-auto text-center">
+        <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
+          <div className="flex-1 px-3">
+            <Card className="mb-8">
+              <p className="font-semibold text-xl">Upload excel of numbers</p>
+              <p className="mt-4">
+                You can directly upload an excel sheet of numbers you want to send your message to without having to type or copy paste
+              </p>
+            </Card>
+          </div>
+          <div className="flex-1 px-3">
+            <Card className="mb-8">
+              <p className="font-semibold text-xl">Download contacts from group</p>
+              <p className="mt-4">
+                You can download all the contacts from a group including the ones you have not saved
+              </p>
+            </Card>
+          </div>
+          <div className="flex-1 px-3">
+            <Card className="mb-8">
+              <p className="font-semibold text-xl">Message Formatting</p>
+              <p className="mt-4">
+                You can format your message - BOLD, italic, strikethrough and Emojis
+              </p>
+            </Card>
+          </div>
+        </div>
+      </div>
+      <div className="container mx-auto text-center">
+        <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
+          <div className="flex-1 px-3">
+            <Card className="mb-8">
+              <p className="font-semibold text-xl">Real Time excel preview</p>
+              <p className="mt-4">
+                Get a real time preview of uploaded CSV of numbers
+              </p>
+            </Card>
+          </div>
+          <div className="flex-1 px-3">
+            <Card className="mb-8">
+              <p className="font-semibold text-xl">Real time notification</p>
+              <p className="mt-4">
+                Get a real time update via notifications
+              </p>
+            </Card>
+          </div>
+          <div className="flex-1 px-3">
+            <Card className="mb-8">
+              <p className="font-semibold text-xl">Active support</p>
+              <p className="mt-4">
+                Your queries are answered in a matter of a day or less. You can also contact us on WhatsApp given below
               </p>
             </Card>
           </div>
@@ -68,80 +144,43 @@ export default () => (
       id="services"
       primarySlot={
         <div className="lg:pr-32 xl:pr-48">
-          <h3 className="text-3xl font-semibold leading-tight">Market Analysis</h3>
+          <h3 className="text-3xl font-semibold leading-tight">Send messages in bulk in a few clicks</h3>
           <p className="mt-8 text-xl font-light leading-relaxed">
-            Our team of enthusiastic marketers will analyse and evaluate how your company stacks
-            against the closest competitors
+            WhatsApp bulk Sender lets you send messages in bulk to your customers according to your customization.
+            This can be done in a few clicks and the messages will be send in a few seconds. You can thus promote and increase your business with minimal effort
           </p>
         </div>
       }
-      secondarySlot={<SvgCharts />}
+      secondarySlot={<img src={service1} alt="WS" />}
     />
     <SplitSection
       reverseOrder
       primarySlot={
         <div className="lg:pl-32 xl:pl-48">
           <h3 className="text-3xl font-semibold leading-tight">
-            Design And Plan Your Business Growth Steps
+            Import your contacts via CSV
           </h3>
           <p className="mt-8 text-xl font-light leading-relaxed">
-            Once the market analysis process is completed our staff will search for opportunities
-            that are in reach
+            You can just import the contacts you want to send the messages to, via a CSV.
+            You do not need to save the contacts before sending messages.
           </p>
         </div>
       }
-      secondarySlot={<SvgCharts />}
+      secondarySlot={<img src={service2} alt="WS" />}
     />
     <SplitSection
       primarySlot={
         <div className="lg:pr-32 xl:pr-48">
           <h3 className="text-3xl font-semibold leading-tight">
-            Search For Performance Optimization
+            Send Photos with ease
           </h3>
           <p className="mt-8 text-xl font-light leading-relaxed">
-            With all the information in place you will be presented with an action plan that your
-            company needs to follow
+            WAS lets you send images and other attachments to you contacts all at once.
+            This way you can send promotional posters to you customers and be connected.
           </p>
         </div>
       }
-      secondarySlot={<SvgCharts />}
+      secondarySlot={<img src={service3} alt="WS" />}
     />
-    <section id="stats" className="py-20 lg:pt-32">
-      <div className="container mx-auto text-center">
-        <LabelText className="text-gray-600">Our customers get results</LabelText>
-        <div className="flex flex-col sm:flex-row mt-8 lg:px-24">
-          <div className="w-full sm:w-1/3">
-            <StatsBox primaryText="+100%" secondaryText="Stats Information" />
-          </div>
-          <div className="w-full sm:w-1/3">
-            <StatsBox primaryText="+100%" secondaryText="Stats Information" />
-          </div>
-          <div className="w-full sm:w-1/3">
-            <StatsBox primaryText="+100%" secondaryText="Stats Information" />
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="testimonials" className="py-20 lg:py-40">
-      <div className="container mx-auto">
-        <LabelText className="mb-8 text-gray-600 text-center">What customers are saying</LabelText>
-        <div className="flex flex-col md:flex-row md:-mx-3">
-          {customerData.map(customer => (
-            <div key={customer.customerName} className="flex-1 px-3">
-              <CustomerCard customer={customer} />
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-    <section className="container mx-auto my-20 py-24 bg-gray-200 rounded-lg text-center">
-      <h3 className="text-5xl font-semibold">Ready to grow your business?</h3>
-      <p className="mt-8 text-xl font-light">
-        Quis lectus nulla at volutpat diam ut. Enim lobortis scelerisque fermentum dui faucibus in.
-      </p>
-      <p className="mt-8">
-        <Button size="xl" link="https://chrome.google.com/webstore/detail/wa-web-sender/klfaghfflijdgoljefdlofkoinndmpia">Get Started Now</Button>
-      </p>
-    </section>
   </Layout>
 );
