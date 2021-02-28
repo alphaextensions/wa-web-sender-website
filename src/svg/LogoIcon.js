@@ -1,5 +1,5 @@
 import React from 'react';
-import ws from "./Group 153.png";
+import ws from "./large.png";
 
 const LogoIcon = () => (
   <img src={ws} alt="WS" />

@@ -104,9 +104,9 @@ function FAQs() {
                     <div style={{fontSize: '20px;'}}>
                         <strong>How to input numbers in an excel file?</strong><br/>
 
-                        Add the heading as 'Contact Numbers'(without the quotes) and fill in the contact numbers along with the country code(without +) below it one by one. Here is a
-                        <a href="https://docs.google.com/spreadsheets/d/1sqbZx8sbIoZBFV4lZk5LJpyirCj0_gr5pqEdZs5aGfk/edit?usp=sharing">link</a> to a sample excel file
-                    </div>
+                        Add the heading as 'Contact Numbers'(without the quotes) and fill in the contact numbers along with the country code(without +) below it one by one.
+                        Here is a <a href="https://docs.google.com/spreadsheets/d/1sqbZx8sbIoZBFV4lZk5LJpyirCj0_gr5pqEdZs5aGfk/edit?usp=sharing">link</a> to a sample excel file
+                    </div><br/><br/>
                 </section>
             </React.Fragment>
     );

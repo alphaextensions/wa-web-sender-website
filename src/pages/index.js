@@ -15,11 +15,10 @@ import SvgCharts from '../svg/SvgCharts';
 // undraw_Images_re_0kll.png
 // undraw_Spreadsheet_re_cn18.png
 // undraw_text_field_htlv.png
-import service2 from '../svg/undraw_attached_file_n4wm.png';
+import service3 from '../svg/undraw_attached_file_n4wm.png';
 // import SvgCharts from '../svg/undraw_Images_re_0kll.png';
-import service3 from '../svg/undraw_Spreadsheet_re_cn18.png';
+import service2 from '../svg/undraw_Spreadsheet_re_cn18.png';
 import service1 from '../svg/undraw_text_field_htlv.png';
-import ws from "../svg/Group 153.png";
 
 export default () => (
   <Layout>
@@ -44,7 +43,7 @@ export default () => (
                     width: '100%',
                     margin: 'auto',
                     padding: '24px'}}
-                  src="https://www.youtube.com/embed/J9RWmcpKImU"
+                  src="https://drive.google.com/file/d/1P7R7I-53Pn6GCG9O1sPAU5YLo5l6938Z/preview"
                   frameBorder="0"
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
