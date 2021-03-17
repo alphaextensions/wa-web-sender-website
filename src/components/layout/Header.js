@@ -23,6 +23,9 @@ const Header = () => (
           <a className="px-4" href="/faqs">
             FAQs
           </a>
+          <a className="px-4" href="https://wawebsender.blogspot.com">
+            Blogs
+          </a>
         </div>
         <div className="hidden md:block">
           <Button className="text-sm" link="https://chrome.google.com/webstore/detail/wa-web-sender/klfaghfflijdgoljefdlofkoinndmpia">Get Started</Button>

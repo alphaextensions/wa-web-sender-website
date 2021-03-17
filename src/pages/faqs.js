@@ -1,12 +1,29 @@
 import React from 'react';
 import Layout from "../components/layout/Layout";
 import LogoIcon from "../svg/LogoIcon";
+import { Helmet } from 'react-helmet';
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import Button from "../components/Button";
+import ws from "../svg/medium.png";
 
 function FAQs() {
+    const title =
+        'WA Web Sender | Free Whatsapp Software | Send messages on whatsapp to your customers and grow your business. Simple and completely free';
+    const description =
+        'Chrome Extension for sending WhatsApp bulk messages and engage your clients. A perfect tool for all business owners. Send WhatsApp messages along with attachments to saved and unsaved contacts for free.';
     return (
             <React.Fragment>
+                <Helmet>
+                    <html lang="en" />
+                    <title>{title}</title>
+                    <meta name="title" content={title} />
+                    <meta name="title" property="og:title" content={title} />
+                    <meta name="description" content={description} />
+                    <meta name="description" property="og:description" content={description} />
+                    <link rel="icon" type="image/png" href={ws} />
+                    <meta name="image" property="og:image" content={ws} />
+                    <meta name="image" content={ws} />
+                </Helmet>
                 <header className="sticky top-0 bg-white shadow">
                     <div className="container flex flex-col sm:flex-row justify-between items-center mx-auto py-4 px-8">
                         <a href="/" className="flex items-center text-2xl" style={{color: '#000'}}>
@@ -31,7 +48,7 @@ function FAQs() {
                     </div>
                 </header>
                 <section className="container mx-auto px-8" >
-                    <div style={{fontSize: '28px', textAlign: 'center', margin: '24px 0px'}}>FAQs</div>
+                    <h1 style={{fontSize: '28px', textAlign: 'center', margin: '24px 0px'}}>FAQs</h1>
                     <div style={{fontSize: '20px'}}>
                         <strong>What are the FREE features?</strong>
                         <p>

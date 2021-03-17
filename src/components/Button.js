@@ -16,22 +16,19 @@ const sizes = {
 
 const Button = ({ children, className = '', size, link }) => {
   return (
-    <button
+    <a
       type="button"
       className={`
         ${sizes[size] || sizes.default}
         ${className}
         bg-primary
-        hover:bg-primary-darker
         rounded
         text-white
     `}
-      onClick={() => {
-        window.open(link);
-      }}
+      href={link}
     >
       {children}
-    </button>
+    </a>
   );
 };
 
