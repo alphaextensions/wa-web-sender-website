@@ -14,16 +14,19 @@ const Header = () => (
       </a>
       <div className="flex flex-col sm:flex-row justify-between items-center">
         <div className="flex mt-4 sm:mt-0">
-          <AnchorLink className="px-4" href="#features">
+          <a className="px-3" href="/how-to-use">
+            How to Use
+          </a>
+          <AnchorLink className="px-3" href="#features">
             Features
           </AnchorLink>
-          <AnchorLink className="px-4" href="#services">
+          <AnchorLink className="px-3" href="#services">
             Services
           </AnchorLink>
-          <a className="px-4" href="/faqs">
+          <a className="px-3" href="/faqs">
             FAQs
           </a>
-          <a className="px-4" href="https://wawebsender.blogspot.com">
+          <a className="px-3" href="https://wawebsender.blogspot.com">
             Blogs
           </a>
         </div>

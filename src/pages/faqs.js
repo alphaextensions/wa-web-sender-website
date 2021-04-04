@@ -5,6 +5,8 @@ import { Helmet } from 'react-helmet';
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import Button from "../components/Button";
 import ws from "../svg/medium.png";
+import SmallHeader from '../components/layout/SmallHeader';
+import Footer from '../components/layout/Footer';
 
 function FAQs() {
     const title =
@@ -24,29 +26,7 @@ function FAQs() {
                     <meta name="image" property="og:image" content={ws} />
                     <meta name="image" content={ws} />
                 </Helmet>
-                <header className="sticky top-0 bg-white shadow">
-                    <div className="container flex flex-col sm:flex-row justify-between items-center mx-auto py-4 px-8">
-                        <a href="/" className="flex items-center text-2xl" style={{color: '#000'}}>
-                            <div className="w-12 mr-3">
-                                <LogoIcon />
-                            </div>
-                            WA Web Sender
-                        </a>
-                        <div className="flex flex-col sm:flex-row justify-between items-center">
-                            <div className="flex mt-4 sm:mt-0">
-                                <a className="px-4" href="/">
-                                    Main Menu
-                                </a>
-                                <a className="px-4" href="/faqs">
-                                    FAQs
-                                </a>
-                            </div>
-                            <div className="hidden md:block">
-                                <Button className="text-sm" link="https://chrome.google.com/webstore/detail/wa-web-sender/klfaghfflijdgoljefdlofkoinndmpia">Get Started</Button>
-                            </div>
-                        </div>
-                    </div>
-                </header>
+                <SmallHeader/>
                 <section className="container mx-auto px-8" >
                     <h1 style={{fontSize: '28px', textAlign: 'center', margin: '24px 0px'}}>FAQs</h1>
                     <div style={{fontSize: '20px'}}>
@@ -125,6 +105,7 @@ function FAQs() {
                         Here is a <a href="https://docs.google.com/spreadsheets/d/1sqbZx8sbIoZBFV4lZk5LJpyirCj0_gr5pqEdZs5aGfk/edit?usp=sharing">link</a> to a sample excel file
                     </div><br/><br/>
                 </section>
+                <Footer/>
             </React.Fragment>
     );
 }
