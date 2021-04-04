@@ -15,8 +15,6 @@ import c3 from '../svg/3c.png';
 import SmallHeader from '../components/layout/SmallHeader';
 import Footer from '../components/layout/Footer';
 
-import logo from "../../../chess-1v1/src/logo.svg";
-
 function HowToUse() {
     const title =
         'WA Web Sender | Free Whatsapp Software | Send messages on whatsapp to your customers and grow your business. Simple and completely free';
