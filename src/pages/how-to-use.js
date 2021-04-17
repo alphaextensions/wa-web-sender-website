@@ -17,9 +17,9 @@ import Footer from '../components/layout/Footer';
 
 function HowToUse() {
     const title =
-        'WA Web Sender | Free Whatsapp Software | Send messages on whatsapp to your customers and grow your business. Simple and completely free';
+        'How to use WA Web Sender';
     const description =
-        'Chrome Extension for sending WhatsApp bulk messages and engage your clients. A perfect tool for all business owners. Send WhatsApp messages along with attachments to saved and unsaved contacts for free.';
+        'How to use Whatsapp tool to broadcast messages and get better engagement with customers.';
     return (
         <React.Fragment>
             <Helmet>
@@ -28,7 +28,6 @@ function HowToUse() {
                 <meta name="title" content={title} />
                 <meta name="title" property="og:title" content={title} />
                 <meta name="description" content={description} />
-                <meta name="description" property="og:description" content={description} />
                 <link rel="icon" type="image/png" href={ws} />
                 <meta name="image" property="og:image" content={ws} />
                 <meta name="image" content={ws} />
@@ -56,11 +55,12 @@ function HowToUse() {
 
                     <strong>1. Enter the numbers you want to send the message to</strong><br/><br/>
                  <img src={a1} alt="." />
-                    <br/>You can either directly enter the numbers separated by comma or upload a csv of numbers. The format of the numbers include the country code without '+'.  Here's how a template of csv looks like :<br/><br/>
+                    <br/>You can either directly enter the numbers separated by comma or upload a csv of numbers. The format of the numbers include the country code without '+'.  Here's how a template of csv looks like :<br/>
                 <img src={a2} alt="." />
 
 
-                    <br/>Here 91 is the country code of India. The heading of the column should be 'Contact Numbers'.<br/><br/><br/>
+                    <br/>Here 91 is the country code of India. The heading of the column should be 'Contact Numbers'.<br/>
+                    Download template file from <a href="/temp-excel-file">here</a><br/><br/><br/>
 
                     <strong>2. Enter the message that you'd like to send</strong><br/><br/>
 

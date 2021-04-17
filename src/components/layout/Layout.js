@@ -7,9 +7,9 @@ import ws from "../../svg/medium.png";
 
 const Layout = ({ children }) => {
   const title =
-    'WA Web Sender | Free Whatsapp Software | Send messages on whatsapp to your customers and grow your business. Simple and completely free';
+    'WA Web Sender | Free Whatsapp Software to send messages and grow your business';
   const description =
-    'Chrome Extension for sending WhatsApp bulk messages and engage your clients. A perfect tool for all business owners. Send WhatsApp messages along with attachments to saved and unsaved contacts for free.';
+    'Send unlimited free whatsapp messages and engage your clients. A tool for business owners for bulk messaging and broadcasting along with attachments to saved and unsaved contacts.';
   return (
     <>
       <Helmet>
@@ -18,7 +18,6 @@ const Layout = ({ children }) => {
         <meta name="title" content={title} />
         <meta name="title" property="og:title" content={title} />
         <meta name="description" content={description} />
-        <meta name="description" property="og:description" content={description} />
         <link rel="icon" type="image/png" href={ws} />
         <meta name="image" property="og:image" content={ws} />
         <meta name="image" content={ws} />

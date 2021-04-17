@@ -26,7 +26,7 @@ export default () => (
       <div className="container mx-auto px-8 lg:flex">
         <div className="text-center lg:text-left lg:w-1/2">
           <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">
-            #1 Extension to send WhatsApp messages in bulk
+            #1 Extension to broadcast WhatsApp messages
           </h1>
           <p className="text-xl lg:text-2xl mt-6 font-light">
             Send customizable messages to your customers in a single go without having to save their contact details

@@ -10,9 +10,9 @@ import Footer from '../components/layout/Footer';
 
 function FAQs() {
     const title =
-        'WA Web Sender | Free Whatsapp Software | Send messages on whatsapp to your customers and grow your business. Simple and completely free';
+        'FAQs | WA Web Sender';
     const description =
-        'Chrome Extension for sending WhatsApp bulk messages and engage your clients. A perfect tool for all business owners. Send WhatsApp messages along with attachments to saved and unsaved contacts for free.';
+        'FAQs and Features of WA Web Sender';
     return (
             <React.Fragment>
                 <Helmet>
@@ -21,7 +21,6 @@ function FAQs() {
                     <meta name="title" content={title} />
                     <meta name="title" property="og:title" content={title} />
                     <meta name="description" content={description} />
-                    <meta name="description" property="og:description" content={description} />
                     <link rel="icon" type="image/png" href={ws} />
                     <meta name="image" property="og:image" content={ws} />
                     <meta name="image" content={ws} />

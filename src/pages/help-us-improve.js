@@ -11,9 +11,9 @@ import Footer from '../components/layout/Footer';
 
 function HelpUsImprove() {
     const title =
-        'WA Web Sender | Free Whatsapp Software | Send messages on whatsapp to your customers and grow your business. Simple and completely free';
+        'Help us Improve | WA Web Sender';
     const description =
-        'Chrome Extension for sending WhatsApp bulk messages and engage your clients. A perfect tool for all business owners. Send WhatsApp messages along with attachments to saved and unsaved contacts for free.';
+        'Submit your feedback to help us improve WA Web Sender';
     return (
         <React.Fragment>
             <Helmet>
@@ -22,7 +22,6 @@ function HelpUsImprove() {
                 <meta name="title" content={title} />
                 <meta name="title" property="og:title" content={title} />
                 <meta name="description" content={description} />
-                <meta name="description" property="og:description" content={description} />
                 <link rel="icon" type="image/png" href={ws} />
                 <meta name="image" property="og:image" content={ws} />
                 <meta name="image" content={ws} />
@@ -30,10 +29,23 @@ function HelpUsImprove() {
             <SmallHeader/>
             <section className="container mx-auto px-8" >
                 <h1 style={{fontSize: '28px', textAlign: 'center', margin: '24px 0px'}}>Help us Improve</h1>
+                <p style={{textAlign: 'center', marginBottom: '36px'}}>
+                    We strive to give you the best service possible but maybe there are certain things we need to catch up on.
+                </p>
                 <iframe
                     src="https://docs.google.com/forms/d/e/1FAIpQLSc_Pi8yQQR9OR76CHn3Abju_XH1jnibDgkp6zKbpibDBnUKBg/viewform?embedded=true"
                     height="1080" style={{margin: 'auto', width: '100%', maxWidth: '840px'}} frameBorder="0" marginHeight="0" marginWidth="0">Loading…
                 </iframe>
+                <p style={{margin: '36px 0px'}}>
+                    <strong>If you had a change of heart somehow and want to know how WA Web Sender works quickly in 3 steps, here :</strong><br/>
+                    <br/>
+                    1. Enter the numbers you want to send the message to, separated by comma<br/>
+
+                    2. Enter the message that you'd like to send. You could also add an attachment.<br/>
+                    Click on 'Add Attachment' >> Click on 'Image/Video/Document' >> Select the file you'd like to send >> The first message would be sent to you itself >> Once it is sent, open the extension and click on 'Send Message'. The messages along with the file will be sent one by one.<br/>
+
+                    3.Download the delivery report by clicking on 'Delivery Report' to view the delivery status of the messages and the attachment sent
+                </p>
             </section>
             <Footer/>
         </React.Fragment>

@@ -8,11 +8,12 @@ import ws from '../svg/medium.png';
 import SmallHeader from '../components/layout/SmallHeader';
 import Footer from '../components/layout/Footer';
 
-function FeatureRequest() {
+
+function TermsOfService() {
     const title =
-        'Feature Request | WA Web Sender';
+        'Terms of Service | WA Web Sender';
     const description =
-        'Submit your request for adding new features to WA Web Sender';
+        'Terms of Service for WA Web Sender';
     return (
         <React.Fragment>
             <Helmet>
@@ -27,15 +28,16 @@ function FeatureRequest() {
             </Helmet>
             <SmallHeader/>
             <section className="container mx-auto px-8" >
-                <h1 style={{fontSize: '28px', textAlign: 'center', margin: '24px 0px'}}>Feature Request</h1>
-                <iframe
-                    src="https://docs.google.com/forms/d/e/1FAIpQLScexPaMhkIuM4j_8qo1FRA40BUatLfeGZVD_SKF9Gcbgla1fw/viewform?embedded=true"
-                    height="760" style={{margin: 'auto', width: '100%', maxWidth: '840px'}} frameBorder="0" marginHeight="0" marginWidth="0">Loading…
-                </iframe>
+                <h1 style={{fontSize: '28px', textAlign: 'center', margin: '24px 0px'}}>Terms of Service</h1>
+                <p>
+                    We strongly encourage you to use it correctly.<br/><br/>
+                    WA Web Sender marketing features are not intended to mass message people or spam them, it is intended to send congratulations, greetings and special invitation messages to family, friends and people you know, please use responsibly. <br/><br/>
+                    If you decide to misuse these features, you might put your WhatsApp account at risk of permanently getting blocked.<br/><br/>
+                </p>
             </section>
             <Footer/>
         </React.Fragment>
     );
 }
 
-export default FeatureRequest;
+export default TermsOfService;

@@ -25,6 +25,17 @@ const Footer = () => (
           </li>
         </ul>
       </div>
+      <div className="flex-1 px-3">
+        <h2 className="text-lg font-semibold">Legal</h2>
+        <ul className="mt-4 leading-loose">
+          <li>
+            <a href="/privacy-policy">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="/terms-of-service">Terms of Service</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </footer>
 );
