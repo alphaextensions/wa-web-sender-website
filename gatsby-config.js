@@ -1,19 +1,10 @@
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`
-})
-
 module.exports = {
   plugins: [
-    {
-      resolve: `gatsby-theme-codebushi`,
-      options: {
-        tailwindConfig: `tailwind.config.js`
-      }
-    },
+    `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: process.env.GA_TRACKING_ID
+        trackingId: 'UA-190269211-1'
       }
     }
   ]

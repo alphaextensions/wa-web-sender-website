@@ -32,7 +32,7 @@ export default () => (
             Send customizable messages to your customers in a single go without having to save their contact details
           </p>
           <p className="mt-8 md:mt-12">
-            <Button size="lg" link="https://chrome.google.com/webstore/detail/wa-web-sender/klfaghfflijdgoljefdlofkoinndmpia">Get Started</Button>
+            <Button size="lg" link="https://chrome.google.com/webstore/detail/wa-web-sender/klfaghfflijdgoljefdlofkoinndmpia?src=website">Get Started</Button>
           </p>
           {/*<p className="mt-4 text-gray-600">Sed fermentum felis ut cursu</p>*/}
         </div>

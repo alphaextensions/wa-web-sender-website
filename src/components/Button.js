@@ -21,10 +21,9 @@ const Button = ({ children, className = '', size, link }) => {
       className={`
         ${sizes[size] || sizes.default}
         ${className}
-        bg-primary
         rounded
-        text-white
     `}
+      style={{backgroundColor: '#4199e1', color: '#fff'}}
       href={link}
     >
       {children}

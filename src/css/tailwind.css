@@ -1,10 +1,7 @@
 @tailwind base;
 
 a {
-  @apply text-primary;
-}
-a:hover {
-  @apply text-primary-darker;
+ color: #4199e1;
 }
 
 @tailwind components;

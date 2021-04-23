@@ -31,7 +31,7 @@ const Header = () => (
           </a>
         </div>
         <div className="hidden md:block">
-          <Button className="text-sm" link="https://chrome.google.com/webstore/detail/wa-web-sender/klfaghfflijdgoljefdlofkoinndmpia">Get Started</Button>
+          <Button className="text-sm" link="https://chrome.google.com/webstore/detail/wa-web-sender/klfaghfflijdgoljefdlofkoinndmpia?src=web-head">Get Started</Button>
         </div>
       </div>
     </div>
