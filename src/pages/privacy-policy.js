@@ -39,7 +39,9 @@ function PrivacyPolicy() {
                     •	Not being used or transferred to determine creditworthiness or for lending purposes<br/><br/>
 
                     <strong>Are my conversations or contacts exposed to any third parties?</strong><br/>
-                    No, the excel sheet of numbers you upload directly reflects all the data onto the extension without saving anything. Your conversations are completely secure as per WhatsApp guidelines and as far as the data part is concerned, it is covered in the previous question
+                    No, the excel sheet of numbers you upload directly reflects all the data onto the extension without saving anything. Your conversations are completely secure as per WhatsApp guidelines and as far as the data part is concerned, it is covered in the previous question<br/><br/>
+
+                    For users reaching us via WA Web Sender - Sheet Add-on on Google Marketplace, we do not store any of the data on the spreadsheet. When you upload a copy of you spreadsheet on our extension, the data is reflected on the extension. Even after your usage of the extension, we do not store any data from the sheet.
                 </p>
             </section>
             <Footer/>
