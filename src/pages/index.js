@@ -74,6 +74,30 @@ export default () => (
           </div>
           <div className="flex-1 px-3">
             <Card className="mb-8">
+              <p className="font-semibold text-xl">Customise your message</p>
+              <p className="mt-4">
+                You can customise your message according to the customer with their name, email, order number,etc
+              </p>
+            </Card>
+          </div>
+          <div className="flex-1 px-3">
+            <Card className="mb-8">
+              <p className="font-semibold text-xl">Schedule your message</p>
+              <p className="mt-4">
+                You can schedule at what time to send your messages to customers and your messages would be sent automatically at the set time
+              </p>
+            </Card>
+          </div>
+          <div className="flex-1 px-3">
+            <Card className="mb-8">
+              <p className="font-semibold text-xl">Quick Response</p>
+              <p className="mt-4">
+                You can respond to your customers quickly, with pre-saved responses
+              </p>
+            </Card>
+          </div>
+          <div className="flex-1 px-3">
+            <Card className="mb-8">
               <p className="font-semibold text-xl">No need to save contacts</p>
               <p className="mt-4">
                 You can send messages to contacts without saving them
@@ -143,9 +167,9 @@ export default () => (
       id="services"
       primarySlot={
         <div className="lg:pr-32 xl:pr-48">
-          <h3 className="text-3xl font-semibold leading-tight">Send messages in bulk in a few clicks</h3>
+          <h3 className="text-3xl font-semibold leading-tight">Send broadcast messages in a few clicks</h3>
           <p className="mt-8 text-xl font-light leading-relaxed">
-            WhatsApp bulk Sender lets you send messages in bulk to your customers according to your customization.
+            WA web Sender lets you broadcast messages to your customers according to your customization.
             This can be done in a few clicks and the messages will be send in a few seconds. You can thus promote and increase your business with minimal effort
           </p>
         </div>
