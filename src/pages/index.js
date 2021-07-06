@@ -80,6 +80,10 @@ export default () => (
               </p>
             </Card>
           </div>
+        </div>
+      </div>
+      <div className="container mx-auto text-center">
+        <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
           <div className="flex-1 px-3">
             <Card className="mb-8">
               <p className="font-semibold text-xl">Schedule your message</p>
