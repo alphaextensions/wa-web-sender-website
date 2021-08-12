@@ -14,7 +14,7 @@ let razorpay = `
 
 function Donation() {
     const title =
-        'Doation | WA Web Sender';
+        'Donation | WA Web Sender';
     const description =
         'Donation for WA Web Sender';
     return (
