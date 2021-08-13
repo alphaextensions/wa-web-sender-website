@@ -42,6 +42,9 @@ function PrivacyPolicy() {
                     No, the excel sheet of numbers you upload directly reflects all the data onto the extension without saving anything. Your conversations are completely secure as per WhatsApp guidelines and as far as the data part is concerned, it is covered in the previous question<br/><br/>
 
                     For users reaching us via WA Web Sender - Sheet Add-on on Google Marketplace, we do not store any of the data on the spreadsheet. When you upload a copy of you spreadsheet on our extension, the data is reflected on the extension. Even after your usage of the extension, we do not store any data from the sheet.
+
+                    <strong>What all data do we collect?</strong><br/>
+                    We just need minimal data for tracking purpose to resolve bugs if any, on the extension, to update the user and for basic analytics. We collect your email and the events performed on the extension. All this information is not sold to any third parties<br/><br/>
                 </p>
             </section>
             <Footer/>
