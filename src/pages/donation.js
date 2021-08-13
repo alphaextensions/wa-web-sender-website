@@ -43,12 +43,13 @@ function Donation() {
                 <div style={{fontSize: '10px', textAlign: 'center'}}>For Indian Users</div>
                 <div style={{clear: "both"}}></div>
                 <div style={{width: '160px', margin: '24px auto 8px'}}>
-                    <a href="https://paypal.me/shashank203" target="_blank" style={{display: 'inline-block', border: '1px solid black',padding: '12px 24px'}}><img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png"/></a>
+                    <a href="https://paypal.me/wawebsender" target="_blank" style={{display: 'inline-block', border: '1px solid black',padding: '12px 24px'}}><img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png"/></a>
                 </div>
                 <div style={{clear: "both"}}></div>
                 <div style={{fontSize: '10px', textAlign: 'center'}}>For International Users</div>
                 <div style={{clear: "both"}}></div>
                 <div style={{fontSize: '10px', textAlign: 'center', marginTop: '24px'}}>Not able to Donate <a href="https://web.whatsapp.com/send?phone=919175419148&text=Hi,+I+am+not+able+to+donate" target="_blank">Contact Us</a></div>
+                <div style={{fontSize: '10px', textAlign: 'center', marginTop: '32px', fontWeight: 'bold'}}><i>Note : Donation is completely optional. It does not enable any extra features. Our software is completely free</i></div>
             </section>
             <Footer/>
         </React.Fragment>
