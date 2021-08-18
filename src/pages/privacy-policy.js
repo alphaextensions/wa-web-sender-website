@@ -33,7 +33,7 @@ function PrivacyPolicy() {
                     <strong>Is it safe to use the extension?</strong><br/>
                     Chrome store extension codes are reviewed manually by Google team, if an extension is danger on user privacy, or goes against the terms of use, they would take it down immediately. Yes, It is safe.<br/><br/>
 
-                    <strong>Is my phone number exposed to any third parties?</strong><br/>
+                    <strong>Is my personal data exposed to any third parties?</strong><br/>
                     •	Not being sold to third parties<br/>
                     •	Not being used or transferred for purposes that are unrelated to the item's core functionality<br/>
                     •	Not being used or transferred to determine creditworthiness or for lending purposes<br/><br/>
