@@ -19,6 +19,8 @@ import service3 from '../svg/undraw_attached_file_n4wm.png';
 // import SvgCharts from '../svg/undraw_Images_re_0kll.png';
 import service2 from '../svg/undraw_Spreadsheet_re_cn18.png';
 import service1 from '../svg/undraw_text_field_htlv.png';
+import screenshot from '../svg/screenshot.png';
+
 
 export default () => (
   <Layout>
@@ -26,10 +28,10 @@ export default () => (
       <div className="container mx-auto px-8 lg:flex">
         <div className="text-center lg:text-left lg:w-1/2">
           <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">
-            #1 Extension to broadcast WhatsApp messages
+            #1 Extension to enhance your WhatsApp Web experience and increase productivity
           </h1>
           <p className="text-xl lg:text-2xl mt-6 font-light">
-            Send customizable messages to your customers in a single go without having to save their contact details
+            Broadcast messages to users simply & efficiently
           </p>
           <p className="mt-8 md:mt-12">
             <Button size="lg" link="https://chrome.google.com/webstore/detail/wa-web-sender/klfaghfflijdgoljefdlofkoinndmpia?src=website">Get Started</Button>
@@ -37,18 +39,7 @@ export default () => (
           {/*<p className="mt-4 text-gray-600">Sed fermentum felis ut cursu</p>*/}
         </div>
         <div className="lg:w-1/2">
-          <iframe
-                  className="youtube-iframe"
-                  style={{height: '364px',
-                    width: '100%',
-                    margin: 'auto',
-                    padding: '24px'}}
-                  src="https://drive.google.com/file/d/1P7R7I-53Pn6GCG9O1sPAU5YLo5l6938Z/preview"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  title="WA Web Sender Demo"
-          ></iframe>
+          <img src={screenshot} style={{width: '100%'}}/>
         </div>
       </div>
     </section>
@@ -60,7 +51,7 @@ export default () => (
             <Card className="mb-8">
               <p className="font-semibold text-xl">Report</p>
               <p className="mt-4">
-                Get a detailed report of your campaigns and promotions to improve sales and utilize WAS to the fullest
+                Get a detailed report of your campaigns and promotions to improve sales and utilize Web Sender to the fullest
               </p>
             </Card>
           </div>
@@ -68,7 +59,7 @@ export default () => (
             <Card className="mb-8">
               <p className="font-semibold text-xl">File Attachment</p>
               <p className="mt-4">
-                You can attach and send images, document, videos, etc along with your message to your customers
+                You can attach and send images, document, videos, etc along with your message to users
               </p>
             </Card>
           </div>
@@ -88,7 +79,7 @@ export default () => (
             <Card className="mb-8">
               <p className="font-semibold text-xl">Schedule your message</p>
               <p className="mt-4">
-                You can schedule at what time to send your messages to customers and your messages would be sent automatically at the set time
+                You can schedule at what time to send your messages to users and your messages would be sent automatically at the set time
               </p>
             </Card>
           </div>
@@ -102,9 +93,9 @@ export default () => (
           </div>
           <div className="flex-1 px-3">
             <Card className="mb-8">
-              <p className="font-semibold text-xl">No need to save contacts</p>
+              <p className="font-semibold text-xl">Active support</p>
               <p className="mt-4">
-                You can send messages to contacts without saving them
+                You can click on 'Live Support' on the extension to get your queries resolved. We also provide call and video support.
               </p>
             </Card>
           </div>
@@ -124,7 +115,7 @@ export default () => (
             <Card className="mb-8">
               <p className="font-semibold text-xl">Download contacts from group</p>
               <p className="mt-4">
-                You can download all the contacts from a group including the ones you have not saved
+                You can get a detailed download of all the contacts from a group including the ones you have not saved
               </p>
             </Card>
           </div>
@@ -157,12 +148,6 @@ export default () => (
             </Card>
           </div>
           <div className="flex-1 px-3">
-            <Card className="mb-8">
-              <p className="font-semibold text-xl">Active support</p>
-              <p className="mt-4">
-                Your queries are answered in a matter of a day or less. You can also contact us on WhatsApp given below
-              </p>
-            </Card>
           </div>
         </div>
       </div>
@@ -173,7 +158,7 @@ export default () => (
         <div className="lg:pr-32 xl:pr-48">
           <h3 className="text-3xl font-semibold leading-tight">Send broadcast messages in a few clicks</h3>
           <p className="mt-8 text-xl font-light leading-relaxed">
-            WA web Sender lets you broadcast messages to your customers according to your customization.
+            Web Sender lets you broadcast messages to users according to your customization.
             This can be done in a few clicks and the messages will be send in a few seconds. You can thus promote and increase your business with minimal effort
           </p>
         </div>
