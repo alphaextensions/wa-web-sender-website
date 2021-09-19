@@ -14,9 +14,9 @@ let razorpay = `
 
 function Donation() {
     const title =
-        'Donation | WA Web Sender';
+        'Donation | Web Sender';
     const description =
-        'Donation for WA Web Sender';
+        'Donation for Web Sender';
     return (
         <React.Fragment>
             <Helmet>

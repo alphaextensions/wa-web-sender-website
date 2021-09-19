@@ -11,9 +11,9 @@ import Footer from '../components/layout/Footer';
 
 function PrivacyPolicy() {
     const title =
-        'Privacy Policy | WA Web Sender';
+        'Privacy Policy | Web Sender';
     const description =
-        'Privacy Policy for WA Web Sender';
+        'Privacy Policy for Web Sender';
     return (
         <React.Fragment>
             <Helmet>

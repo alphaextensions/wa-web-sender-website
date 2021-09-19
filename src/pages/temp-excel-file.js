@@ -11,9 +11,9 @@ import Footer from '../components/layout/Footer';
 
 function TempExcelFile() {
     const title =
-        'Template File | WA Web Sender';
+        'Template File | Web Sender';
     const description =
-        'Template File for WA Web Sender';
+        'Template File for Web Sender';
     return (
         <React.Fragment>
             <Helmet>

@@ -11,9 +11,9 @@ import Footer from '../components/layout/Footer';
 
 function TermsOfService() {
     const title =
-        'Terms of Service | WA Web Sender';
+        'Terms of Service | Web Sender';
     const description =
-        'Terms of Service for WA Web Sender';
+        'Terms of Service for Web Sender';
     return (
         <React.Fragment>
             <Helmet>
@@ -31,7 +31,7 @@ function TermsOfService() {
                 <h1 style={{fontSize: '28px', textAlign: 'center', margin: '24px 0px'}}>Terms of Service</h1>
                 <p>
                     We strongly encourage you to use it correctly.<br/><br/>
-                    WA Web Sender marketing features are not intended to mass message people or spam them, it is intended to send congratulations, greetings and special invitation messages to family, friends and people you know, please use responsibly. <br/><br/>
+                    Web Sender marketing features are not intended to mass message people or spam them, it is intended to send congratulations, greetings and special invitation messages to family, friends and people you know, please use responsibly. <br/><br/>
                     If you decide to misuse these features, you might put your WhatsApp account at risk of permanently getting blocked.<br/><br/>
                 </p>
             </section>

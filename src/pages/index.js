@@ -159,7 +159,7 @@ export default () => (
           <h3 className="text-3xl font-semibold leading-tight">Send broadcast messages in a few clicks</h3>
           <p className="mt-8 text-xl font-light leading-relaxed">
             Web Sender lets you broadcast messages to users according to your customization.
-            This can be done in a few clicks and the messages will be send in a few seconds. You can thus promote and increase your business with minimal effort
+            This can be done in a few clicks and the messages will be send in a few seconds.
           </p>
         </div>
       }
@@ -170,11 +170,10 @@ export default () => (
       primarySlot={
         <div className="lg:pl-32 xl:pl-48">
           <h3 className="text-3xl font-semibold leading-tight">
-            Import your contacts via CSV
+            Import CSV
           </h3>
           <p className="mt-8 text-xl font-light leading-relaxed">
-            You can just import the contacts you want to send the messages to, via a CSV.
-            You do not need to save the contacts before sending messages.
+            Ability to import csv of numbers.
           </p>
         </div>
       }
@@ -184,10 +183,10 @@ export default () => (
       primarySlot={
         <div className="lg:pr-32 xl:pr-48">
           <h3 className="text-3xl font-semibold leading-tight">
-            Send Photos with ease
+            Add Attachment
           </h3>
           <p className="mt-8 text-xl font-light leading-relaxed">
-            WAS lets you send images and other attachments to you contacts all at once.
+            Add and send attachments including photos, videos, contacts, document,etc.
             This way you can send promotional posters to you customers and be connected.
           </p>
         </div>

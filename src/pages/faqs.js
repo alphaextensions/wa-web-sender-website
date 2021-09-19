@@ -10,9 +10,9 @@ import Footer from '../components/layout/Footer';
 
 function FAQs() {
     const title =
-        'FAQs | WA Web Sender';
+        'FAQs | Web Sender';
     const description =
-        'FAQs and Features of WA Web Sender';
+        'FAQs and Features of Web Sender';
     return (
             <React.Fragment>
                 <Helmet>
@@ -31,7 +31,7 @@ function FAQs() {
                     <div style={{fontSize: '20px'}}>
                         <strong>What are the FREE features?</strong>
                         <p>
-                        Here are the things that you can do with the free version of the WA Web Sender without paying a single penny.<br/>
+                        Here are the things that you can do with the free version of the Web Sender without paying a single penny.<br/>
                         1.Send WhatsApp messages <strong>without saving numbers.</strong><br/>
                         2.Send <strong>unlimited</strong> WhatsApp messages<br/>
                         3.<strong>Send attachments</strong> like images, documents, etc for free to any number of contacts<br/>

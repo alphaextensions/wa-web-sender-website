@@ -17,7 +17,7 @@ import Footer from '../components/layout/Footer';
 
 function HowToUse() {
     const title =
-        'How to use WA Web Sender';
+        'How to use Web Sender';
     const description =
         'How to use Whatsapp tool to broadcast messages and get better engagement with customers.';
     return (
@@ -46,7 +46,7 @@ function HowToUse() {
                     frameBorder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
-                    title="WA Web Sender Demo"
+                    title="Web Sender Demo"
                 ></iframe>
                 <div style={{fontSize: '16px'}}>
                 WA Web Sender is a free chrome extension for Web WhatsApp which allows businesses to connect with their customers efficiently. It is extremely easy to use.
