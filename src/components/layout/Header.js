@@ -6,7 +6,7 @@ import Button from '../Button';
 const Header = () => (
   <header className="sticky top-0 bg-white shadow">
     <div className="container flex flex-col sm:flex-row justify-between items-center mx-auto py-4 px-8">
-      <a href="/" className="flex items-center text-2xl" style={{color: '#000'}}>
+      <a href="/" className="flex items-center text-2xl" style={{ color: '#000' }}>
         <div className="w-12 mr-3">
           <LogoIcon />
         </div>
@@ -31,7 +31,12 @@ const Header = () => (
           </a>
         </div>
         <div className="hidden md:block">
-          <Button className="text-sm" link="https://chrome.google.com/webstore/detail/wa-web-sender/klfaghfflijdgoljefdlofkoinndmpia?src=web-head">Get Started</Button>
+          <Button
+            className="text-sm"
+            link="https://chrome.google.com/webstore/detail/wa-web-sender/klfaghfflijdgoljefdlofkoinndmpia?src=web-head"
+          >
+            Get Started
+          </Button>
         </div>
       </div>
     </div>
