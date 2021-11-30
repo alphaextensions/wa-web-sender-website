@@ -49,16 +49,20 @@ export default function Pricing() {
 
   function getBasicPlanPrice() {
     if (planType === 'international') {
-      return planPeriod === 'monthly' ? '$9' : '$90';
+      return planPeriod === 'monthly' ? '$12.99' : '$129.99';
     }
     return planPeriod === 'monthly' ? '₹699' : '₹6999';
   }
 
   function getAdvancePlanPrice() {
     if (planType === 'international') {
-      return planPeriod === 'monthly' ? '$12' : '$120';
+      return planPeriod === 'monthly' ? '$15.99' : '$159.99';
     }
     return planPeriod === 'monthly' ? '₹849' : '₹8499';
+  }
+
+  function getFreePlanPrice(){
+    return planType === 'international' ? '$0.00' : '₹0';
   }
 
   function showBasicButton() {
@@ -113,14 +117,14 @@ export default function Pricing() {
           </tr>
           <tr>
             <th />
-            <th />
+            <th className="pricing-header-text">{getFreePlanPrice()}</th>
             <th className="pricing-header-text">{getBasicPlanPrice()}</th>
             <th className="pricing-header-text">{getAdvancePlanPrice()}</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th>Broadcasting</th>
+            <th className="bold">Broadcasting</th>
             <td>
               <img src={check} className="pricing-table-logo" />
             </td>
@@ -132,7 +136,7 @@ export default function Pricing() {
             </th>
           </tr>
           <tr>
-            <th>Attachment</th>
+            <th className="bold">Attachment</th>
             <td>
               <img src={check} className="pricing-table-logo" />
             </td>
@@ -144,7 +148,7 @@ export default function Pricing() {
             </th>
           </tr>
           <tr>
-            <th>Customisation</th>
+            <th className="bold">Customisation</th>
             <td>
               <img src={check} className="pricing-table-logo" />
             </td>
@@ -156,7 +160,7 @@ export default function Pricing() {
             </th>
           </tr>
           <tr>
-            <th>Chat Support</th>
+            <th className="bold">Chat Support</th>
             <td>
               <img src={check} className="pricing-table-logo" />
             </td>
@@ -168,7 +172,7 @@ export default function Pricing() {
             </th>
           </tr>
           <tr>
-            <th>Priority Support</th>
+            <th className="bold">Priority Support</th>
             <td>
               <img src={cancel} className="pricing-table-logo" />
             </td>
@@ -180,7 +184,7 @@ export default function Pricing() {
             </th>
           </tr>
           <tr>
-            <th>Call support</th>
+            <th className="bold">Call support</th>
             <td>
               <img src={cancel} className="pricing-table-logo" />
             </td>
@@ -192,7 +196,7 @@ export default function Pricing() {
             </th>
           </tr>
           <tr>
-            <th>No minimum time gap</th>
+            <th className="bold">No minimum time gap</th>
             <td
               style={{
                 whiteSpace: 'nowrap',
@@ -211,7 +215,7 @@ export default function Pricing() {
             </th>
           </tr>
           <tr>
-            <th>Random time gap</th>
+            <th className="bold">Random time gap</th>
             <td>
               <img src={cancel} className="pricing-table-logo" />
             </td>
@@ -223,7 +227,7 @@ export default function Pricing() {
             </th>
           </tr>
           <tr>
-            <th>Batching</th>
+            <th className="bold">Batching</th>
             <td>
               <img src={cancel} className="pricing-table-logo" />
             </td>
@@ -235,7 +239,7 @@ export default function Pricing() {
             </th>
           </tr>
           <tr>
-            <th>Group Contacts Export</th>
+            <th className="bold">Group Contacts Export</th>
             <td>
               <img src={cancel} className="pricing-table-logo" />
             </td>
@@ -247,7 +251,7 @@ export default function Pricing() {
             </th>
           </tr>
           <tr>
-            <th>Quick Replies</th>
+            <th className="bold">Quick Replies</th>
             <td>
               <img src={cancel} className="pricing-table-logo" />
             </td>
@@ -259,7 +263,7 @@ export default function Pricing() {
             </th>
           </tr>
           <tr>
-            <th>Schedule</th>
+            <th className="bold">Schedule</th>
             <td>
               <img src={cancel} className="pricing-table-logo" />
             </td>
@@ -271,7 +275,7 @@ export default function Pricing() {
             </th>
           </tr>
           <tr>
-            <th>Zoom Call Support</th>
+            <th className="bold">Zoom Call Support</th>
             <td>
               <img src={cancel} className="pricing-table-logo" />
             </td>
@@ -283,7 +287,7 @@ export default function Pricing() {
             </th>
           </tr>
           <tr>
-            <th>Business Chat Link</th>
+            <th className="bold">Business Chat Link</th>
             <td>
               <img src={cancel} className="pricing-table-logo" />
             </td>
@@ -295,7 +299,7 @@ export default function Pricing() {
             </th>
           </tr>
           <tr>
-            <th>Download saved contacts</th>
+            <th className="bold">Download saved contacts</th>
             <td>
               <img src={cancel} className="pricing-table-logo" />
             </td>
@@ -305,7 +309,7 @@ export default function Pricing() {
             <th className="coming_soon">Coming Soon</th>
           </tr>
           <tr>
-            <th>Download all chat's contacts</th>
+            <th className="bold">Download all chat's contacts</th>
             <td>
               <img src={cancel} className="pricing-table-logo" />
             </td>
@@ -315,7 +319,7 @@ export default function Pricing() {
             <th className="coming_soon">Coming Soon</th>
           </tr>
           <tr>
-            <th>Filter Contacts</th>
+            <th className="bold">Filter Contacts</th>
             <td>
               <img src={cancel} className="pricing-table-logo" />
             </td>
@@ -323,7 +327,7 @@ export default function Pricing() {
             <th className="coming_soon">Coming Soon</th>
           </tr>
           <tr>
-            <th>To do list</th>
+            <th className="bold">To do list</th>
             <td>
               <img src={cancel} className="pricing-table-logo" />
             </td>
@@ -331,7 +335,7 @@ export default function Pricing() {
             <th className="coming_soon">Coming Soon</th>
           </tr>
           <tr>
-            <th>Advanced Group Download</th>
+            <th className="bold">Advanced Group Download</th>
             <td>
               <img src={cancel} className="pricing-table-logo" />
             </td>
@@ -339,7 +343,7 @@ export default function Pricing() {
             <th className="coming_soon">Coming Soon</th>
           </tr>
           <tr>
-            <th>Add reminder</th>
+            <th className="bold">Add reminder</th>
             <td>
               <img src={cancel} className="pricing-table-logo" />
             </td>
@@ -347,7 +351,7 @@ export default function Pricing() {
             <th className="coming_soon">Coming Soon</th>
           </tr>
           <tr>
-            <th>Download Chat</th>
+            <th className="bold">Download Chat</th>
             <td>
               <img src={cancel} className="pricing-table-logo" />
             </td>
@@ -355,7 +359,7 @@ export default function Pricing() {
             <th className="coming_soon">Coming Soon</th>
           </tr>
           <tr>
-            <th>Add notes to conversation</th>
+            <th className="bold">Add notes to conversation</th>
             <td>
               <img src={cancel} className="pricing-table-logo" />
             </td>
