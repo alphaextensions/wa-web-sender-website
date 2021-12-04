@@ -49,7 +49,7 @@ function HowToUse() {
                     title="Web Sender Demo"
                 ></iframe>
                 <div style={{fontSize: '16px'}}>
-                WA Web Sender is a free chrome extension for Web WhatsApp which allows businesses to connect with their customers efficiently. It is extremely easy to use.
+                Web Sender is a free chrome extension for Web WhatsApp which allows businesses to connect with their customers efficiently. It is extremely easy to use.
                 <br/><br/>
                 Here's how to use it :<br/><br/><br/>
 

@@ -94,7 +94,7 @@ export default function Pricing() {
       <h1 className="price-header">Our Pricing</h1>
 
       <Slider
-        style={{ paddingLeft: '48px', marginTop: '24px' }}
+        style={{ marginTop: '24px' }}
         onText="International"
         offText="India"
         setValue={toggleType}
