@@ -42,7 +42,7 @@ function PrivacyPolicy() {
                     No, the excel sheet of numbers you upload directly reflects all the data onto the extension without saving anything. Your conversations are completely secure as per WhatsApp guidelines and as far as the data part is concerned, it is covered in the previous question<br/><br/>
 
                     <strong>What all data do we collect?</strong><br/>
-                    We just need minimal data for tracking purpose to resolve bugs if any on the extension and for basic analytics. We collect your email and the events performed on the extension. All this information is not sold to any third parties<br/><br/>
+                    We just need minimal data for tracking purpose to resolve bugs if any on the extension and for basic analytics. We collect your email, number and the events performed on the extension. All this information is not sold to any third parties<br/><br/>
                 </p>
             </section>
             <Footer/>

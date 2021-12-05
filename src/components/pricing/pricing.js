@@ -382,6 +382,7 @@ export default function Pricing() {
           </tr>
         </tbody>
       </table>
+      <div style={{fontSize: '12px', fontWeight: 'bold'}}>By purchasing the premium plan, you agree to our Terms and Service and Privacy Policy.</div>
     </div>
   );
 }
