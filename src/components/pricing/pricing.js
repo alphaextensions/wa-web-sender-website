@@ -37,14 +37,14 @@ export default function Pricing() {
     if (planType === 'international') {
       return planPeriod === 'monthly' ? 'pl_I0B8PGRZZSSZee' : 'pl_I0BHMbiadHeBLV';
     }
-    return planPeriod === 'monthly' ? 'pl_HyXXWJfzvsmVH4' : 'pl_HyuXVKKhpfe28k';
+    return planPeriod === 'monthly' ? 'pl_I7DCoIINFHc2Ar' : 'pl_HyuXVKKhpfe28k';
   }
 
   function getBasicButtonId() {
     if (planType === 'international') {
       return planPeriod === 'monthly' ? 'pl_I0B4TeRuHo2Wln' : 'pl_I0BCjM0zwX6Tw4';
     }
-    return planPeriod === 'monthly' ? 'pl_HyThizWtcY5IQI' : 'pl_HyuSnC8BpjlWV7';
+    return planPeriod === 'monthly' ? 'pl_I7D9RHEnkdeDyf' : 'pl_HyuSnC8BpjlWV7';
   }
 
   function getBasicPlanPrice() {
