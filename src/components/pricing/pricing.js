@@ -54,11 +54,25 @@ export default function Pricing() {
     return planPeriod === 'monthly' ? '₹699' : '₹6999';
   }
 
+  function getBasicPlanSlashPrice() {
+    if (planType === 'international') {
+      return planPeriod === 'monthly' ? '$16.99' : '$169.99';
+    }
+    return planPeriod === 'monthly' ? '₹999' : '₹9999';
+  }
+
   function getAdvancePlanPrice() {
     if (planType === 'international') {
       return planPeriod === 'monthly' ? '$15.99' : '$159.99';
     }
     return planPeriod === 'monthly' ? '₹849' : '₹8499';
+  }
+
+  function getAdvancePlanSlashPrice() {
+    if (planType === 'international') {
+      return planPeriod === 'monthly' ? '$20.99' : '$209.99';
+    }
+    return planPeriod === 'monthly' ? '₹1199' : '₹11999';
   }
 
   function getFreePlanPrice(){
@@ -92,7 +106,7 @@ export default function Pricing() {
   return (
     <div className="pricing">
       <h1 className="price-header">Our Pricing</h1>
-      {/*<div>Early Bird offers with 30% discount!</div>*/}
+      <div>Early Bird offers with 30% discount!</div>
       <Slider
         style={{ marginTop: '24px' }}
         onText="International"
@@ -118,8 +132,18 @@ export default function Pricing() {
           <tr>
             <th />
             <th className="pricing-header-text">{getFreePlanPrice()}</th>
-            <th className="pricing-header-text">{getBasicPlanPrice()}</th>
-            <th className="pricing-header-text">{getAdvancePlanPrice()}</th>
+            <th className="pricing-header-text">
+              <div>{getBasicPlanPrice()}</div>
+              <div className="amount-slash">
+                <span>{getBasicPlanSlashPrice()}</span>
+              </div>
+            </th>
+            <th className="pricing-header-text">
+              <div>{getAdvancePlanPrice()}</div>
+              <div className="amount-slash">
+                <span>{getAdvancePlanSlashPrice()}</span>
+              </div>
+            </th>
           </tr>
         </thead>
         <tbody>

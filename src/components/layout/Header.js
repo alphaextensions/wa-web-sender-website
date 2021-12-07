@@ -26,6 +26,9 @@ const Header = () => (
           <a className="px-3" href="/faqs">
             FAQs
           </a>
+          <a className="px-3" href="/pricing">
+            Pricing
+          </a>
           <a className="px-3" href="https://wawebsender.blogspot.com">
             Blogs
           </a>

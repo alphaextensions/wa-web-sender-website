@@ -26,7 +26,7 @@ function AdvanceSuccessPage() {
             <SmallHeader/>
             <section className="container mx-auto px-8" >
                 <div style={{color: '#1E4F29', fontSize: '28px', fontWeight: 'bold', margin: '32px auto', textAlign: 'center'}}>Congrats! You have successfully purchased WS Premium</div>
-                <div style={{color: '#1E4F29', fontSize: '16px', textAlign: 'center'}}>WS Advance will be enabled for your number in a few minutes. You will receive a confirmation email soon.</div>
+                <div style={{color: '#1E4F29', fontSize: '16px', textAlign: 'center'}}>Please reload WhatsApp Web after 10 minutes to activate Premium. You will receive a confirmation email soon.</div>
                 <div style={{color: '#1E4F29', fontSize: '28px', fontWeight: 'bold', margin: '32px auto', textAlign: 'center'}}>Features</div>
                 <div style={{width: '640px', margin: 'auto'}}>
                     <div className="features_row">

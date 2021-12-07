@@ -90,3 +90,21 @@
 .bold{
   font-weight: bold !important;
 }
+
+.amount-slash {
+  text-decoration: none;
+  position: relative;
+  max-width: 160px;
+  margin: auto;
+  &:before {
+    content: " ";
+    display: block;
+    width: 100%;
+    border-top: 2px solid #000;
+    height: 12px;
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    transform: rotate(-180deg);
+  }
+}
