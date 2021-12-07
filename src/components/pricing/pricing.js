@@ -35,16 +35,16 @@ export default function Pricing() {
 
   function getAdvanceButtonId() {
     if (planType === 'international') {
-      return planPeriod === 'monthly' ? 'pl_I0B8PGRZZSSZee' : 'pl_I0BHMbiadHeBLV';
+      return planPeriod === 'monthly' ? 'https://buy.stripe.com/cN2aEY7k658I7ZKbIN' : 'https://buy.stripe.com/6oEcN6cEqat2gwg6or';
     }
-    return planPeriod === 'monthly' ? 'pl_I7DCoIINFHc2Ar' : 'pl_HyuXVKKhpfe28k';
+    return planPeriod === 'monthly' ? 'https://razorpay.com/payment-button/pl_I7DCoIINFHc2Ar/view' : 'https://razorpay.com/payment-button/pl_HyuXVKKhpfe28k/view';
   }
 
   function getBasicButtonId() {
     if (planType === 'international') {
-      return planPeriod === 'monthly' ? 'pl_I0B4TeRuHo2Wln' : 'pl_I0BCjM0zwX6Tw4';
+      return planPeriod === 'monthly' ? 'https://buy.stripe.com/8wM4gA33QeJi6VG6os' : 'https://buy.stripe.com/7sI4gAcEqeJi3JudQW';
     }
-    return planPeriod === 'monthly' ? 'pl_I7D9RHEnkdeDyf' : 'pl_HyuSnC8BpjlWV7';
+    return planPeriod === 'monthly' ? 'https://razorpay.com/payment-button/pl_I7D9RHEnkdeDyf/view' : 'https://razorpay.com/payment-button/pl_HyuSnC8BpjlWV7/view';
   }
 
   function getBasicPlanPrice() {
@@ -69,7 +69,7 @@ export default function Pricing() {
     const button_id = getBasicButtonId();
     return (
         <a
-            href={`https://razorpay.com/payment-button/${button_id}/view`}
+            href={button_id}
             target="_blank"
             className="buy_button">
           Buy Basic
@@ -81,7 +81,7 @@ export default function Pricing() {
     const button_id = getAdvanceButtonId();
     return (
         <a
-            href={`https://razorpay.com/payment-button/${button_id}/view`}
+            href={button_id}
             target="_blank"
             className="buy_button">
           Buy Advance
@@ -92,7 +92,7 @@ export default function Pricing() {
   return (
     <div className="pricing">
       <h1 className="price-header">Our Pricing</h1>
-
+      {/*<div>Early Bird offers with 30% discount!</div>*/}
       <Slider
         style={{ marginTop: '24px' }}
         onText="International"
