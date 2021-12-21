@@ -108,3 +108,22 @@
     transform: rotate(-180deg);
   }
 }
+
+.newsfeed_tabs{
+  background: #F8F8F8;
+  border: 1px solid #E7ECEB;
+  box-sizing: border-box;
+  border-radius: 8px;
+  display: flex;
+  width: 480px;
+  margin-top: 24px;
+  font-size: 18px;
+  .active {
+    background: #FFFFFF;
+    border: 1px solid #EEF0F2;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    font-weight: bold;
+  }
+}

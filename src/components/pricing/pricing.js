@@ -35,15 +35,19 @@ export default function Pricing() {
 
   function getAdvanceButtonId() {
     if (planType === 'international') {
-      return planPeriod === 'monthly' ? 'https://buy.stripe.com/cN2aEY7k658I7ZKbIN' : 'https://buy.stripe.com/6oEcN6cEqat2gwg6or';
+      return planPeriod === 'monthly' ? 'https://buy.stripe.com/fZeeVe1ZM30Aeo88wL' : 'https://buy.stripe.com/6oEcN6cEqat2gwg6or';
     }
+    else if(planType === 'indonesia')
+      return planPeriod === 'monthly' ? 'https://buy.stripe.com/28ocN6gUGcBa7ZKdQX' : 'https://buy.stripe.com/00g7sM7k6gRq3JufZ9';
     return planPeriod === 'monthly' ? 'https://razorpay.com/payment-button/pl_I7DCoIINFHc2Ar/view' : 'https://razorpay.com/payment-button/pl_HyuXVKKhpfe28k/view';
   }
 
   function getBasicButtonId() {
     if (planType === 'international') {
-      return planPeriod === 'monthly' ? 'https://buy.stripe.com/8wM4gA33QeJi6VG6os' : 'https://buy.stripe.com/7sI4gAcEqeJi3JudQW';
+      return planPeriod === 'monthly' ? 'https://buy.stripe.com/4gwbJ25bYgRqa7S9AO' : 'https://buy.stripe.com/7sI4gAcEqeJi3JudQW';
     }
+    else if(planType === 'indonesia')
+      return planPeriod === 'monthly' ? 'https://buy.stripe.com/dR6dRa33Q7gQeo8eV2' : 'https://buy.stripe.com/fZe28s8oaat2a7S8wJ';
     return planPeriod === 'monthly' ? 'https://razorpay.com/payment-button/pl_I7D9RHEnkdeDyf/view' : 'https://razorpay.com/payment-button/pl_HyuSnC8BpjlWV7/view';
   }
 
@@ -51,6 +55,8 @@ export default function Pricing() {
     if (planType === 'international') {
       return planPeriod === 'monthly' ? '$12.99' : '$129.99';
     }
+    else if(planType === 'indonesia')
+      return planPeriod === 'monthly' ? 'IDR 79000' : 'IDR 790000';
     return planPeriod === 'monthly' ? '₹699' : '₹6999';
   }
 
@@ -58,6 +64,8 @@ export default function Pricing() {
     if (planType === 'international') {
       return planPeriod === 'monthly' ? '$16.99' : '$169.99';
     }
+    else if(planType === 'indonesia')
+      return planPeriod === 'monthly' ? '109000' : '1090000';
     return planPeriod === 'monthly' ? '₹999' : '₹9999';
   }
 
@@ -65,6 +73,8 @@ export default function Pricing() {
     if (planType === 'international') {
       return planPeriod === 'monthly' ? '$15.99' : '$159.99';
     }
+    else if(planType === 'indonesia')
+      return planPeriod === 'monthly' ? 'IDR 99000' : 'IDR 990000';
     return planPeriod === 'monthly' ? '₹849' : '₹8499';
   }
 
@@ -72,6 +82,8 @@ export default function Pricing() {
     if (planType === 'international') {
       return planPeriod === 'monthly' ? '$20.99' : '$209.99';
     }
+    else if(planType === 'indonesia')
+      return planPeriod === 'monthly' ? '139000' : '1390000';
     return planPeriod === 'monthly' ? '₹1199' : '₹11999';
   }
 
@@ -103,16 +115,30 @@ export default function Pricing() {
     );
   }
 
+  function renderResultTabs() {
+    var india = (planType == "india") ? 'active' : '';
+    var indonesia = (planType == "indonesia") ? 'active' : '';
+    var international = (planType == "international") ? 'active' : '';
+    return (
+        <div className="newsfeed_tabs">
+          <div onClick={() => setPlanType('india')} className={india} style={{padding: '16px 0px', textAlign: 'center', width: '33%'}}>India</div>
+          <div onClick={() => setPlanType('indonesia')} className={indonesia} style={{padding: '16px 0px', textAlign: 'center', width: '33%'}}>Indonesia</div>
+          <div onClick={() => setPlanType('international')} className={international} style={{padding: '16px 0px', textAlign: 'center', width: '33%'}}>International</div>
+        </div>
+    );
+  }
+
   return (
     <div className="pricing">
       <h1 className="price-header">Our Pricing</h1>
       <div>Early Bird offers with 30% discount!</div>
-      <Slider
-        style={{ marginTop: '24px' }}
-        onText="International"
-        offText="India"
-        setValue={toggleType}
-      />
+      {/*<Slider*/}
+      {/*  style={{ marginTop: '24px' }}*/}
+      {/*  onText="International"*/}
+      {/*  offText="India"*/}
+      {/*  setValue={toggleType}*/}
+      {/*/>*/}
+      {renderResultTabs()}
       <table className="pricing-table">
         <thead>
           <tr>
