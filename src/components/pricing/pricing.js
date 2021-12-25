@@ -39,7 +39,7 @@ export default function Pricing() {
     }
     else if(planType === 'indonesia')
       return planPeriod === 'monthly' ? 'https://buy.stripe.com/28ocN6gUGcBa7ZKdQX' : 'https://buy.stripe.com/00g7sM7k6gRq3JufZ9';
-    return planPeriod === 'monthly' ? 'https://razorpay.com/payment-button/pl_I7DCoIINFHc2Ar/view' : 'https://razorpay.com/payment-button/pl_HyuXVKKhpfe28k/view';
+    return planPeriod === 'monthly' ? 'https://razorpay.com/payment-button/pl_IbLg7wzSDpnLED/view' : 'https://razorpay.com/payment-button/pl_HyuXVKKhpfe28k/view';
   }
 
   function getBasicButtonId() {
@@ -48,7 +48,7 @@ export default function Pricing() {
     }
     else if(planType === 'indonesia')
       return planPeriod === 'monthly' ? 'https://buy.stripe.com/dR6dRa33Q7gQeo8eV2' : 'https://buy.stripe.com/fZe28s8oaat2a7S8wJ';
-    return planPeriod === 'monthly' ? 'https://razorpay.com/payment-button/pl_I7D9RHEnkdeDyf/view' : 'https://razorpay.com/payment-button/pl_HyuSnC8BpjlWV7/view';
+    return planPeriod === 'monthly' ? 'https://razorpay.com/payment-button/pl_IbLezxxWdMS9Qm/view' : 'https://razorpay.com/payment-button/pl_HyuSnC8BpjlWV7/view';
   }
 
   function getBasicPlanPrice() {
