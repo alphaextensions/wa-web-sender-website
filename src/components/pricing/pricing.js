@@ -289,6 +289,18 @@ export default function Pricing() {
             </th>
           </tr>
           <tr>
+            <th className="bold">Stop</th>
+            <td>
+              <img src={cancel} className="pricing-table-logo" />
+            </td>
+            <td>
+              <img src={check} className="pricing-table-logo" />
+            </td>
+            <th>
+              <img src={check} className="pricing-table-logo" />
+            </th>
+          </tr>
+          <tr>
             <th className="bold">Group Contacts Export</th>
             <td>
               <img src={cancel} className="pricing-table-logo" />
