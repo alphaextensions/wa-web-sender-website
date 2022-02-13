@@ -360,74 +360,74 @@ export default function Pricing() {
               <img src={check} className="pricing-table-logo" />
             </th>
           </tr>
-          <tr>
-            <th className="bold">Download saved contacts</th>
-            <td>
-              <img src={cancel} className="pricing-table-logo" />
-            </td>
-            <td>
-              <img src={cancel} className="pricing-table-logo" />
-            </td>
-            <th className="coming_soon">Coming Soon</th>
-          </tr>
-          <tr>
-            <th className="bold">Download all chat's contacts</th>
-            <td>
-              <img src={cancel} className="pricing-table-logo" />
-            </td>
-            <td>
-              <img src={cancel} className="pricing-table-logo" />
-            </td>
-            <th className="coming_soon">Coming Soon</th>
-          </tr>
-          <tr>
-            <th className="bold">Filter Contacts</th>
-            <td>
-              <img src={cancel} className="pricing-table-logo" />
-            </td>
-            <td className="coming_soon">Coming Soon</td>
-            <th className="coming_soon">Coming Soon</th>
-          </tr>
-          <tr>
-            <th className="bold">To do list</th>
-            <td>
-              <img src={cancel} className="pricing-table-logo" />
-            </td>
-            <td className="coming_soon">Coming Soon</td>
-            <th className="coming_soon">Coming Soon</th>
-          </tr>
-          <tr>
-            <th className="bold">Advanced Group Download</th>
-            <td>
-              <img src={cancel} className="pricing-table-logo" />
-            </td>
-            <td className="coming_soon">Coming Soon</td>
-            <th className="coming_soon">Coming Soon</th>
-          </tr>
-          <tr>
-            <th className="bold">Add reminder</th>
-            <td>
-              <img src={cancel} className="pricing-table-logo" />
-            </td>
-            <td className="coming_soon">Coming Soon</td>
-            <th className="coming_soon">Coming Soon</th>
-          </tr>
-          <tr>
-            <th className="bold">Download Chat</th>
-            <td>
-              <img src={cancel} className="pricing-table-logo" />
-            </td>
-            <td className="coming_soon">Coming Soon</td>
-            <th className="coming_soon">Coming Soon</th>
-          </tr>
-          <tr>
-            <th className="bold">Add notes to conversation</th>
-            <td>
-              <img src={cancel} className="pricing-table-logo" />
-            </td>
-            <td className="coming_soon">Coming Soon</td>
-            <th className="coming_soon">Coming Soon</th>
-          </tr>
+          {/*<tr>*/}
+          {/*  <th className="bold">Download saved contacts</th>*/}
+          {/*  <td>*/}
+          {/*    <img src={cancel} className="pricing-table-logo" />*/}
+          {/*  </td>*/}
+          {/*  <td>*/}
+          {/*    <img src={cancel} className="pricing-table-logo" />*/}
+          {/*  </td>*/}
+          {/*  <th className="coming_soon">Coming Soon</th>*/}
+          {/*</tr>*/}
+          {/*<tr>*/}
+          {/*  <th className="bold">Download all chat's contacts</th>*/}
+          {/*  <td>*/}
+          {/*    <img src={cancel} className="pricing-table-logo" />*/}
+          {/*  </td>*/}
+          {/*  <td>*/}
+          {/*    <img src={cancel} className="pricing-table-logo" />*/}
+          {/*  </td>*/}
+          {/*  <th className="coming_soon">Coming Soon</th>*/}
+          {/*</tr>*/}
+          {/*<tr>*/}
+          {/*  <th className="bold">Filter Contacts</th>*/}
+          {/*  <td>*/}
+          {/*    <img src={cancel} className="pricing-table-logo" />*/}
+          {/*  </td>*/}
+          {/*  <td className="coming_soon">Coming Soon</td>*/}
+          {/*  <th className="coming_soon">Coming Soon</th>*/}
+          {/*</tr>*/}
+          {/*<tr>*/}
+          {/*  <th className="bold">To do list</th>*/}
+          {/*  <td>*/}
+          {/*    <img src={cancel} className="pricing-table-logo" />*/}
+          {/*  </td>*/}
+          {/*  <td className="coming_soon">Coming Soon</td>*/}
+          {/*  <th className="coming_soon">Coming Soon</th>*/}
+          {/*</tr>*/}
+          {/*<tr>*/}
+          {/*  <th className="bold">Advanced Group Download</th>*/}
+          {/*  <td>*/}
+          {/*    <img src={cancel} className="pricing-table-logo" />*/}
+          {/*  </td>*/}
+          {/*  <td className="coming_soon">Coming Soon</td>*/}
+          {/*  <th className="coming_soon">Coming Soon</th>*/}
+          {/*</tr>*/}
+          {/*<tr>*/}
+          {/*  <th className="bold">Add reminder</th>*/}
+          {/*  <td>*/}
+          {/*    <img src={cancel} className="pricing-table-logo" />*/}
+          {/*  </td>*/}
+          {/*  <td className="coming_soon">Coming Soon</td>*/}
+          {/*  <th className="coming_soon">Coming Soon</th>*/}
+          {/*</tr>*/}
+          {/*<tr>*/}
+          {/*  <th className="bold">Download Chat</th>*/}
+          {/*  <td>*/}
+          {/*    <img src={cancel} className="pricing-table-logo" />*/}
+          {/*  </td>*/}
+          {/*  <td className="coming_soon">Coming Soon</td>*/}
+          {/*  <th className="coming_soon">Coming Soon</th>*/}
+          {/*</tr>*/}
+          {/*<tr>*/}
+          {/*  <th className="bold">Add notes to conversation</th>*/}
+          {/*  <td>*/}
+          {/*    <img src={cancel} className="pricing-table-logo" />*/}
+          {/*  </td>*/}
+          {/*  <td className="coming_soon">Coming Soon</td>*/}
+          {/*  <th className="coming_soon">Coming Soon</th>*/}
+          {/*</tr>*/}
           <tr>
             <th />
             <th />

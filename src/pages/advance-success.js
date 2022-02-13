@@ -100,41 +100,41 @@ function AdvanceSuccessPage() {
                         <img style={{float: 'right'}} src={check} className="pricing-table-logo" />
                         <div style={{clear: 'both'}}></div>
                     </div>
-                    <div className="features_row">
-                        <div style={{float: 'left'}}>Download chat</div>
-                        <div style={{float: 'right'}}>Coming Soon</div>
-                        <div style={{clear: 'both'}}></div>
-                    </div>
-                    <div className="features_row">
-                        <div style={{float: 'left'}}>Download all chat’s contacts</div>
-                        <div style={{float: 'right'}}>Coming Soon</div>
-                        <div style={{clear: 'both'}}></div>
-                    </div>
-                    <div className="features_row">
-                        <div style={{float: 'left'}}>Download saved contacts</div>
-                        <div style={{float: 'right'}}>Coming Soon</div>
-                        <div style={{clear: 'both'}}></div>
-                    </div>
-                    <div className="features_row">
-                        <div style={{float: 'left'}}>Advanced Group Download</div>
-                        <div style={{float: 'right'}}>Coming Soon</div>
-                        <div style={{clear: 'both'}}></div>
-                    </div>
-                    <div className="features_row">
-                        <div style={{float: 'left'}}>Add notes to conversation</div>
-                        <div style={{float: 'right'}}>Coming Soon</div>
-                        <div style={{clear: 'both'}}></div>
-                    </div>
-                    <div className="features_row">
-                        <div style={{float: 'left'}}>Add Reminder</div>
-                        <div style={{float: 'right'}}>Coming Soon</div>
-                        <div style={{clear: 'both'}}></div>
-                    </div>
-                    <div className="features_row">
-                        <div style={{float: 'left'}}>To Do List</div>
-                        <div style={{float: 'right'}}>Coming Soon</div>
-                        <div style={{clear: 'both'}}></div>
-                    </div>
+                    {/*<div className="features_row">*/}
+                    {/*    <div style={{float: 'left'}}>Download chat</div>*/}
+                    {/*    <div style={{float: 'right'}}>Coming Soon</div>*/}
+                    {/*    <div style={{clear: 'both'}}></div>*/}
+                    {/*</div>*/}
+                    {/*<div className="features_row">*/}
+                    {/*    <div style={{float: 'left'}}>Download all chat’s contacts</div>*/}
+                    {/*    <div style={{float: 'right'}}>Coming Soon</div>*/}
+                    {/*    <div style={{clear: 'both'}}></div>*/}
+                    {/*</div>*/}
+                    {/*<div className="features_row">*/}
+                    {/*    <div style={{float: 'left'}}>Download saved contacts</div>*/}
+                    {/*    <div style={{float: 'right'}}>Coming Soon</div>*/}
+                    {/*    <div style={{clear: 'both'}}></div>*/}
+                    {/*</div>*/}
+                    {/*<div className="features_row">*/}
+                    {/*    <div style={{float: 'left'}}>Advanced Group Download</div>*/}
+                    {/*    <div style={{float: 'right'}}>Coming Soon</div>*/}
+                    {/*    <div style={{clear: 'both'}}></div>*/}
+                    {/*</div>*/}
+                    {/*<div className="features_row">*/}
+                    {/*    <div style={{float: 'left'}}>Add notes to conversation</div>*/}
+                    {/*    <div style={{float: 'right'}}>Coming Soon</div>*/}
+                    {/*    <div style={{clear: 'both'}}></div>*/}
+                    {/*</div>*/}
+                    {/*<div className="features_row">*/}
+                    {/*    <div style={{float: 'left'}}>Add Reminder</div>*/}
+                    {/*    <div style={{float: 'right'}}>Coming Soon</div>*/}
+                    {/*    <div style={{clear: 'both'}}></div>*/}
+                    {/*</div>*/}
+                    {/*<div className="features_row">*/}
+                    {/*    <div style={{float: 'left'}}>To Do List</div>*/}
+                    {/*    <div style={{float: 'right'}}>Coming Soon</div>*/}
+                    {/*    <div style={{clear: 'both'}}></div>*/}
+                    {/*</div>*/}
                 </div>
             </section>
             <Footer/>
