@@ -93,24 +93,26 @@ export default function Pricing() {
 
   function showBasicButton() {
     const button_id = getBasicButtonId();
+    const button_text = planPeriod === 'monthly' ? 'Subscribe' : 'Buy Basic'
     return (
         <a
             href={button_id}
             target="_blank"
             className="buy_button">
-          Buy Basic
+          {button_text}
         </a>
     );
   }
 
   function showAdvanceButton() {
     const button_id = getAdvanceButtonId();
+    const button_text = planPeriod === 'monthly' ? 'Subscribe' : 'Buy Advance'
     return (
         <a
             href={button_id}
             target="_blank"
             className="buy_button">
-          Buy Advance
+          {button_text}
         </a>
     );
   }
