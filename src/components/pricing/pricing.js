@@ -433,16 +433,19 @@ export default function Pricing() {
           <tr>
             <th />
             <th />
-            <th style={{ padding: '24px 0px' }}>
+            <th style={{ padding: '24px 0px', paddingBottom: 12 }}>
               <div style={{ width: '200px', margin: 'auto' }}>
                 {showBasicButton()}
               </div>
             </th>
-            <th style={{ padding: '24px 0px' }}>
+            <th style={{ padding: '24px 0px', paddingBottom: 12 }}>
               <div style={{ width: '200px', margin: 'auto' }}>
                 {showAdvanceButton()}
               </div>
             </th>
+          </tr>
+          <tr>
+            <th colspan="4" style={{color: '#C64A23', fontSize: '12px', textDecoration: 'underline', paddingBottom: 24, textAlign: 'center'}}>By subscribing, you agree to auto-deductions every month according to your plan type which will extend your plan type by a month.</th>
           </tr>
         </tbody>
       </table>
