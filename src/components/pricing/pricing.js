@@ -133,7 +133,9 @@ export default function Pricing() {
   return (
     <div className="pricing">
       <h1 className="price-header">Our Pricing</h1>
-      <div>Early Bird offers with 30% discount!</div>
+      <div style={{background: '#1E4F29', borderRadius: '5px', textAlign: 'center', color: '#fff', padding: '12px', width: '100%', maxWidth: '980px', fontWeight: 'bold', fontSize: '20px'}}>
+        Early Bird Offer - Extra 30% OFF. Use Code ‘NEWUSER30’
+      </div>
       {/*<Slider*/}
       {/*  style={{ marginTop: '24px' }}*/}
       {/*  onText="International"*/}
