@@ -180,7 +180,7 @@ export default function Pricing() {
           <tr>
             <th className="bold">Broadcasting</th>
             <td>
-              <img src={check} className="pricing-table-logo" />
+              <img src={cancel} className="pricing-table-logo" />
             </td>
             <td>
               <img src={check} className="pricing-table-logo" />
@@ -192,7 +192,7 @@ export default function Pricing() {
           <tr>
             <th className="bold">Attachment</th>
             <td>
-              <img src={check} className="pricing-table-logo" />
+              <img src={cancel} className="pricing-table-logo" />
             </td>
             <td>
               <img src={check} className="pricing-table-logo" />
@@ -204,7 +204,7 @@ export default function Pricing() {
           <tr>
             <th className="bold">Customisation</th>
             <td>
-              <img src={check} className="pricing-table-logo" />
+              <img src={cancel} className="pricing-table-logo" />
             </td>
             <td>
               <img src={check} className="pricing-table-logo" />
@@ -216,7 +216,7 @@ export default function Pricing() {
           <tr>
             <th className="bold">Chat Support</th>
             <td>
-              <img src={check} className="pricing-table-logo" />
+              <img src={cancel} className="pricing-table-logo" />
             </td>
             <td>
               <img src={check} className="pricing-table-logo" />
