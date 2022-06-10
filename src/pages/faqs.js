@@ -28,19 +28,6 @@ function FAQs() {
                 <SmallHeader/>
                 <section className="container mx-auto px-8" >
                     <h1 style={{fontSize: '28px', textAlign: 'center', margin: '24px 0px'}}>FAQs</h1>
-                    <div style={{fontSize: '20px'}}>
-                        <strong>What are the FREE features?</strong>
-                        <p>
-                        Here are the things that you can do with the free version of the Web Sender without paying a single penny.<br/>
-                        1.Send WhatsApp messages <strong>without saving numbers.</strong><br/>
-                        2.Send <strong>unlimited</strong> WhatsApp messages<br/>
-                        3.<strong>Send attachments</strong> like images, documents, etc for free to any number of contacts<br/>
-                        4.Upload excel sheet of numbers and send to <strong>any country</strong><br/>
-                        5.No software installation needed, just a simple chrome extension.<br/>
-                        6.Download <strong>delivery report</strong> for free<br/>
-                        7.Extremely simple to use<br/>
-                        </p>
-                    </div><br/><br/>
 
                     <div style={{fontSize: '20px;'}}>
                         <strong>Does it work in WhatsApp’s Desktop App?</strong><br/>
