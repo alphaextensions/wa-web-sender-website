@@ -6,7 +6,7 @@ import ws from "../../svg/medium.png";
 
 const Layout = ({ children }) => {
   const title =
-    'Web Sender | Free Whatsapp Software to send messages & grow business';
+    'Web Sender | Free Whatsapp Software to grow business';
   const description =
     'Send unlimited free whatsapp messages and engage your clients. A tool for business owners for bulk messaging and broadcasting along with attachments to saved and unsaved contacts.';
   return (
@@ -21,22 +21,9 @@ const Layout = ({ children }) => {
         <meta name="image" property="og:image" content={ws} />
         <meta name="image" content={ws} />
       </Helmet>
-      <Header />
       <main className="text-gray-900">
-        {children}
-        {/*<div*/}
-        {/*  style={{*/}
-        {/*    width: '80px',*/}
-        {/*    height: '80px',*/}
-        {/*    right: 0,*/}
-        {/*    bottom: 0,*/}
-        {/*    background: '#000',*/}
-        {/*    position: 'fixed',*/}
-        {/*    display: 'block'*/}
-        {/*  }}*/}
-        {/*/>*/}
+        Website is Shut Down
       </main>
-      <Footer />
     </>
   );
 };
