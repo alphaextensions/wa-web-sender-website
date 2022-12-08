@@ -6,7 +6,7 @@ import ws from "../../svg/medium.png";
 
 const Layout = ({ children }) => {
   const title =
-    'Web Sender | Free Whatsapp Software to grow business';
+    'Prime Sender | Free Whatsapp Software to grow business';
   const description =
     'Send unlimited free whatsapp messages and engage your clients. A tool for business owners for bulk messaging and broadcasting along with attachments to saved and unsaved contacts.';
   return (

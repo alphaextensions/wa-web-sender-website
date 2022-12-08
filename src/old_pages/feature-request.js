@@ -10,9 +10,9 @@ import Footer from '../components/layout/Footer';
 
 function FeatureRequest() {
     const title =
-        'Feature Request | Web Sender';
+        'Feature Request | Prime Sender';
     const description =
-        'Submit your request for adding new features to Web Sender';
+        'Submit your request for adding new features to Prime Sender';
     return (
         <React.Fragment>
             <Helmet>

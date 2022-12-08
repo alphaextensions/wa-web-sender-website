@@ -9,7 +9,7 @@ const SmallHeader = () => (
                 <div className="w-12 mr-3">
                     <LogoIcon />
                 </div>
-                Web Sender
+                Prime Sender
             </a>
             <div className="flex flex-col sm:flex-row justify-between items-center">
                 <div className="flex mt-4 sm:mt-0">

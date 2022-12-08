@@ -133,7 +133,7 @@ export default function Pricing() {
   return (
     <div className="pricing">
       <h1 className="price-header">Our Pricing</h1>
-      <div style={{background: '#1E4F29', borderRadius: '5px', textAlign: 'center', color: '#fff', padding: '12px', width: '100%', maxWidth: '980px', fontWeight: 'bold', fontSize: '20px'}}>
+      <div style={{background: '#009A88', borderRadius: '5px', textAlign: 'center', color: '#fff', padding: '12px', width: '100%', maxWidth: '980px', fontWeight: 'bold', fontSize: '20px'}}>
         Early Bird Offer For New User - Extra 30% OFF. Use Code ‘NEWUSER30’
       </div>
       {/*<Slider*/}

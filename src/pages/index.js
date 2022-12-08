@@ -51,7 +51,7 @@ export default () => (
                         <Card className="mb-8">
                             <p className="font-semibold text-xl">Report</p>
                             <p className="mt-4">
-                                Get a detailed report of your campaigns and promotions to improve sales and utilize Web Sender to the fullest
+                                Get a detailed report of your campaigns and promotions to improve sales and utilize Prime Sender to the fullest
                             </p>
                         </Card>
                     </div>
@@ -158,7 +158,7 @@ export default () => (
                 <div className="lg:pr-32 xl:pr-48">
                     <h3 className="text-3xl font-semibold leading-tight">Send broadcast messages in a few clicks</h3>
                     <p className="mt-8 text-xl font-light leading-relaxed">
-                        Web Sender lets you broadcast messages to users according to your customization.
+                        Prime Sender lets you broadcast messages to users according to your customization.
                         This can be done in a few clicks and the messages will be send in a few seconds.
                     </p>
                 </div>

@@ -11,9 +11,9 @@ import Footer from '../components/layout/Footer';
 
 function HelpUsImprove() {
     const title =
-        'Help us Improve | Web Sender';
+        'Help us Improve | Prime Sender';
     const description =
-        'Submit your feedback to help us improve Web Sender';
+        'Submit your feedback to help us improve Prime Sender';
     return (
         <React.Fragment>
             <Helmet>
@@ -37,7 +37,7 @@ function HelpUsImprove() {
                     height="1080" style={{margin: 'auto', width: '100%', maxWidth: '840px'}} frameBorder="0" marginHeight="0" marginWidth="0">Loading…
                 </iframe>
                 <p style={{margin: '36px 0px'}}>
-                    <strong>If you had a change of heart somehow and want to know how Web Sender works quickly in 3 steps, here :</strong><br/>
+                    <strong>If you had a change of heart somehow and want to know how Prime Sender works quickly in 3 steps, here :</strong><br/>
                     <br/>
                     1. Enter the numbers you want to send the message to, separated by comma<br/>
 

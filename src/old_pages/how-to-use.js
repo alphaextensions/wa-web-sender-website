@@ -17,7 +17,7 @@ import Footer from '../components/layout/Footer';
 
 function HowToUse() {
     const title =
-        'How to use Web Sender';
+        'How to use Prime Sender';
     const description =
         'How to use Whatsapp tool to broadcast messages and get better engagement with customers.';
     return (
@@ -46,10 +46,10 @@ function HowToUse() {
                     frameBorder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
-                    title="Web Sender Demo"
+                    title="Prime Sender Demo"
                 ></iframe>
                 <div style={{fontSize: '16px'}}>
-                Web Sender is a free chrome extension for Web WhatsApp which allows businesses to connect with their customers efficiently. It is extremely easy to use.
+                Prime Sender is a free chrome extension for Web WhatsApp which allows businesses to connect with their customers efficiently. It is extremely easy to use.
                 <br/><br/>
                 Here's how to use it :<br/><br/><br/>
 

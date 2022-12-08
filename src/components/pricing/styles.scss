@@ -8,7 +8,7 @@
 }
 
 .price-header {
-  color: #1E4F29;
+  color: #009A88;
   margin: 32px 0 16px;
   font-weight: bold;
   font-size: 32px;
@@ -50,7 +50,7 @@
     @media (max-width: 720px) {
       padding: 16px;
     }
-    border-right: 1px solid #1E4F29;;
+    border-right: 1px solid #009A88;;
   }
   th:nth-child(1){
     text-align: left;
@@ -59,13 +59,13 @@
     font-weight: bold;
     font-size: 16px;
     line-height: 21px;
-    color: #1E4F29;
+    color: #009A88;
   }
 }
 
 .pricing-header-text{
   font-weight: bold !important;
-  color: #1E4F29;
+  color: #009A88;
   font-size: 24px !important;
   padding: 12px 48px 12px !important;
 }
@@ -76,7 +76,7 @@
 }
 
 .buy_button{
-  background-color: #1E4F29;
+  background-color: #009A88;
   color: #fff;
   padding: 8px 24px;
   border-radius: 6px;

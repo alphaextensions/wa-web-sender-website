@@ -23,7 +23,7 @@ const Button = ({ children, className = '', size, link }) => {
         ${className}
         rounded
     `}
-      style={{backgroundColor: '#1E4F29', color: '#fff'}}
+      style={{backgroundColor: '#009A88', color: '#fff'}}
       href={link}
     >
       {children}

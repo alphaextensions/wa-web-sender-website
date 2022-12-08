@@ -10,9 +10,9 @@ import Footer from '../components/layout/Footer';
 
 function FAQs() {
     const title =
-        'FAQs | Web Sender';
+        'FAQs | Prime Sender';
     const description =
-        'FAQs and Features of Web Sender';
+        'FAQs and Features of Prime Sender';
     return (
             <React.Fragment>
                 <Helmet>

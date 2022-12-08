@@ -9,9 +9,9 @@ import Pricing from '../components/pricing/pricing';
 
 function TransactionSucess() {
     const title =
-        'Success | Web Sender';
+        'Success | Prime Sender';
     const description =
-        'Success for Web Sender';
+        'Success for Prime Sender';
     return (
         <React.Fragment>
             <Helmet>

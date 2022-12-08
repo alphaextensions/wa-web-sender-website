@@ -9,9 +9,9 @@ import Pricing from '../components/pricing/pricing';
 
 function PricingPage() {
     const title =
-        'Pricing | Web Sender';
+        'Pricing | Prime Sender';
     const description =
-        'Pricing for Web Sender';
+        'Pricing for Prime Sender';
     return (
         <React.Fragment>
             <Helmet>
