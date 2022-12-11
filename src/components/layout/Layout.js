@@ -21,9 +21,11 @@ const Layout = ({ children }) => {
         <meta name="image" property="og:image" content={ws} />
         <meta name="image" content={ws} />
       </Helmet>
+        <Header />
       <main className="text-gray-900">
-        Website is Shut Down
+          {children}
       </main>
+        <Footer />
     </>
   );
 };
