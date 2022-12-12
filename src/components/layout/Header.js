@@ -14,7 +14,7 @@ const Header = () => (
       </a>
       <div className="flex flex-col sm:flex-row justify-between items-center">
         <div className="flex mt-4 sm:mt-0">
-          <a className="px-3" href="/how-to-use">
+          {/* <a className="px-3" href="/how-to-use">
             How to Use
           </a>
           <AnchorLink className="px-3" href="#features">
@@ -25,13 +25,13 @@ const Header = () => (
           </AnchorLink>
           <a className="px-3" href="/faqs">
             FAQs
-          </a>
+          </a> */}
           <a className="px-3" href="/pricing">
             Pricing
           </a>
-          <a className="px-3" href="https://wawebsender.blogspot.com">
+          {/* <a className="px-3" href="https://primesender.blogspot.com/">
             Blogs
-          </a>
+          </a> */}
         </div>
         <div className="hidden md:block">
           <Button

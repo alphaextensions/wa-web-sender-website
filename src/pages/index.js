@@ -28,11 +28,11 @@ export default () => (
       <div className="container mx-auto px-8 lg:flex">
         <div className="text-center lg:text-left lg:w-1/2">
           <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">
-            #1 Extension to enhance your WhatsApp Web experience and increase productivity
+            #1 Extension for your business
           </h1>
-          <p className="text-xl lg:text-2xl mt-6 font-light">
+          {/* <p className="text-xl lg:text-2xl mt-6 font-light">
             Broadcast messages to users simply & efficiently
-          </p>
+          </p> */}
           <p className="mt-8 md:mt-12">
             <Button size="lg" link="https://chrome.google.com/webstore/detail/wa-web-sender/klfaghfflijdgoljefdlofkoinndmpia?src=website">Get Started</Button>
           </p>
@@ -43,7 +43,7 @@ export default () => (
         </div>
       </div>
     </section>
-    <section id="features" className="py-20 lg:pb-40 lg:pt-48">
+    {/* <section id="features" className="py-20 lg:pb-40 lg:pt-48">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl lg:text-5xl font-semibold">Main Features</h2>
         <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
@@ -151,8 +151,8 @@ export default () => (
           </div>
         </div>
       </div>
-    </section>
-    <SplitSection
+    </section> */}
+    {/* <SplitSection
       id="services"
       primarySlot={
         <div className="lg:pr-32 xl:pr-48">
@@ -192,6 +192,6 @@ export default () => (
         </div>
       }
       secondarySlot={<img src={service3} alt="WS" />}
-    />
+    /> */}
   </Layout>
 );

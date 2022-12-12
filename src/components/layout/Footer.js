@@ -7,7 +7,7 @@ const Footer = () => (
         <h2 className="text-lg font-semibold">Contact Us</h2>
         <ul className="mt-4 leading-loose">
           <li>
-            <a href="mailto:extensionsalpha@gmail.com">Email: extensionsalpha@gmail.com</a>
+            <a href="mailto:extensionsalpha@gmail.com">Email: primesenderextension@gmail.com</a>
           </li>
         </ul>
       </div>

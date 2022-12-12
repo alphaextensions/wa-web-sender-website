@@ -32,7 +32,7 @@ function FAQs() {
                     <div style={{fontSize: '20px;'}}>
                         <strong>Does it work in WhatsApp’s Desktop App?</strong><br/>
 
-                        No, it is a chrome extension and it works only on WhatsApp web on Google Chrome (Mac, Windows, and Linux).
+                        No, it is a chrome extension and it works only on Google Chrome (Mac, Windows, and Linux).
                     </div><br/><br/>
 
                     <div style={{fontSize: '20px;'}}>
@@ -42,11 +42,11 @@ function FAQs() {
                     </div><br/><br/>
 
                     <div style={{fontSize: '20px;'}}>
-                        <strong>How to Send Clickable Links in through WAS?</strong><br/>
+                        <strong>How to Send Clickable Links in through Prime Sender?</strong><br/>
 
                         You can send a clickable link to anyone who<br/>
                         - Either has your number saved in his phone book<br/>
-                        - Or has replied to you at least once on WhatsApp.<br/>
+                        - Or has replied to you at least once.<br/>
                     </div><br/><br/>
 
                     <div style={{fontSize: '20px;'}}>
@@ -65,7 +65,7 @@ function FAQs() {
 
                         2. Select the file you want to send<br/>
 
-                        3. Your personal whatsapp number chat would open up - send the file in the chat.<br/>
+                        3. Your personal chat would open up - send the file in the chat.<br/>
 
                         4. Now open the extension and click on 'Send Message'. Your file will be sent one by one to all the contacts<br/>
                     </div><br/><br/>
@@ -88,7 +88,7 @@ function FAQs() {
                         <strong>How to input numbers in an excel file?</strong><br/>
 
                         Add the heading as 'Contact Numbers'(without the quotes) and fill in the contact numbers along with the country code(without +) below it one by one.
-                        Here is a <a href="https://docs.google.com/spreadsheets/d/1sqbZx8sbIoZBFV4lZk5LJpyirCj0_gr5pqEdZs5aGfk/edit?usp=sharing">link</a> to a sample excel file
+                        Here is a <a href="https://docs.google.com/spreadsheets/d/1xCZr8e0wKO8bsQdrVZdXrmfijgO-zgLXLzFjAjaX8eQ/edit?usp=sharing">link</a> to a sample excel file
                     </div><br/><br/>
                 </section>
                 <Footer/>
