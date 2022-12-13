@@ -13,7 +13,7 @@ const SmallHeader = () => (
             </a>
             <div className="flex flex-col sm:flex-row justify-between items-center">
                 <div className="flex mt-4 sm:mt-0">
-                    <a className="px-4" href="/how-to-use">
+                    {/* <a className="px-4" href="/how-to-use">
                         How to Use
                     </a>
                     <a className="px-4" href="/">
@@ -21,13 +21,13 @@ const SmallHeader = () => (
                     </a>
                     <a className="px-4" href="/faqs">
                         FAQs
-                    </a>
+                    </a> */}
                     <a className="px-3" href="/pricing">
                         Pricing
                     </a>
-                    <a className="px-4" href="https://wawebsender.blogspot.com">
+                    {/* <a className="px-4" href="https://wawebsender.blogspot.com">
                         Blogs
-                    </a>
+                    </a> */}
                 </div>
                 <div className="hidden md:block">
                     <Button className="text-sm" link="https://chrome.google.com/webstore/detail/wa-web-sender/klfaghfflijdgoljefdlofkoinndmpia">Get Started</Button>

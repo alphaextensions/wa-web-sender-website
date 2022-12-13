@@ -49,7 +49,7 @@ function HowToUse() {
                     title="Prime Sender Demo"
                 ></iframe>
                 <div style={{fontSize: '16px'}}>
-                Prime Sender is a free chrome extension for Web WhatsApp which allows businesses to connect with their customers efficiently. It is extremely easy to use.
+                Prime Sender is a free chrome extension which allows businesses to connect with their customers efficiently. It is extremely easy to use.
                 <br/><br/>
                 Here's how to use it :<br/><br/><br/>
 
