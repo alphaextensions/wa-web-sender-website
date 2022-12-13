@@ -19,7 +19,7 @@ function HowToUse() {
     const title =
         'How to use Prime Sender';
     const description =
-        'How to use Whatsapp tool to broadcast messages and get better engagement with customers.';
+        'How to use this tool to broadcast messages and get better engagement with customers.';
     return (
         <React.Fragment>
             <Helmet>
