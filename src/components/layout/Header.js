@@ -38,7 +38,7 @@ const Header = () => (
             className="text-sm"
             link="https://chrome.google.com/webstore/detail/wa-web-sender/klfaghfflijdgoljefdlofkoinndmpia?src=web-head"
           >
-            Get Started
+            Download Now
           </Button>
         </div>
       </div>

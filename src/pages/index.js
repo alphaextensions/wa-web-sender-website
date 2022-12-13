@@ -34,7 +34,7 @@ export default () => (
             Broadcast messages to users simply & efficiently
           </p> */}
           <p className="mt-8 md:mt-12">
-            <Button size="lg" link="https://chrome.google.com/webstore/detail/wa-web-sender/klfaghfflijdgoljefdlofkoinndmpia?src=website">Get Started</Button>
+            <Button size="lg" link="https://chrome.google.com/webstore/detail/wa-web-sender/klfaghfflijdgoljefdlofkoinndmpia?src=website">Download Now</Button>
           </p>
           {/*<p className="mt-4 text-gray-600">Sed fermentum felis ut cursu</p>*/}
         </div>
