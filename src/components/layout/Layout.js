@@ -17,6 +17,7 @@ const Layout = ({ children }) => {
         <meta name="title" content={title} />
         <meta name="title" property="og:title" content={title} />
         <meta name="description" content={description} />
+        <link rel="canonical" href="https://prime-sender.com/" />
         <link rel="icon" type="image/png" href={ws} />
         <meta name="image" property="og:image" content={ws} />
         <meta name="image" content={ws} />
