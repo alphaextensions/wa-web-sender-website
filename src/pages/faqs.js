@@ -30,7 +30,7 @@ function FAQs() {
                     <h1 style={{fontSize: '28px', textAlign: 'center', margin: '24px 0px'}}>FAQs</h1>
 
                     <div style={{fontSize: '20px;'}}>
-                        <strong>Does it work in WhatsApp’s Desktop App?</strong><br/>
+                        <strong>Does it work in Desktop App?</strong><br/>
 
                         No, it is a chrome extension and it works only on Google Chrome (Mac, Windows, and Linux).
                     </div><br/><br/>

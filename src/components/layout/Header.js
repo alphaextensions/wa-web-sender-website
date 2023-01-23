@@ -29,9 +29,9 @@ const Header = () => (
           <a className="px-3" href="/pricing">
             Pricing
           </a>
-          {/* <a className="px-3" href="https://primesender.blogspot.com/">
+          <a className="px-3" href="https://primesender.blogspot.com/">
             Blogs
-          </a> */}
+          </a>
         </div>
         <div className="hidden md:block">
           <Button

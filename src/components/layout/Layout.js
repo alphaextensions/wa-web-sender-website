@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
   const title =
     'Prime Sender | Free Software to grow business';
   const description =
-    'Send unlimited free messages and engage your clients. A tool for business owners for bulk messaging and broadcasting along with attachments to saved and unsaved contacts.';
+    'The highest rated business extension on google chrome store to enhance your buisness by broadcasting messages along with attachments.';
   return (
     <>
       <Helmet>

@@ -8,7 +8,7 @@ import Slider from '../slider/slider';
 // Style
 import './styles.scss';
 
-import check from '../../svg/check.png';
+import check from '../../svg/check.jpeg';
 import cancel from '../../svg/cancel.png';
 import screenshot from '../../svg/screenshot.png';
 

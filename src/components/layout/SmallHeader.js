@@ -25,9 +25,9 @@ const SmallHeader = () => (
                     <a className="px-3" href="/pricing">
                         Pricing
                     </a>
-                    {/* <a className="px-4" href="https://wawebsender.blogspot.com">
+                    <a className="px-4" href="https://primesender.blogspot.com">
                         Blogs
-                    </a> */}
+                    </a>
                 </div>
                 <div className="hidden md:block">
                     <Button className="text-sm" link="https://chrome.google.com/webstore/detail/wa-web-sender/klfaghfflijdgoljefdlofkoinndmpia">Download Now</Button>

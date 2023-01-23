@@ -29,9 +29,7 @@ function TempExcelFile() {
             <SmallHeader/>
             <section className="container mx-auto px-8" >
                 <h1 style={{fontSize: '28px', textAlign: 'center', margin: '24px 0px'}}>Template Excel File</h1>
-                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTPwiXz7kPQComBw4ELaOuiNgLmKTA_6BUiLOjT4FVgaT1JB2w-Uuw8gfzM3432h_7sJZZ2sxWdcstp/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
-                    style={{margin: 'auto'}}>
-                </iframe>
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTPwiXz7kPQComBw4ELaOuiNgLmKTA_6BUiLOjT4FVgaT1JB2w-Uuw8gfzM3432h_7sJZZ2sxWdcstp/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
                 <p style={{textAlign: 'center', marginTop: '24px'}}>
                     To edit, please download<br/><br/>
                     <a href="https://docs.google.com/spreadsheets/u/2/d/1sqbZx8sbIoZBFV4lZk5LJpyirCj0_gr5pqEdZs5aGfk/export?format=csv&id=1sqbZx8sbIoZBFV4lZk5LJpyirCj0_gr5pqEdZs5aGfk&gid=0"

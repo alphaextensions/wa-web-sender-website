@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import ws from '../svg/medium.png';
 import SmallHeader from '../components/layout/SmallHeader';
 import Footer from '../components/layout/Footer';
-import check from '../svg/check.png';
+import check from '../svg/check.jpeg';
 import cancel from '../svg/cancel.png';
 
 function AdvanceSuccessPage() {
