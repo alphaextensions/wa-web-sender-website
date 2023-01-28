@@ -5,11 +5,7 @@ import Button from '../Button';
 import { Link } from "react-scroll";
 import $ from "jquery"
 
-
-
-
 //header for index page
-// console.log(localStorage.getItem("howToUse"));
 
 const Header = () => (
   <header className="sticky top-0 bg-white shadow">

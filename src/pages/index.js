@@ -21,9 +21,9 @@ import service2 from '../svg/undraw_Spreadsheet_re_cn18.png';
 import service1 from '../svg/undraw_text_field_htlv.png';
 import screenshot from '../svg/screenshot.png';
 import Ucard from '../components/howToUseCard';
-import image1 from '../svg/howToUse1.png'
-import image2 from '../svg/howToUse2.png'
-import image3 from '../svg/howToUse3.png'
+import image1 from '../svg/howToUse1.png';
+import image2 from '../svg/howToUse2.png';
+import image3 from '../svg/howToUse3.png';
 
 export default () => (
   <Layout>
@@ -42,17 +42,26 @@ export default () => (
                 color: '#fff',
                 paddingTop: '1rem',
                 paddingBottom: '1rem',
-                paddingLeft: "3rem",
-                paddingRight: "3rem",
-                borderRadius:"0.25rem",
+                paddingLeft: '3rem',
+                paddingRight: '3rem',
+                borderRadius: '0.25rem'
               }}
             >
               Download Now
             </a>
           </p>
-          <p className="text-2xl mt-8" style={{marginRight: '24px',fontWeight:"100",fontSize:"1.4rem"}}>Best productivity and communication tool for business. Prime Sender is the best google chrome extension to enhance your business. It is the currently the highest rated and the best tool on the chrome webstore.<br/><br/></p>
+          <p
+            className="text-2xl mt-8"
+            style={{ marginRight: '24px', fontWeight: '100', fontSize: '1.4rem' }}
+          >
+            Best productivity and communication tool for business. Prime Sender is the best google
+            chrome extension to enhance your business. It is the currently the highest rated and the
+            best tool on the chrome webstore.
+            <br />
+            <br />
+          </p>
 
-         <p className='text-2xl'>Lifetime Offer : Basic Features FREE FOREVER!</p>
+          <p className="text-2xl">Lifetime Offer : Basic Features FREE FOREVER!</p>
           {/*<p className="mt-4 text-gray-600">Sed fermentum felis ut cursu</p>*/}
         </div>
         <div className="lg:w-1/2">
@@ -60,12 +69,33 @@ export default () => (
         </div>
       </div>
     </section>
-    <section id="working" className="py-20 lg:pt-48" style={{paddingTop:"18rem"}}>
+    <section
+      id="working"
+      className="py-20 lg:pt-48"
+      style={{ paddingTop: '18rem' }}
+      onLoad={() => {
+        if (localStorage.getItem('howToUse') == 1) {
+          localStorage.setItem('howToUse', 0);
+          document.querySelector('#working').scrollIntoView({
+            behavior: 'smooth',
+            block: 'center', 
+            inline: 'center'
+          });
+        }
+      }}
+    >
       <div className="container mx-auto text-center">
         <h2 className="text-3xl lg:text-5xl font-semibold">How to Use</h2>
         <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
           <div className="flex-1 px-3">
-            <div style={{display:"flex",justifyContent:"space-evenly",alignItems:"flex-start",flexWrap:"wrap"}}>
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-evenly',
+                alignItems: 'flex-start',
+                flexWrap: 'wrap'
+              }}
+            >
               <Ucard
                 imgSrc={image3}
                 description="Enter the numbers you want to send the message to, separated by comma."
@@ -236,7 +266,7 @@ export default () => (
       }
       secondarySlot={<img src={service3} alt="PS" />}
     />
-     <section id="stats" class="py-20 lg:pt-32">
+    <section id="stats" class="py-20 lg:pt-32">
       <div class="container mx-auto text-center">
         <p class="uppercase tracking-wider" style={{ color: '#718096' }}>
           Our Numbers speak for themselves
