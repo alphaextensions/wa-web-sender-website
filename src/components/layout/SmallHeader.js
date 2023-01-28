@@ -1,6 +1,9 @@
 import React from 'react';
 import LogoIcon from '../../svg/LogoIcon';
 import Button from '../Button';
+import $ from "jquery"
+
+//header for pages other than index
 
 const SmallHeader = () => (
     <header className="sticky top-0 bg-white shadow">
@@ -22,10 +25,16 @@ const SmallHeader = () => (
                     <a className="px-4" href="/faqs">
                         FAQs
                     </a> */}
+          <a className="px-3" href="/">How to Use</a>
+          {/* <a className="px-3" href="/" onClick={()=>{
+                if(localStorage.getItem("howToUse")==null){
+                    localStorage.setItem("howToUse",1);
+                }
+          }}>How to Use</a> */}
                     <a className="px-3" href="/pricing">
                         Pricing
                     </a>
-                    <a className="px-4" href="https://primesender.blogspot.com">
+                    <a className="px-4" href="/blog">
                         Blogs
                     </a>
                 </div>

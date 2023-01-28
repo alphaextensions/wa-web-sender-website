@@ -14,11 +14,13 @@
     "gatsby-plugin-google-analytics": "^3.3.0",
     "gatsby-plugin-postcss": "^4.3.0",
     "gatsby-plugin-sass": "^4.14.0",
+    "jquery": "^3.6.3",
     "postcss": "^8.2.6",
     "react": "^16.12.0",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
+    "react-scroll": "^1.8.9",
     "sass": "^1.42.1",
     "tailwindcss": "^2.1.1"
   },

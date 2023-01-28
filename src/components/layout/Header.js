@@ -2,6 +2,14 @@ import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import LogoIcon from '../../svg/LogoIcon';
 import Button from '../Button';
+import { Link } from "react-scroll";
+import $ from "jquery"
+
+
+
+
+//header for index page
+// console.log(localStorage.getItem("howToUse"));
 
 const Header = () => (
   <header className="sticky top-0 bg-white shadow">
@@ -26,12 +34,18 @@ const Header = () => (
           <a className="px-3" href="/faqs">
             FAQs
           </a> */}
+          <Link className="px-3 howToUse" to="working" spy={true} smooth={true} offset={170} duration={500} style={{cursor:"pointer"}}>
+            How to Use
+          </Link>
           <a className="px-3" href="/pricing">
             Pricing
           </a>
-          <a className="px-3" href="https://primesender.blogspot.com/">
+          <a className="px-3" href="/blog">
             Blogs
           </a>
+          {/* <a className="px-3" href="https://primesender.blogspot.com/">
+            Blogs
+          </a> */}
         </div>
         <div className="hidden md:block">
           <Button

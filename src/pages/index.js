@@ -20,6 +20,10 @@ import service3 from '../svg/undraw_attached_file_n4wm.png';
 import service2 from '../svg/undraw_Spreadsheet_re_cn18.png';
 import service1 from '../svg/undraw_text_field_htlv.png';
 import screenshot from '../svg/screenshot.png';
+import Ucard from '../components/howToUseCard';
+import image1 from '../svg/howToUse1.png'
+import image2 from '../svg/howToUse2.png'
+import image3 from '../svg/howToUse3.png'
 
 export default () => (
   <Layout>
@@ -56,6 +60,31 @@ export default () => (
         </div>
       </div>
     </section>
+    <section id="working" className="py-20 lg:pt-48" style={{paddingTop:"18rem"}}>
+      <div className="container mx-auto text-center">
+        <h2 className="text-3xl lg:text-5xl font-semibold">How to Use</h2>
+        <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
+          <div className="flex-1 px-3">
+            <div style={{display:"flex",justifyContent:"space-evenly",alignItems:"flex-start",flexWrap:"wrap"}}>
+              <Ucard
+                imgSrc={image3}
+                description="Enter the numbers you want to send the message to, separated by comma."
+              />
+              <Ucard
+                imgSrc={image1}
+                description="Enter the message that you'd like to send. You could also add an attachment.
+                Click on 'Add Attachment' >> Click on 'Image/Video/Document' >> Select the file you'd like to send >> The first message would be sent to you itself >> Once it is sent, open the extension and click on 'Send Message'. The messages along with the file will be sent one by one."
+              />
+              <Ucard
+                imgSrc={image2}
+                description="Download the delivery report by clicking on 'Delivery Report' to view the delivery status of the messages and the attachment sent."
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="features" className="py-20 lg:pb-40 lg:pt-48">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl lg:text-5xl font-semibold">Main Features</h2>
@@ -207,5 +236,80 @@ export default () => (
       }
       secondarySlot={<img src={service3} alt="PS" />}
     />
+     <section id="stats" class="py-20 lg:pt-32">
+      <div class="container mx-auto text-center">
+        <p class="uppercase tracking-wider" style={{ color: '#718096' }}>
+          Our Numbers speak for themselves
+        </p>
+        <div class="flex flex-col sm:flex-row mt-8 lg:px-24">
+          <div
+            class="w-full sm:w-1/3"
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              marginBottom: '20px'
+            }}
+          >
+            <p
+              class="text-4xl lg:text-6xl font-semibold"
+              style={{ color: '#4199e1', fontSize: '4rem', marginBottom: '20px' }}
+            >
+              50,000+
+            </p>
+            <p class="font-semibold mb-6">Users</p>
+          </div>
+          <div
+            class="w-full sm:w-1/3"
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              marginBottom: '20px'
+            }}
+          >
+            <p
+              class="text-4xl lg:text-6xl font-semibold"
+              style={{ color: '#4199e1', fontSize: '4rem', marginBottom: '20px' }}
+            >
+              4.6/5
+            </p>
+            <p class="font-semibold mb-6">Users Ratings</p>
+          </div>
+          <div
+            class="w-full sm:w-1/3"
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              marginBottom: '20px'
+            }}
+          >
+            <p
+              class="text-4xl lg:text-6xl font-semibold"
+              style={{ color: '#4199e1', fontSize: '4rem', marginBottom: '20px' }}
+            >
+              Rank 1
+            </p>
+            <p class="font-semibold mb-6">Sender on Google Chrome Web Store</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="testimonials" className="py-20 lg:py-40">
+      <div className="container mx-auto">
+        <LabelText className="mb-8 text-gray-600 text-center">What customers are saying</LabelText>
+        <div className="flex flex-col md:flex-row md:-mx-3">
+          {customerData.map(customer => (
+            <div key={customer.customerName} className="flex-1 px-3">
+              <CustomerCard customer={customer} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   </Layout>
 );
