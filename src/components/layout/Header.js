@@ -3,7 +3,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import LogoIcon from '../../svg/LogoIcon';
 import Button from '../Button';
 import { Link } from "react-scroll";
-import $ from "jquery"
+
 
 //header for index page
 

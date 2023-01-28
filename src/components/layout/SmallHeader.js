@@ -1,7 +1,7 @@
 import React from 'react';
 import LogoIcon from '../../svg/LogoIcon';
 import Button from '../Button';
-import $ from 'jquery';
+
 
 //header for pages other than index
 
