@@ -24,6 +24,18 @@ import Ucard from '../components/howToUseCard';
 import image1 from '../svg/howToUse1.png';
 import image2 from '../svg/howToUse2.png';
 import image3 from '../svg/howToUse3.png';
+import report from '../svg/report.png';
+import attachment from '../svg/attached.png';
+import customize from '../svg/message-customize.png';
+import schedule from '../svg/schedule.png';
+import speed from '../svg/high-speed.png';
+import support from '../svg/check.png';
+import excel from '../svg/excel.png';
+import download from '../svg/file.png';
+import format from '../svg/message-formatting.png';
+import preview from '../svg/excel preview.png';
+import notification from '../svg/notification.png';
+import '../css/index.css'
 
 export default () => (
   <Layout>
@@ -71,14 +83,13 @@ export default () => (
     </section>
     <section
       id="working"
-      className="py-20 lg:pt-48"
-      style={{ paddingTop: '18rem' }}
+      style={{ paddingTop: '12rem' }}
       onLoad={() => {
         if (localStorage.getItem('howToUse') == 1) {
           localStorage.setItem('howToUse', 0);
           document.querySelector('#working').scrollIntoView({
             behavior: 'smooth',
-            block: 'center', 
+            block: 'center',
             inline: 'center'
           });
         }
@@ -98,15 +109,18 @@ export default () => (
             >
               <Ucard
                 imgSrc={image3}
+                title="Step1: Upload"
                 description="Enter the numbers you want to send the message to, separated by comma."
               />
               <Ucard
                 imgSrc={image1}
+                title="Step2: Send Message"
                 description="Enter the message that you'd like to send. You could also add an attachment.
                 Click on 'Add Attachment' >> Click on 'Image/Video/Document' >> Select the file you'd like to send >> The first message would be sent to you itself >> Once it is sent, open the extension and click on 'Send Message'. The messages along with the file will be sent one by one."
               />
               <Ucard
                 imgSrc={image2}
+                title="Step3: Download Report"
                 description="Download the delivery report by clicking on 'Delivery Report' to view the delivery status of the messages and the attachment sent."
               />
             </div>
@@ -115,13 +129,29 @@ export default () => (
       </div>
     </section>
 
-    <section id="features" className="py-20 lg:pb-40 lg:pt-48">
+    <section id="features" style={{ paddingTop: '8rem' }}>
       <div className="container mx-auto text-center">
         <h2 className="text-3xl lg:text-5xl font-semibold">Main Features</h2>
         <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
           <div className="flex-1 px-3">
             <Card className="mb-8">
-              <p className="font-semibold text-xl">Report</p>
+              <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
+                <img
+                  src={report}
+                  style={{
+                    display: 'inline-block',
+                    width: '2em',
+                    marginLeft: '-10px',
+                    height: '2em'
+                  }}
+                ></img>
+                <p
+                  className="font-semibold text-xl"
+                  style={{ display: 'inline-block', padding: '0px 10px' }}
+                >
+                  Report
+                </p>
+              </div>
               <p className="mt-4">
                 Get a detailed report of your campaigns to improve sales and utilize Prime Sender to
                 the fullest
@@ -131,7 +161,26 @@ export default () => (
           </div>
           <div className="flex-1 px-3">
             <Card className="mb-8">
-              <p className="font-semibold text-xl">File Attachment</p>
+              <div
+                className="container"
+                style={{ display: 'flex', justifyContent: 'center', padding: '0px 10px' }}
+              >
+                <img
+                  src={attachment}
+                  style={{
+                    display: 'inline-block',
+                    width: '2em',
+                    marginLeft: '-10px',
+                    height: '2em'
+                  }}
+                ></img>
+                <p
+                  className="font-semibold text-xl"
+                  style={{ display: 'inline-block', padding: '0px 10px' }}
+                >
+                  File Attachment
+                </p>
+              </div>
               <p className="mt-4">
                 You can attach and send images, document, videos, etc along with your message to
                 users
@@ -140,7 +189,23 @@ export default () => (
           </div>
           <div className="flex-1 px-3">
             <Card className="mb-8">
-              <p className="font-semibold text-xl">Customise your message</p>
+              <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
+                <img
+                  src={customize}
+                  style={{
+                    display: 'inline-block',
+                    width: '2em',
+                    marginLeft: '-10px',
+                    height: '2em'
+                  }}
+                ></img>
+                <p
+                  className="font-semibold text-xl"
+                  style={{ display: 'inline-block', padding: '0px 10px' }}
+                >
+                  Customise your message
+                </p>
+              </div>
               <p className="mt-4">
                 You can customise your message according to the customer with their name, email,
                 order number,etc
@@ -153,7 +218,23 @@ export default () => (
         <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
           <div className="flex-1 px-3">
             <Card className="mb-8">
-              <p className="font-semibold text-xl">Schedule your message</p>
+              <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
+                <img
+                  src={schedule}
+                  style={{
+                    display: 'inline-block',
+                    width: '2em',
+                    marginLeft: '-10px',
+                    height: '2em'
+                  }}
+                ></img>
+                <p
+                  className="font-semibold text-xl"
+                  style={{ display: 'inline-block', padding: '0px 10px' }}
+                >
+                  Schedule your message
+                </p>
+              </div>
               <p className="mt-4">
                 You can schedule at what time to send your messages to users and your messages would
                 be sent automatically at the set time
@@ -162,7 +243,23 @@ export default () => (
           </div>
           <div className="flex-1 px-3">
             <Card className="mb-8">
-              <p className="font-semibold text-xl">Quick Response</p>
+              <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
+                <img
+                  src={speed}
+                  style={{
+                    display: 'inline-block',
+                    width: '2em',
+                    marginLeft: '-10px',
+                    height: '2em'
+                  }}
+                ></img>
+                <p
+                  className="font-semibold text-xl"
+                  style={{ display: 'inline-block', padding: '0px 10px' }}
+                >
+                  Quick Response
+                </p>
+              </div>
               <p className="mt-4">
                 You can respond to your customers quickly, with pre-saved responses
               </p>
@@ -170,7 +267,23 @@ export default () => (
           </div>
           <div className="flex-1 px-3">
             <Card className="mb-8">
-              <p className="font-semibold text-xl">Active support</p>
+              <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
+                <img
+                  src={support}
+                  style={{
+                    display: 'inline-block',
+                    width: '2em',
+                    marginLeft: '-10px',
+                    height: '2em'
+                  }}
+                ></img>
+                <p
+                  className="font-semibold text-xl"
+                  style={{ display: 'inline-block', padding: '0px 10px' }}
+                >
+                  Active support
+                </p>
+              </div>
               <p className="mt-4">
                 You can click on 'Live Support' on the extension to get your queries resolved. We
                 also provide call and video support.
@@ -183,7 +296,23 @@ export default () => (
         <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
           <div className="flex-1 px-3">
             <Card className="mb-8">
-              <p className="font-semibold text-xl">Upload excel of numbers</p>
+              <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
+                <img
+                  src={excel}
+                  style={{
+                    display: 'inline-block',
+                    width: '2em',
+                    marginLeft: '-10px',
+                    height: '2em'
+                  }}
+                ></img>
+                <p
+                  className="font-semibold text-xl"
+                  style={{ display: 'inline-block', padding: '0px 10px' }}
+                >
+                  Upload excel of numbers
+                </p>
+              </div>
               <p className="mt-4">
                 You can directly upload an excel sheet of numbers you want to send your message to
                 without having to type or copy paste
@@ -192,7 +321,23 @@ export default () => (
           </div>
           <div className="flex-1 px-3">
             <Card className="mb-8">
-              <p className="font-semibold text-xl">Download contacts from group</p>
+              <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
+                <img
+                  src={download}
+                  style={{
+                    display: 'inline-block',
+                    width: '2em',
+                    marginLeft: '-10px',
+                    height: '2em'
+                  }}
+                ></img>
+                <p
+                  className="font-semibold text-xl"
+                  style={{ display: 'inline-block', padding: '0px 10px' }}
+                >
+                  Download contacts from group
+                </p>
+              </div>
               <p className="mt-4">
                 You can get a detailed download of all the contacts from a group including the ones
                 you have not saved
@@ -201,7 +346,23 @@ export default () => (
           </div>
           <div className="flex-1 px-3">
             <Card className="mb-8">
-              <p className="font-semibold text-xl">Message Formatting</p>
+              <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
+                <img
+                  src={format}
+                  style={{
+                    display: 'inline-block',
+                    width: '2em',
+                    marginLeft: '-10px',
+                    height: '2em'
+                  }}
+                ></img>
+                <p
+                  className="font-semibold text-xl"
+                  style={{ display: 'inline-block', padding: '0px 10px' }}
+                >
+                  Message Formatting
+                </p>
+              </div>
               <p className="mt-4">
                 You can format your message - BOLD, italic, strikethrough and Emojis
               </p>
@@ -213,13 +374,45 @@ export default () => (
         <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
           <div className="flex-1 px-3">
             <Card className="mb-8">
-              <p className="font-semibold text-xl">Real Time excel preview</p>
+              <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
+                <img
+                  src={preview}
+                  style={{
+                    display: 'inline-block',
+                    width: '2em',
+                    marginLeft: '-10px',
+                    height: '2em'
+                  }}
+                ></img>
+                <p
+                  className="font-semibold text-xl"
+                  style={{ display: 'inline-block', padding: '0px 10px' }}
+                >
+                  Real Time excel preview
+                </p>
+              </div>
               <p className="mt-4">Get a real time preview of uploaded CSV of numbers</p>
             </Card>
           </div>
           <div className="flex-1 px-3">
             <Card className="mb-8">
-              <p className="font-semibold text-xl">Real time notification</p>
+              <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
+                <img
+                  src={notification}
+                  style={{
+                    display: 'inline-block',
+                    width: '2em',
+                    marginLeft: '-10px',
+                    height: '2em'
+                  }}
+                ></img>
+                <p
+                  className="font-semibold text-xl"
+                  style={{ display: 'inline-block', padding: '0px 10px' }}
+                >
+                  Real time notification
+                </p>
+              </div>
               <p className="mt-4">Get real time update via notifications</p>
             </Card>
           </div>
@@ -230,7 +423,7 @@ export default () => (
     <SplitSection
       id="services"
       primarySlot={
-        <div className="lg:pr-32 xl:pr-48">
+        <div className="lg:pr-32 xl:pr-48" style={{ paddingBottom: '0px' }}>
           <h3 className="text-3xl font-semibold leading-tight">
             Send broadcast messages in a few clicks
           </h3>
@@ -245,7 +438,7 @@ export default () => (
     <SplitSection
       reverseOrder
       primarySlot={
-        <div className="lg:pl-32 xl:pl-48">
+        <div className="lg:pl-32 xl:pl-48" style={{ paddingBottom: '0px' }}>
           <h3 className="text-3xl font-semibold leading-tight">Import CSV</h3>
           <p className="mt-8 text-xl font-light leading-relaxed">
             Ability to import csv of numbers.
@@ -255,18 +448,19 @@ export default () => (
       secondarySlot={<img src={service2} alt="PS" />}
     />
     <SplitSection
+      id="third"
       primarySlot={
-        <div className="lg:pr-32 xl:pr-48">
-          <h3 className="text-3xl font-semibold leading-tight">Add Attachment</h3>
-          <p className="mt-8 text-xl font-light leading-relaxed">
-            Add and send attachments including photos, videos, contacts, document,etc. This way you
-            can send promotional posters to you customers and be connected.
-          </p>
-        </div>
+          <div className="lg:pr-32 xl:pr-48" style={{ paddingBottom: '0px' }}>
+            <h3 className="text-3xl font-semibold leading-tight">Add Attachment</h3>
+            <p className="mt-8 text-xl font-light leading-relaxed">
+              Add and send attachments including photos, videos, contacts, document,etc. This way
+              you can send promotional posters to you customers and be connected.
+            </p>
+          </div>
       }
       secondarySlot={<img src={service3} alt="PS" />}
     />
-    <section id="stats" class="py-20 lg:pt-32">
+    <section id="stats" style={{ paddingTop: '8rem' }}>
       <div class="container mx-auto text-center">
         <p class="uppercase tracking-wider" style={{ color: '#718096' }}>
           Our Numbers speak for themselves
@@ -284,7 +478,7 @@ export default () => (
           >
             <p
               class="text-4xl lg:text-6xl font-semibold"
-              style={{ color: '#4199e1', fontSize: '4rem', marginBottom: '20px' }}
+              style={{ color: 'rgb(0 154 136)', fontSize: '4rem', marginBottom: '20px' }}
             >
               50,000+
             </p>
@@ -302,7 +496,7 @@ export default () => (
           >
             <p
               class="text-4xl lg:text-6xl font-semibold"
-              style={{ color: '#4199e1', fontSize: '4rem', marginBottom: '20px' }}
+              style={{ color: 'rgb(0 154 136)', fontSize: '4rem', marginBottom: '20px' }}
             >
               4.6/5
             </p>
@@ -320,7 +514,7 @@ export default () => (
           >
             <p
               class="text-4xl lg:text-6xl font-semibold"
-              style={{ color: '#4199e1', fontSize: '4rem', marginBottom: '20px' }}
+              style={{ color: 'rgb(0 154 136)', fontSize: '4rem', marginBottom: '20px' }}
             >
               Rank 1
             </p>
@@ -329,7 +523,7 @@ export default () => (
         </div>
       </div>
     </section>
-    <section id="testimonials" className="py-20 lg:py-40">
+    <section id="testimonials" style={{ paddingTop: '8rem' }}>
       <div className="container mx-auto">
         <LabelText className="mb-8 text-gray-600 text-center">What customers are saying</LabelText>
         <div className="flex flex-col md:flex-row md:-mx-3">

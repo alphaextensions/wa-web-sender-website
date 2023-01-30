@@ -1,7 +1,7 @@
 import React from 'react';
 
-const SplitSection = ({ id, primarySlot, secondarySlot, reverseOrder }) => (
-  <section id={id} className="py-20">
+const SplitSection = ({ id, primarySlot, secondarySlot, reverseOrder,style }) => (
+  <section id={id} style={{paddingTop:"8rem"}}>
     <div className="container mx-auto px-16 items-center flex flex-col lg:flex-row">
       <div className="lg:w-1/2">{primarySlot}</div>
       <div

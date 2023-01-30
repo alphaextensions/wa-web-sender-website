@@ -30,7 +30,7 @@ const Header = () => (
           <a className="px-3" href="/faqs">
             FAQs
           </a> */}
-          <Link className="px-3 howToUse" to="working" spy={true} smooth={true} offset={170} duration={500} style={{cursor:"pointer"}}>
+          <Link className="px-3 howToUse" to="working" spy={true} smooth={true} offset={110} duration={500} style={{cursor:"pointer"}}>
             How to Use
           </Link>
           <a className="px-3" href="/pricing">
