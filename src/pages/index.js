@@ -66,9 +66,7 @@ export default () => (
             className="text-2xl mt-8"
             style={{ marginRight: '24px', fontWeight: '100', fontSize: '1.4rem' }}
           >
-            Best productivity and communication tool for business. Prime Sender is the best google
-            chrome extension to enhance your business. It is the currently the highest rated and the
-            best tool on the chrome webstore.
+            Best productivity and communication tool for business. Prime Sender is a google chrome extension to enhance your business. It is the currently the highest rated sender on the google chrome webstore.
             <br />
             <br />
           </p>
@@ -109,18 +107,18 @@ export default () => (
             >
               <Ucard
                 imgSrc={image3}
-                title="Step1: Upload"
+                title="Step 1: Upload"
                 description="Enter the numbers you want to send the message to, separated by comma."
               />
               <Ucard
                 imgSrc={image1}
-                title="Step2: Send Message"
+                title="Step 2: Send Message"
                 description="Enter the message that you'd like to send. You could also add an attachment.
                 Click on 'Add Attachment' >> Click on 'Image/Video/Document' >> Select the file you'd like to send >> The first message would be sent to you itself >> Once it is sent, open the extension and click on 'Send Message'. The messages along with the file will be sent one by one."
               />
               <Ucard
                 imgSrc={image2}
-                title="Step3: Download Report"
+                title="Step 3: Download Report"
                 description="Download the delivery report by clicking on 'Delivery Report' to view the delivery status of the messages and the attachment sent."
               />
             </div>

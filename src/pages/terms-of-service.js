@@ -36,12 +36,13 @@ function TermsOfService() {
                 accessing or using Prime Sender, you and the entity you are authorized to represent (hereinafter
                 'you' or 'your') signify your agreement to be bound by the terms of use.</p>
 
-                <br></br>
+              <br/>
               <b>User Eligibility</b>
               
               <p>Prime Sender is provided by <a href ="www.prime-sender.com"> www.prime-sender.com </a>   available only to entities and persons
                 who have reached the age of legal majority and are competent to enter into a legally binding
                 agreement(s) under the applicable law. If You do not qualify, You are not permitted to use PrimeSender.</p>
+                <br/>
               <b>Scope Of Terms Of Use</b>
               <p>These Terms of Use govern Your use of Prime Sender and all applications, software and services
                 (collectively known as "Services") available via Prime Sender, except to the extent that such
@@ -49,6 +50,7 @@ function TermsOfService() {
                 use of certain Services and other items provided to You via Prime Sender ("Service
                 Agreement(s)"). Any such Service Agreements will accompany the applicable Services or are
                 listed in association therewith or via a hyperlink associated there with.</p>
+                <br/>
               <b>Modifications </b>
               <p><a href ="www.prime-sender.com"> www.prime-sender.com </a>  may revise and update these Terms of Use at any time. Your continued
                 usage of Prime Sender after any changes to these Terms of Use will be deemed as acceptance of
@@ -57,6 +59,7 @@ function TermsOfService() {
                 change or impose fees for products and services provided through Prime Sender at any time, at its
                 sole discretion. <a href ="www.prime-sender.com">www.prime-sender.com</a> may establish or change, at any time, general practices and restrictions concerning other <a href ="www.prime-sender.com"> www.prime-sender.com </a> products and services at its sole discretion. <a href ="www.prime-sender.com"> www.prime-sender.com</a>  Privacy Notice
                 With respect to any individual whose personal information is provided by You to <a href ="www.prime-sender.com">www.prime-sender.com</a>, You represent to <a href ="www.prime-sender.com">www.prime-sender.com</a> that You have obtained all necessary consents for the processing of such personal information contemplated by the Services.</p>
+                <br/>
               <b>Licence and Ownership</b>
               <p> Any and all intellectual property rights ("Intellectual Property") associated with Prime Sender
                 and its contents (the "Content") are the sole property of <a href ="www.prime-sender.com">www.prime-sender.com</a>, its affiliates or
@@ -84,6 +87,7 @@ function TermsOfService() {
                 perform, import, distribute, retransmit or otherwise use the Content in any way unless expressly permitted to do so
                 by <a href ="www.prime-sender.com">www.prime-sender.com</a>
               </p>
+              <br/>
               <b>Restrictions on Use Of The Website</b><br></br>
               In addition to other restrictions set forth in these Terms of Use, You agree that:
               <li> You shall not disguise the origin of information transmitted through Prime Sender </li>
@@ -102,6 +106,7 @@ function TermsOfService() {
                 Prime Sender.</li>
               <li>You may not frame or utilize framing techniques to enclose any portion or aspect of the
                 Content or the Information, without the express written consent of <a href ="www.prime-sender.com">www.prime-sender.com</a></li>
+                <br/>
               <b>Links</b>
               <p>Outbound Links. Prime Sender may contain links to third-party Web Sites and resources
                 (referred to collectively hereinafter as "Linked Sites"). These Linked Sites are provided solely as
@@ -130,7 +135,7 @@ function TermsOfService() {
                 <li> using any logo or mark of <a href ="www.prime-sender.com">www.prime-sender.com</a> or any of its affiliates, without express
                   written permission from <a href ="www.prime-sender.com">www.prime-sender.com</a></li>
               </p>
-
+              <br/>
               <b>Termination</b>
               <p> agree that <a href ="www.prime-sender.com">www.prime-sender.com</a>, at its sole discretion, may terminate or suspend Your use
                 of Prime Sender, the www.prime-sender.com Systems, Information, Services and Content at any
@@ -144,6 +149,7 @@ function TermsOfService() {
                 suspension of Your access to Prime Sender, the <a href ="www.prime-sender.com">www.prime-sender.com</a> Systems, Information
                 and/or the Services.
               </p>
+              <br/>
               <b>Disclaimer of Warranties</b>
               <p><a href ="www.prime-sender.com">www.prime-sender.com</a>  makes no representations about the results to be obtained from using Prime Sender, the <a href ="www.prime-sender.com">www.prime-sender.com</a> systems, the services, the information or the content. The use of same is at your own risk.
                 Prime Sender, the www.prime-sender.com systems, the
@@ -154,6 +160,7 @@ function TermsOfService() {
                 representations or warranties concerning the accuracy, completeness, security or timeliness of the content,
                 information or services provided on or through the use of Prime Sender or the <a href ="www.prime-sender.com">www.prime-sender.com</a> systems. No
                 information obtained by you from Prime Sender shall create any warranty not expressly stated by <a href ="www.prime-sender.com">www.prime-sender.com</a> in these terms of use.</p>
+                <br/>
               <b>Limitation of Liability</b>
               <p>To the extent permitted by law, in no event shall <a href ="www.prime-sender.com">www.prime-sender.com</a>,its affiliates,licensors, suppliers or any third
                 parties mentioned at Prime Sender be liable for any incidental, direct, indirect, exemplary, punitive and/or
@@ -162,6 +169,7 @@ function TermsOfService() {
                 the content whether based on warranty, contract, tort, delict, or any other legal foundation, and whether or not <a href ="www.prime-sender.com">www.prime-sender.com</a> is advised of the possibility of such damages.To the extent permitted by law, the remedies stated for
                 you in these terms of use are exclusive and are limited to those expressly provided for herein.
               </p>
+              <br/>
               <b>Compliance With Law including Export Control</b>
               <p>You agree to use Prime Sender in strict compliance with all applicable laws, rulings, and regulations and in a
                 fashion that does not, in the sole judgment of <a href ="www.prime-sender.com">www.prime-sender.com</a>, negatively reflect on the goodwill or reputation of <a href ="www.prime-sender.com">www.prime-sender.com</a> and You shall take no action which might cause <a href ="www.prime-sender.com">www.prime-sender.com</a> to be in breach of
@@ -177,6 +185,7 @@ function TermsOfService() {
               <p>To the fullest extent permitted by law, these Terms of Use are governed by the internal laws of India and courtsin
                 Amravati, India will have jurisdiction.
               </p>
+              <br/>
               <b>General</b>
               <p>You may not assign these Terms of Useor any of Your interests,rights or obligations underthese Terms of Use. If any provision
                 of these Terms of Use shall be found to be invalid by any court having competent jurisdiction, the invalidity of

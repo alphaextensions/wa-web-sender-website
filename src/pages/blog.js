@@ -29,9 +29,17 @@ function blog() {
             <SmallHeader/>
             <section className="container mx-auto px-8" >
                 <h1 style={{fontSize: '28px', textAlign: 'center', margin: '24px 0px'}}>Blogs</h1>
-                <iframe
+                <iframe id='iframe'
                     src="https://primesender.blogspot.com/"
-                    height="1080" style={{margin: 'auto', width: '100%', maxWidth: '840px'}} frameBorder="0" marginHeight="0" marginWidth="0">Loading…
+                    height="1080" style={{margin: 'auto', width: '100%', maxWidth: '840px'}} frameBorder="0" marginHeight="0" marginWidth="0" onLoad={()=>{
+                        // let iframe = document.getElementById("iframe");
+                        // let links = iframe.contentWindow.document.getElementsByTagName("a");
+                        // for (let i = 0; i < links.length; i++) {
+                        //   links[i].target = "_blank";
+                        // }
+                    }
+                }
+                >Loading…
                 </iframe>
             </section>
             <Footer/>

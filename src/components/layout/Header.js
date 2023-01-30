@@ -14,7 +14,9 @@ const Header = () => (
         <div className="w-12 mr-3">
           <LogoIcon />
         </div>
+        <div style={{color:'#62d9c7'}}>
         Prime Sender
+        </div>
       </a>
       <div className="flex flex-col sm:flex-row justify-between items-center">
         <div className="flex mt-4 sm:mt-0">
