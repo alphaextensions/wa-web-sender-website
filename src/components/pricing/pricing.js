@@ -161,17 +161,17 @@ export default function Pricing() {
           </tr>
           <tr>
             <th />
-            <th className="pricing-header-text">{getFreePlanPrice()}</th>
+            <th className="pricing-header-text rupee">{getFreePlanPrice()}</th>
             <th className="pricing-header-text">
-              <div>{getBasicPlanPrice()}</div>
+              <div className='rupee'>{getBasicPlanPrice()}</div>
               <div className="amount-slash">
-                <span>{getBasicPlanSlashPrice()}</span>
+                <span className='rupee'>{getBasicPlanSlashPrice()}</span>
               </div>
             </th>
             <th className="pricing-header-text">
-              <div>{getAdvancePlanPrice()}</div>
+              <div className='rupee'>{getAdvancePlanPrice()}</div>
               <div className="amount-slash">
-                <span>{getAdvancePlanSlashPrice()}</span>
+                <span className='rupee'>{getAdvancePlanSlashPrice()}</span>
               </div>
             </th>
           </tr>
