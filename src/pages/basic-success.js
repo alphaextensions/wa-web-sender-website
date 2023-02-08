@@ -25,7 +25,7 @@ function BasicSuccessPage() {
             </Helmet>
             <SmallHeader/>
             <section className="container mx-auto px-8" >
-                <div style={{color: '#009A88', fontSize: '28px', fontWeight: 'bold', margin: '32px auto', textAlign: 'center'}}>Congrats! You have successfully purchased WS Premium</div>
+                <div style={{color: '#009A88', fontSize: '28px', fontWeight: 'bold', margin: '32px auto', textAlign: 'center'}}>Congrats! You have successfully purchased PS Premium</div>
                 <div style={{color: '#009A88', fontSize: '16px', textAlign: 'center'}}>Please reload WhatsApp Web after 10 minutes to activate Premium. You will receive a confirmation email soon.</div>
                 <div style={{color: '#009A88', fontSize: '12px', textAlign: 'center', marginTop: '8px'}}>If Premium is not enabled, do not worry. Please click on 'Live Support' button on the top left of the extension.</div>
                 <div style={{color: '#009A88', fontSize: '28px', fontWeight: 'bold', margin: '32px auto', textAlign: 'center'}}>Features</div>
