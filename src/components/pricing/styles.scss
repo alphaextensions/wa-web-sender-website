@@ -33,7 +33,7 @@
 }
 
 .pricing-table{
-  max-width: 1040px;
+  // max-width: 1040px;
   margin: 64px auto;
   box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.16);
   border-radius: 3px;
@@ -70,7 +70,31 @@
   font-weight: bold !important;
   color: #009A88;
   font-size: 24px !important;
-  padding: 12px 48px 12px !important;
+  padding: 12px 80px 12px !important;
+  position: relative;
+}
+.offer{
+  padding: 12px 130px 12px 50px !important;
+}
+.offer-indo{
+  padding: 12px 148px 12px 50px !important;
+}
+.free{
+  padding: 12px 30px 12px !important;
+}
+.offer-price
+{
+  color: #7829F9;
+  font-size: 16px;
+  position: absolute;
+  top: 20%;
+  right: 0px;
+  font-family: 'PT Sans Caption';
+  font-style: normal;
+  font-weight: 600;
+  text-decoration-line: underline;
+  text-align: left;
+  padding-right: 8px;
 }
 
 .pricing-table-logo{

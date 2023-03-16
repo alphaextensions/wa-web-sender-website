@@ -26,28 +26,28 @@ function HelpUsImprove() {
                 <meta name="image" property="og:image" content={ws} />
                 <meta name="image" content={ws} />
             </Helmet>
-            <SmallHeader/>
+            <SmallHeader />
             <section className="container mx-auto px-8" >
-                <h1 style={{fontSize: '28px', textAlign: 'center', margin: '24px 0px'}}>Help us Improve</h1>
-                <p style={{textAlign: 'center', marginBottom: '36px'}}>
+                <h1 style={{ fontSize: '28px', textAlign: 'center', margin: '24px 0px' }}>Help us Improve</h1>
+                <p style={{ textAlign: 'center', marginBottom: '36px' }}>
                     We strive to give you the best service possible but maybe there are certain things we need to catch up on.
                 </p>
                 <iframe
                     src="https://docs.google.com/forms/d/16gee-5t1oYn_y7BNs7mt1UG43gke2TQmuzp-StsstnQ/viewform?embedded=true"
-                    height="1080" style={{margin: 'auto', width: '100%', maxWidth: '840px'}} frameBorder="0" marginHeight="0" marginWidth="0">Loading…
+                    height="1080" style={{ margin: 'auto', width: '100%', maxWidth: '840px' }} frameBorder="0" marginHeight="0" marginWidth="0">Loading…
                 </iframe>
-                <p style={{marginTop: '-80px'}}>
-                    <strong>If you had a change of heart somehow and want to know how Prime Sender works quickly in 3 steps, here :</strong><br/>
-                    <br/>
-                    1. Enter the numbers you want to send the message to, separated by comma<br/>
+                <p style={{ marginTop: '40px' }}>
+                    <strong>If you had a change of heart somehow and want to know how Prime Sender works quickly in 3 steps, here :</strong><br />
+                    <br />
+                    1. Enter the numbers you want to send the message to, separated by comma<br />
 
-                    2. Enter the message that you'd like to send. You could also add an attachment.<br/>
-                    Click on 'Add Attachment' >> Click on 'Image/Video/Document' >> Select the file you'd like to send >> The first message would be sent to you itself >> Once it is sent, open the extension and click on 'Send Message'. The messages along with the file will be sent one by one.<br/>
+                    2. Enter the message that you'd like to send. You could also add an attachment.<br />
+                    Click on 'Add Attachment' >> Click on 'Image/Video/Document' >> Select the file you'd like to send >> The first message would be sent to you itself >> Once it is sent, open the extension and click on 'Send Message'. The messages along with the file will be sent one by one.<br />
 
                     3.Download the delivery report by clicking on 'Delivery Report' to view the delivery status of the messages and the attachment sent
                 </p>
             </section>
-            <Footer/>
+            <Footer />
         </React.Fragment>
     );
 }

@@ -37,7 +37,7 @@ export default function Pricing() {
     if (planType === 'international') {
       return planPeriod === 'monthly' ? 'https://buy.stripe.com/fZeeVe1ZM30Aeo88wL' : 'https://buy.stripe.com/6oEcN6cEqat2gwg6or';
     }
-    else if(planType === 'indonesia')
+    else if (planType === 'indonesia')
       return planPeriod === 'monthly' ? 'https://buy.stripe.com/28ocN6gUGcBa7ZKdQX' : 'https://buy.stripe.com/00g7sM7k6gRq3JufZ9';
     return planPeriod === 'monthly' ? 'https://buy.stripe.com/fZe7sMawi30Acg0bIZ' : 'https://razorpay.com/payment-button/pl_HyuXVKKhpfe28k/view';
   }
@@ -46,7 +46,7 @@ export default function Pricing() {
     if (planType === 'international') {
       return planPeriod === 'monthly' ? 'https://buy.stripe.com/4gwbJ25bYgRqa7S9AO' : 'https://buy.stripe.com/7sI4gAcEqeJi3JudQW';
     }
-    else if(planType === 'indonesia')
+    else if (planType === 'indonesia')
       return planPeriod === 'monthly' ? 'https://buy.stripe.com/dR6dRa33Q7gQeo8eV2' : 'https://buy.stripe.com/fZe28s8oaat2a7S8wJ';
     return planPeriod === 'monthly' ? 'https://buy.stripe.com/00g7sMawi30A3JucN2' : 'https://razorpay.com/payment-button/pl_HyuSnC8BpjlWV7/view';
   }
@@ -55,7 +55,7 @@ export default function Pricing() {
     if (planType === 'international') {
       return planPeriod === 'monthly' ? '$12.99' : '$129.99';
     }
-    else if(planType === 'indonesia')
+    else if (planType === 'indonesia')
       return planPeriod === 'monthly' ? 'IDR 79000' : 'IDR 790000';
     return planPeriod === 'monthly' ? '₹699' : '₹6999';
   }
@@ -64,30 +64,48 @@ export default function Pricing() {
     if (planType === 'international') {
       return planPeriod === 'monthly' ? '$16.99' : '$169.99';
     }
-    else if(planType === 'indonesia')
+    else if (planType === 'indonesia')
       return planPeriod === 'monthly' ? '109000' : '1090000';
     return planPeriod === 'monthly' ? '₹999' : '₹9999';
+  }
+
+  function getBasicPlanOfferPrice() {
+    if (planType === 'international') {
+      return planPeriod === 'monthly' ? '$10.39' : '';
+    }
+    else if (planType === 'indonesia')
+      return planPeriod === 'monthly' ? 'IDR 63200' : '';
+    return planPeriod === 'monthly' ? '₹599' : '';
   }
 
   function getAdvancePlanPrice() {
     if (planType === 'international') {
       return planPeriod === 'monthly' ? '$15.99' : '$159.99';
     }
-    else if(planType === 'indonesia')
+    else if (planType === 'indonesia')
       return planPeriod === 'monthly' ? 'IDR 99000' : 'IDR 990000';
     return planPeriod === 'monthly' ? '₹849' : '₹8499';
+  }
+
+  function getAdvancePlanOfferPrice() {
+    if (planType === 'international') {
+      return planPeriod === 'monthly' ? '$12.79' : '';
+    }
+    else if (planType === 'indonesia')
+      return planPeriod === 'monthly' ? 'IDR 79200' : '';
+    return planPeriod === 'monthly' ? '₹679' : '';
   }
 
   function getAdvancePlanSlashPrice() {
     if (planType === 'international') {
       return planPeriod === 'monthly' ? '$20.99' : '$209.99';
     }
-    else if(planType === 'indonesia')
+    else if (planType === 'indonesia')
       return planPeriod === 'monthly' ? '139000' : '1390000';
     return planPeriod === 'monthly' ? '₹1199' : '₹11999';
   }
 
-  function getFreePlanPrice(){
+  function getFreePlanPrice() {
     return planType === 'international' ? '$0.00' : '₹0';
   }
 
@@ -95,12 +113,12 @@ export default function Pricing() {
     const button_id = getBasicButtonId();
     const button_text = planPeriod === 'monthly' ? 'Subscribe' : 'Buy Basic'
     return (
-        <a
-            href={button_id}
-            target="_blank"
-            className="buy_button">
-          {button_text}
-        </a>
+      <a
+        href={button_id}
+        target="_blank"
+        className="buy_button">
+        {button_text}
+      </a>
     );
   }
 
@@ -108,12 +126,12 @@ export default function Pricing() {
     const button_id = getAdvanceButtonId();
     const button_text = planPeriod === 'monthly' ? 'Subscribe' : 'Buy Advance'
     return (
-        <a
-            href={button_id}
-            target="_blank"
-            className="buy_button">
-          {button_text}
-        </a>
+      <a
+        href={button_id}
+        target="_blank"
+        className="buy_button">
+        {button_text}
+      </a>
     );
   }
 
@@ -122,18 +140,18 @@ export default function Pricing() {
     var indonesia = (planType == "indonesia") ? 'active' : '';
     var international = (planType == "international") ? 'active' : '';
     return (
-        <div className="newsfeed_tabs">
-          <div onClick={() => setPlanType('india')} className={india} style={{padding: '16px 0px', textAlign: 'center', width: '33%'}}>India</div>
-          <div onClick={() => setPlanType('indonesia')} className={indonesia} style={{padding: '16px 0px', textAlign: 'center', width: '33%'}}>Indonesia</div>
-          <div onClick={() => setPlanType('international')} className={international} style={{padding: '16px 0px', textAlign: 'center', width: '33%'}}>International</div>
-        </div>
+      <div className="newsfeed_tabs">
+        <div onClick={() => setPlanType('india')} className={india} style={{ padding: '16px 0px', textAlign: 'center', width: '33%' }}>India</div>
+        <div onClick={() => setPlanType('indonesia')} className={indonesia} style={{ padding: '16px 0px', textAlign: 'center', width: '33%' }}>Indonesia</div>
+        <div onClick={() => setPlanType('international')} className={international} style={{ padding: '16px 0px', textAlign: 'center', width: '33%' }}>International</div>
+      </div>
     );
   }
 
   return (
     <div className="pricing">
       <h1 className="price-header">Our Pricing</h1>
-      <div style={{background: '#009A88', borderRadius: '5px', textAlign: 'center', color: '#fff', padding: '12px', width: '100%', maxWidth: '980px', fontWeight: 'bold', fontSize: '20px'}}>
+      <div style={{ background: '#009A88', borderRadius: '5px', textAlign: 'center', color: '#fff', padding: '12px', width: '100%', maxWidth: '980px', fontWeight: 'bold', fontSize: '20px' }}>
         Early Bird Offer For New User - Extra 30% OFF. Use Code ‘NEWUSER30’
       </div>
       {/*<Slider*/}
@@ -147,31 +165,50 @@ export default function Pricing() {
         <thead>
           <tr>
             <th />
-            <th className="pricing-header-text" style={{padding: '24px 48px 12px !important'}}>Free</th>
-            <th className="pricing-header-text" style={{padding: '24px 48px 12px !important'}}>Basic</th>
-            <th className="pricing-header-text" style={{padding: '24px 48px 12px !important'}}>Advance</th>
+            <th className="pricing-header-text" style={{ padding: '24px 48px 12px !important' }}>Free</th>
+            <th className="pricing-header-text" style={{ padding: '24px 48px 12px !important' }}>Basic</th>
+            <th className="pricing-header-text" style={{ padding: '24px 48px 12px !important' }}>Advance</th>
           </tr>
           <tr>
             <th />
             <th />
-            <th style={{padding: '24px 0px'}}>
+            <th colSpan={2} style={{ padding: '24px 0px' }}>
               <Slider onText="Monthly" offText="Annually" setValue={togglePeriod} />
             </th>
-            <th />
           </tr>
           <tr>
             <th />
-            <th className="pricing-header-text rupee">{getFreePlanPrice()}</th>
-            <th className="pricing-header-text">
+            <th className="pricing-header-text rupee free">{getFreePlanPrice()}</th>
+            <th className={`pricing-header-text ${planPeriod === 'monthly' ? 'offer' : ''} ${planType === 'indonesia' && planPeriod === "monthly" ? "offer-indo" : ""}`}>
               <div className='rupee'>{getBasicPlanPrice()}</div>
               <div className="amount-slash">
                 <span className='rupee'>{getBasicPlanSlashPrice()}</span>
               </div>
+              <div className="offer-price">
+                {planPeriod === "monthly" && (
+                  <>
+                    {"(Get at "}
+                    <span className='rupee'>{getBasicPlanOfferPrice()}</span>
+                    <br />
+                    Limited offer*)
+                  </>
+                )}
+              </div>
             </th>
-            <th className="pricing-header-text">
+            <th className={`pricing-header-text ${planPeriod === 'monthly' ? 'offer' : ''} ${planType === 'indonesia' && planPeriod === "monthly" ? "offer-indo" : ""}`}>
               <div className='rupee'>{getAdvancePlanPrice()}</div>
               <div className="amount-slash">
                 <span className='rupee'>{getAdvancePlanSlashPrice()}</span>
+              </div>
+              <div className="offer-price">
+                {planPeriod === "monthly" && (
+                  <>
+                    {"(Get at "}
+                    <span className='rupee'>{getAdvancePlanOfferPrice()}</span>
+                    <br />
+                    Limited offer*)
+                  </>
+                )}
               </div>
             </th>
           </tr>
@@ -447,11 +484,11 @@ export default function Pricing() {
             </th>
           </tr>
           <tr>
-            <th colspan="4" style={{color: '#C64A23', fontSize: '12px', textDecoration: 'underline', paddingBottom: 24, textAlign: 'center'}}>By subscribing, you agree to auto-deductions every month according to your plan type which will extend your plan type by a month.</th>
+            <th colspan="4" style={{ color: '#C64A23', fontSize: '12px', textDecoration: 'underline', paddingBottom: 24, textAlign: 'center' }}>By subscribing, you agree to auto-deductions every month according to your plan type which will extend your plan type by a month.</th>
           </tr>
         </tbody>
       </table>
-      <div style={{fontSize: '12px', fontWeight: 'bold'}}>By purchasing the premium plan, you agree to our Terms and Service and Privacy Policy.</div>
-    </div>
+      <div style={{ fontSize: '12px', fontWeight: 'bold' }}>By purchasing the premium plan, you agree to our Terms and Service and Privacy Policy.</div>
+    </div >
   );
 }
