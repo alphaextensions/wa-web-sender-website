@@ -6,13 +6,13 @@ import Button from '../Button';
 //header for pages other than index
 
 const SmallHeader = () => (
-  <header className="sticky top-0 bg-white shadow">
+  <header className="sticky top-0 bg-white shadow" style={{zIndex: "100"}}>
     <div className="container flex flex-col sm:flex-row justify-between items-center mx-auto py-4 px-8">
       <a href="/" className="flex items-center text-2xl" style={{ color: '#000' }}>
         <div className="w-12 mr-3">
           <LogoIcon />
         </div>
-        <div style={{color:'#62d9c7'}}>
+        <div style={{color:'#009a88'}}>
         Prime Sender
         </div>
       </a>
