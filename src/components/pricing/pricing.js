@@ -71,11 +71,11 @@ export default function Pricing() {
 
   function getBasicPlanOfferPrice() {
     if (planType === 'international') {
-      return planPeriod === 'monthly' ? '$10.39' : '';
+      return planPeriod === 'monthly' ? '$9.09' : '';
     }
     else if (planType === 'indonesia')
-      return planPeriod === 'monthly' ? 'IDR 63200' : '';
-    return planPeriod === 'monthly' ? '₹599' : '';
+      return planPeriod === 'monthly' ? 'IDR 55300' : '';
+    return planPeriod === 'monthly' ? '₹489' : '';
   }
 
   function getAdvancePlanPrice() {
@@ -89,11 +89,11 @@ export default function Pricing() {
 
   function getAdvancePlanOfferPrice() {
     if (planType === 'international') {
-      return planPeriod === 'monthly' ? '$12.79' : '';
+      return planPeriod === 'monthly' ? '$11.19' : '';
     }
     else if (planType === 'indonesia')
-      return planPeriod === 'monthly' ? 'IDR 79200' : '';
-    return planPeriod === 'monthly' ? '₹679' : '';
+      return planPeriod === 'monthly' ? 'IDR 69300' : '';
+    return planPeriod === 'monthly' ? '₹594' : '';
   }
 
   function getAdvancePlanSlashPrice() {
@@ -184,14 +184,14 @@ export default function Pricing() {
               <div className="amount-slash">
                 <span className='rupee'>{getBasicPlanSlashPrice()}</span>
               </div>
-              <div className="offer-price">
+              <div>
                 {planPeriod === "monthly" && (
-                  <>
+                  <a target='_blank' href={getBasicButtonId()} className="offer-price">
                     {"(Get at "}
                     <span className='rupee'>{getBasicPlanOfferPrice()}</span>
                     <br />
                     Limited offer*)
-                  </>
+                  </a>
                 )}
               </div>
             </th>
@@ -200,14 +200,14 @@ export default function Pricing() {
               <div className="amount-slash">
                 <span className='rupee'>{getAdvancePlanSlashPrice()}</span>
               </div>
-              <div className="offer-price">
+              <div>
                 {planPeriod === "monthly" && (
-                  <>
+                  <a target='_blank' href={getAdvanceButtonId()} className="offer-price">
                     {"(Get at "}
                     <span className='rupee'>{getAdvancePlanOfferPrice()}</span>
                     <br />
                     Limited offer*)
-                  </>
+                  </a>
                 )}
               </div>
             </th>
