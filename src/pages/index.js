@@ -113,21 +113,23 @@ function main() {
                     flexWrap: 'wrap'
                   }}
                 >
-                  <Ucard
+                   <Ucard
                     imgSrc={image3}
                     title="Step 1: Upload"
                     description="Enter the numbers you want to send the message to, separated by comma."
+                    detailedDescription=""
                   />
                   <Ucard
                     imgSrc={image1}
                     title="Step 2: Send Message"
-                    description="Enter the message that you'd like to send. You could also add an attachment.
-                    Click on 'Add Attachment' >> Click on 'Image/Video/Document' >> Select the file you'd like to send >> The first message would be sent to you itself >> Once it is sent, open the extension and click on 'Send Message'. The messages along with the file will be sent one by one."
+                    description={"Enter the message you'd like to send. \n You could also add attachments📁 \n"}
+                    detailedDescription={"\n 1. Click on the icon of 📎 Attachment inside the text box inside the extension \n\n2. Select files you'd like to send. You can select multiple \n\n 3. You can click on Add Caption to add caption to your attachment \n\n 4. Click on Send button inside the extension"}
                   />
                   <Ucard
                     imgSrc={image2}
                     title="Step 3: Download Report"
                     description="Download the delivery report by clicking on 'Delivery Report' to view the delivery status of the messages and the attachment sent."
+                    detailedDescription=""
                   />
                 </div>
               </div>

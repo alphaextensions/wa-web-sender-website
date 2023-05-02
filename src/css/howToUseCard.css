@@ -15,7 +15,12 @@
 .ucard img{
     border-radius: 7px 7px 0px 0px;
 }
-
+.ucard p {
+    white-space: pre-wrap;
+  }
+.ucard .detailedDesc{
+    text-align: left;
+}  
 @media(max-width:400px){
     .ucard{
         width: 15rem;
