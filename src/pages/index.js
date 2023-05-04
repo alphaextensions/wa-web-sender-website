@@ -27,7 +27,6 @@ import image3 from '../svg/howToUse3.png';
 import report from '../svg/report.png';
 import attachment from '../svg/attached.png';
 import customize from '../svg/message-customize.png';
-import caption from '../svg/closed-caption.png'
 import schedule from '../svg/schedule.png';
 import speed from '../svg/high-speed.png';
 import support from '../svg/check.png';
@@ -226,10 +225,10 @@ function main() {
           <div className="container mx-auto text-center">
             <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
               <div className="flex-1 px-3">
-              <Card className="mb-8">
+                <Card className="mb-8">
                   <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
                     <img
-                      src={caption}
+                      src={schedule}
                       style={{
                         display: 'inline-block',
                         width: '2em',
@@ -241,62 +240,63 @@ function main() {
                       className="font-semibold text-xl"
                       style={{ display: 'inline-block', padding: '0px 10px' }}
                     >
-                      Add Caption
+                      Schedule your message
                     </p>
                   </div>
                   <p className="mt-4">
-                  Add caption to your attachments
+                    You can schedule at what time to send your messages to users and your messages would
+                    be sent automatically at the set time
                   </p>
                 </Card>
               </div>
-              <div className="flex-1 px-3">  
+              <div className="flex-1 px-3">
                 <Card className="mb-8">
-                    <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
-                      <img
-                        src={schedule}
-                        style={{
-                          display: 'inline-block',
-                          width: '2em',
-                          marginLeft: '-10px',
-                          height: '2em'
-                        }}
-                      ></img>
-                      <p
-                        className="font-semibold text-xl"
-                        style={{ display: 'inline-block', padding: '0px 10px' }}
-                      >
-                        Schedule your message
-                      </p>
-                    </div>
-                    <p className="mt-4">
-                      You can schedule at what time to send your messages to users and your messages would
-                      be sent automatically at the set time
+                  <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
+                    <img
+                      src={speed}
+                      style={{
+                        display: 'inline-block',
+                        width: '2em',
+                        marginLeft: '-10px',
+                        height: '2em'
+                      }}
+                    ></img>
+                    <p
+                      className="font-semibold text-xl"
+                      style={{ display: 'inline-block', padding: '0px 10px' }}
+                    >
+                      Quick Response
                     </p>
-                  </Card>
+                  </div>
+                  <p className="mt-4">
+                    You can respond to your customers quickly, with pre-saved responses
+                  </p>
+                </Card>
               </div>
               <div className="flex-1 px-3">
                 <Card className="mb-8">
-                    <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
-                      <img
-                        src={speed}
-                        style={{
-                          display: 'inline-block',
-                          width: '2em',
-                          marginLeft: '-10px',
-                          height: '2em'
-                        }}
-                      ></img>
-                      <p
-                        className="font-semibold text-xl"
-                        style={{ display: 'inline-block', padding: '0px 10px' }}
-                      >
-                        Quick Response
-                      </p>
-                    </div>
-                    <p className="mt-4">
-                      You can respond to your customers quickly, with pre-saved responses
+                  <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
+                    <img
+                      src={support}
+                      style={{
+                        display: 'inline-block',
+                        width: '2em',
+                        marginLeft: '-10px',
+                        height: '2em'
+                      }}
+                    ></img>
+                    <p
+                      className="font-semibold text-xl"
+                      style={{ display: 'inline-block', padding: '0px 10px' }}
+                    >
+                      Active support
                     </p>
-                  </Card>
+                  </div>
+                  <p className="mt-4">
+                    You can click on 'Live Support' on the extension to get your queries resolved. We
+                    also provide call and video support.
+                  </p>
+                </Card>
               </div>
             </div>
           </div>
@@ -304,78 +304,77 @@ function main() {
             <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
               <div className="flex-1 px-3">
                 <Card className="mb-8">
-                    <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
-                      <img
-                        src={support}
-                        style={{
-                          display: 'inline-block',
-                          width: '2em',
-                          marginLeft: '-10px',
-                          height: '2em'
-                        }}
-                      ></img>
-                      <p
-                        className="font-semibold text-xl"
-                        style={{ display: 'inline-block', padding: '0px 10px' }}
-                      >
-                        Active support
-                      </p>
-                    </div>
-                    <p className="mt-4">
-                      You can click on 'Live Support' on the extension to get your queries resolved. We
-                      also provide call and video support.
+                  <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
+                    <img
+                      src={excel}
+                      style={{
+                        display: 'inline-block',
+                        width: '2em',
+                        marginLeft: '-10px',
+                        height: '2em'
+                      }}
+                    ></img>
+                    <p
+                      className="font-semibold text-xl"
+                      style={{ display: 'inline-block', padding: '0px 10px' }}
+                    >
+                      Upload excel of numbers
                     </p>
-                  </Card>
+                  </div>
+                  <p className="mt-4">
+                    You can directly upload an excel sheet of numbers you want to send your message to
+                    without having to type or copy paste
+                  </p>
+                </Card>
               </div>
               <div className="flex-1 px-3">
                 <Card className="mb-8">
-                    <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
-                      <img
-                        src={excel}
-                        style={{
-                          display: 'inline-block',
-                          width: '2em',
-                          marginLeft: '-10px',
-                          height: '2em'
-                        }}
-                      ></img>
-                      <p
-                        className="font-semibold text-xl"
-                        style={{ display: 'inline-block', padding: '0px 10px' }}
-                      >
-                        Upload excel of numbers
-                      </p>
-                    </div>
-                    <p className="mt-4">
-                      You can directly upload an excel sheet of numbers you want to send your message to
-                      without having to type or copy paste
+                  <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
+                    <img
+                      src={download}
+                      style={{
+                        display: 'inline-block',
+                        width: '2em',
+                        marginLeft: '-10px',
+                        height: '2em'
+                      }}
+                    ></img>
+                    <p
+                      className="font-semibold text-xl"
+                      style={{ display: 'inline-block', padding: '0px 10px' }}
+                    >
+                      Download contacts from group
                     </p>
-                  </Card>
+                  </div>
+                  <p className="mt-4">
+                    You can get a detailed download of all the contacts from a group including the ones
+                    you have not saved
+                  </p>
+                </Card>
               </div>
               <div className="flex-1 px-3">
                 <Card className="mb-8">
-                    <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
-                      <img
-                        src={download}
-                        style={{
-                          display: 'inline-block',
-                          width: '2em',
-                          marginLeft: '-10px',
-                          height: '2em'
-                        }}
-                      ></img>
-                      <p
-                        className="font-semibold text-xl"
-                        style={{ display: 'inline-block', padding: '0px 10px' }}
-                      >
-                        Download contacts from group
-                      </p>
-                    </div>
-                    <p className="mt-4">
-                      You can get a detailed download of all the contacts from a group including the ones
-                      you have not saved
+                  <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
+                    <img
+                      src={format}
+                      style={{
+                        display: 'inline-block',
+                        width: '2em',
+                        marginLeft: '-10px',
+                        height: '2em'
+                      }}
+                    ></img>
+                    <p
+                      className="font-semibold text-xl"
+                      style={{ display: 'inline-block', padding: '0px 10px' }}
+                    >
+                      Message Formatting
                     </p>
-                  </Card>
+                  </div>
+                  <p className="mt-4">
+                    You can format your message - BOLD, italic, strikethrough and Emojis
+                  </p>
+                </Card>
               </div>
             </div>
           </div>
@@ -383,72 +382,49 @@ function main() {
             <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
               <div className="flex-1 px-3">
                 <Card className="mb-8">
-                    <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
-                      <img
-                        src={format}
-                        style={{
-                          display: 'inline-block',
-                          width: '2em',
-                          marginLeft: '-10px',
-                          height: '2em'
-                        }}
-                      ></img>
-                      <p
-                        className="font-semibold text-xl"
-                        style={{ display: 'inline-block', padding: '0px 10px' }}
-                      >
-                        Message Formatting
-                      </p>
-                    </div>
-                    <p className="mt-4">
-                      You can format your message - BOLD, italic, strikethrough and Emojis
+                  <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
+                    <img
+                      src={preview}
+                      style={{
+                        display: 'inline-block',
+                        width: '2em',
+                        marginLeft: '-10px',
+                        height: '2em'
+                      }}
+                    ></img>
+                    <p
+                      className="font-semibold text-xl"
+                      style={{ display: 'inline-block', padding: '0px 10px' }}
+                    >
+                      Real Time excel preview
                     </p>
-                  </Card>
+                  </div>
+                  <p className="mt-4">Get a real time preview of uploaded CSV of numbers</p>
+                </Card>
               </div>
               <div className="flex-1 px-3">
                 <Card className="mb-8">
-                    <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
-                      <img
-                        src={preview}
-                        style={{
-                          display: 'inline-block',
-                          width: '2em',
-                          marginLeft: '-10px',
-                          height: '2em'
-                        }}
-                      ></img>
-                      <p
-                        className="font-semibold text-xl"
-                        style={{ display: 'inline-block', padding: '0px 10px' }}
-                      >
-                        Real Time excel preview
-                      </p>
-                    </div>
-                    <p className="mt-4">Get a real time preview of uploaded CSV of numbers</p>
-                  </Card>
+                  <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
+                    <img
+                      src={notification}
+                      style={{
+                        display: 'inline-block',
+                        width: '2em',
+                        marginLeft: '-10px',
+                        height: '2em'
+                      }}
+                    ></img>
+                    <p
+                      className="font-semibold text-xl"
+                      style={{ display: 'inline-block', padding: '0px 10px' }}
+                    >
+                      Real time notification
+                    </p>
+                  </div>
+                  <p className="mt-4">Get real time update via notifications</p>
+                </Card>
               </div>
-              <div className="flex-1 px-3">
-                <Card className="mb-8">
-                    <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
-                      <img
-                        src={notification}
-                        style={{
-                          display: 'inline-block',
-                          width: '2em',
-                          marginLeft: '-10px',
-                          height: '2em'
-                        }}
-                      ></img>
-                      <p
-                        className="font-semibold text-xl"
-                        style={{ display: 'inline-block', padding: '0px 10px' }}
-                      >
-                        Real time notification
-                      </p>
-                    </div>
-                    <p className="mt-4">Get real time update via notifications</p>
-                  </Card>
-              </div>
+              <div className="flex-1 px-3"></div>
             </div>
           </div>
         </section>

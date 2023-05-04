@@ -6,7 +6,7 @@ import ws from "../../svg/medium.png";
 
 const Layout = ({ children }) => {
   const title =
-    'Prime Sender - Best Web Extension for Sending Messages';
+    'Prime Sender | Best Web Extension';
   const description =
     'The highest rated premium web sender extension on google chrome store to send messages, attachment, delivery report and much more...';
   return (
