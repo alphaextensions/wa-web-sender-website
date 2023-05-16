@@ -32,10 +32,8 @@ function HelpUsImprove() {
                 <p style={{ textAlign: 'center', marginBottom: '36px' }}>
                     We strive to give you the best service possible but maybe there are certain things we need to catch up on.
                 </p>
-                <iframe
-                    src="https://docs.google.com/forms/d/16gee-5t1oYn_y7BNs7mt1UG43gke2TQmuzp-StsstnQ/viewform?embedded=true"
-                    height="1080" style={{ margin: 'auto', width: '100%', maxWidth: '840px' }} frameBorder="0" marginHeight="0" marginWidth="0">Loading…
-                </iframe>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdAACp4FEHgEkv3o1T1fMMsY76pKv3KUUqp5wV5LT3gTEuhmQ/viewform?embedded=true" height="1080" style={{ margin: 'auto', width: '100%', maxWidth: '840px' }} 
+                frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
                 <p style={{ marginTop: '40px' }}>
                     <strong>If you had a change of heart somehow and want to know how Prime Sender works quickly in 3 steps, here :</strong><br />
                     <br />
