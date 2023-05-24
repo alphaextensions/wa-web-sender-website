@@ -27,28 +27,27 @@ export default function Pricing() {
   const location = useLocation(); 
   const getParams = () => {
     const params = new URLSearchParams(location.search);
-    const freeTrial = params.get('freeTrial');
-    const planExpired = params.get('planExpired');
-    const plan = params.get('plan')
+    const lastPlan = params.get('lastPlan');
+    const country = params.get('country');
+    const currentPlan = params.get('currentPlan')
 
-    if (freeTrial) {
-      setUserCountry(freeTrial);
+    setUserCountry(country)
+    if(lastPlan==='freeTrial'){
       setUserFreeTrial(true)
       setUserPlanExpired(false)
-    } else if (planExpired) {
-      setUserCountry(planExpired);
-      setUserFreeTrial(false)
+    }else if(lastPlan==='planExpired'){
       setUserPlanExpired(true)
+      setUserFreeTrial(false)
     }
-    if(plan==='basic'){
+    if(currentPlan==='basic'){
       setIsUserBasic(true)
       setIsUserAdvance(false)
-    }else if(plan==='advance'){
+    }else if(currentPlan==='advance'){
       setIsUserAdvance(true)
       setIsUserBasic(false)
     }
   
-    if (freeTrial || planExpired) {
+    if (lastPlan || country || currentPlan) {
       window.history.replaceState(null, '', window.location.pathname);
     }
   };
@@ -78,49 +77,31 @@ export default function Pricing() {
     sliderValue ? setPlanType('international') : setPlanType('indian');
   }
 
-  function getAdvanceButtonId() {
-    if (planType === 'international') {
-      return planPeriod === 'monthly' ? 'https://buy.stripe.com/fZeeVe1ZM30Aeo88wL' : 'https://buy.stripe.com/6oEcN6cEqat2gwg6or';
+  function getAdvanceButtonId(country,duration) {
+    if (country === 'international') {
+      return duration === 'monthly' ? 'https://buy.stripe.com/fZeeVe1ZM30Aeo88wL' : 'https://buy.stripe.com/6oEcN6cEqat2gwg6or';
     }
-    else if (planType === 'indonesia')
-      return planPeriod === 'monthly' ? 'https://buy.stripe.com/28ocN6gUGcBa7ZKdQX' : 'https://buy.stripe.com/00g7sM7k6gRq3JufZ9';
-    return planPeriod === 'monthly' ? 'https://buy.stripe.com/fZe7sMawi30Acg0bIZ' : 'https://razorpay.com/payment-button/pl_HyuXVKKhpfe28k/view';
+    else if (country === 'indonesia')
+      return duration === 'monthly' ? 'https://buy.stripe.com/28ocN6gUGcBa7ZKdQX' : 'https://buy.stripe.com/00g7sM7k6gRq3JufZ9';
+    return duration === 'monthly' ? 'https://buy.stripe.com/fZe7sMawi30Acg0bIZ' : 'https://razorpay.com/payment-button/pl_HyuXVKKhpfe28k/view';
   }
 
-  function getAdvanceUserButtonId() {
-    if (userCountry === 'international') {
-      return userPlanPeriod === 'monthly' ? 'https://buy.stripe.com/fZeeVe1ZM30Aeo88wL' : 'https://buy.stripe.com/6oEcN6cEqat2gwg6or';
+  function getBasicButtonId(country,duration) {
+    if (country === 'international') {
+      return duration === 'monthly' ? 'https://buy.stripe.com/4gwbJ25bYgRqa7S9AO' : 'https://buy.stripe.com/7sI4gAcEqeJi3JudQW';
     }
-    else if (userCountry === 'indonesia')
-      return userPlanPeriod === 'monthly' ? 'https://buy.stripe.com/28ocN6gUGcBa7ZKdQX' : 'https://buy.stripe.com/00g7sM7k6gRq3JufZ9';
-    return userPlanPeriod === 'monthly' ? 'https://buy.stripe.com/fZe7sMawi30Acg0bIZ' : 'https://razorpay.com/payment-button/pl_HyuXVKKhpfe28k/view';
+    else if (country === 'indonesia')
+      return duration === 'monthly' ? 'https://buy.stripe.com/dR6dRa33Q7gQeo8eV2' : 'https://buy.stripe.com/fZe28s8oaat2a7S8wJ';
+    return duration === 'monthly' ? 'https://buy.stripe.com/00g7sMawi30A3JucN2' : 'https://razorpay.com/payment-button/pl_HyuSnC8BpjlWV7/view';
   }
 
-  function getBasicButtonId() {
-    if (planType === 'international') {
-      return planPeriod === 'monthly' ? 'https://buy.stripe.com/4gwbJ25bYgRqa7S9AO' : 'https://buy.stripe.com/7sI4gAcEqeJi3JudQW';
+  function getBasicPlanPrice(country,duration) {
+    if (country === 'international') {
+      return duration === 'monthly' ? '$12.99' : '$129.99';
     }
-    else if (planType === 'indonesia')
-      return planPeriod === 'monthly' ? 'https://buy.stripe.com/dR6dRa33Q7gQeo8eV2' : 'https://buy.stripe.com/fZe28s8oaat2a7S8wJ';
-    return planPeriod === 'monthly' ? 'https://buy.stripe.com/00g7sMawi30A3JucN2' : 'https://razorpay.com/payment-button/pl_HyuSnC8BpjlWV7/view';
-  }
-
-  function getBasicUserButtonId() {
-    if (userCountry === 'international') {
-      return userPlanPeriod === 'monthly' ? 'https://buy.stripe.com/4gwbJ25bYgRqa7S9AO' : 'https://buy.stripe.com/7sI4gAcEqeJi3JudQW';
-    }
-    else if (userCountry === 'indonesia')
-      return userPlanPeriod === 'monthly' ? 'https://buy.stripe.com/dR6dRa33Q7gQeo8eV2' : 'https://buy.stripe.com/fZe28s8oaat2a7S8wJ';
-    return userPlanPeriod === 'monthly' ? 'https://buy.stripe.com/00g7sMawi30A3JucN2' : 'https://razorpay.com/payment-button/pl_HyuSnC8BpjlWV7/view';
-  }
-
-  function getBasicPlanPrice() {
-    if (planType === 'international') {
-      return planPeriod === 'monthly' ? '$12.99' : '$129.99';
-    }
-    else if (planType === 'indonesia')
-      return planPeriod === 'monthly' ? 'IDR 79000' : 'IDR 790000';
-    return planPeriod === 'monthly' ? '₹699' : '₹6999';
+    else if (country === 'indonesia')
+      return duration === 'monthly' ? 'IDR 79000' : 'IDR 790000';
+    return duration === 'monthly' ? '₹699' : '₹6999';
   }
 
   function getBasicPlanSlashPrice() {
@@ -132,31 +113,31 @@ export default function Pricing() {
     return planPeriod === 'monthly' ? '₹999' : '₹9999';
   }
 
-  function getBasicPlanOfferPrice() {
-    if (planType === 'international') {
-      return planPeriod === 'monthly' ? '$9.09' : '';
+  function getBasicPlanOfferPrice(country,duration) {
+    if (country === 'international') {
+      return duration === 'monthly' ? '$9.09' : '';
     }
-    else if (planType === 'indonesia')
-      return planPeriod === 'monthly' ? 'IDR 55300' : '';
-    return planPeriod === 'monthly' ? '₹489' : '';
+    else if (country === 'indonesia')
+      return duration === 'monthly' ? 'IDR 55300' : '';
+    return duration === 'monthly' ? '₹489' : '';
   }
 
-  function getAdvancePlanPrice() {
-    if (planType === 'international') {
-      return planPeriod === 'monthly' ? '$15.99' : '$159.99';
+  function getAdvancePlanPrice(country,duration) {
+    if (country === 'international') {
+      return duration === 'monthly' ? '$15.99' : '$159.99';
     }
-    else if (planType === 'indonesia')
-      return planPeriod === 'monthly' ? 'IDR 99000' : 'IDR 990000';
-    return planPeriod === 'monthly' ? '₹849' : '₹8499';
+    else if (country === 'indonesia')
+      return duration === 'monthly' ? 'IDR 99000' : 'IDR 990000';
+    return duration === 'monthly' ? '₹849' : '₹8499';
   }
 
-  function getAdvancePlanOfferPrice() {
-    if (planType === 'international') {
-      return planPeriod === 'monthly' ? '$11.19' : '';
+  function getAdvancePlanOfferPrice(country,duration) {
+    if (country === 'international') {
+      return duration === 'monthly' ? '$11.19' : '';
     }
-    else if (planType === 'indonesia')
-      return planPeriod === 'monthly' ? 'IDR 69300' : '';
-    return planPeriod === 'monthly' ? '₹594' : '';
+    else if (country === 'indonesia')
+      return duration === 'monthly' ? 'IDR 69300' : '';
+    return duration === 'monthly' ? '₹594' : '';
   }
 
   function getAdvancePlanSlashPrice() {
@@ -168,102 +149,12 @@ export default function Pricing() {
     return planPeriod === 'monthly' ? '₹1199' : '₹11999';
   }
 
-  function getBasicUserFreeTrialMonthlyPrice() {
-    if (userCountry === 'international') {
-      return '$12.99' 
-    }
-    else if (userCountry === 'indonesia')
-      return 'IDR 79000' 
-    return '₹699'
-  }
-
-  function getBasicUserFreeTrialMonthlyOfferPrice() {
-    if (userCountry === 'international') {
-      return '$9.09' 
-    }
-    else if (userCountry === 'indonesia')
-      return 'IDR 55300' 
-    return '₹489'
-  }
-
-  function getBasicUserFreeTrialAnnuallyPrice(){
-    if (userCountry === 'international') {
-      return '$129.99' 
-    }
-    else if (userCountry === 'indonesia')
-      return 'IDR 790000' 
-    return '₹6999'
-  }
-
-  function getAdvanceUserFreeTrialMonthlyPrice() {
-    if (userCountry === 'international') {
-      return '$15.99' 
-    }
-    else if (userCountry === 'indonesia')
-      return 'IDR 99000' 
-    return '₹849'
-  }
-
-  function getAdvanceUserFreeTrialMonthlyOfferPrice() {
-    if (userCountry === 'international') {
-      return '$11.19' 
-    }
-    else if (userCountry === 'indonesia')
-      return 'IDR 69300' 
-    return '₹594'
-  }
-
-  function getAdvanceUserFreeTrialAnnuallyPrice(){
-    if (userCountry === 'international') {
-      return '$159.99' 
-    }
-    else if (userCountry === 'indonesia')
-      return 'IDR 990000' 
-    return '₹8499'
-  }
-
-  function getBasicUserPlanExpiredMonthlyPrice() {
-    if (userCountry === 'international') {
-      return '$12.99' 
-    }
-    else if (userCountry === 'indonesia')
-      return 'IDR 79000' 
-    return '₹699'
-  }
-
-  function getBasicUserPlanExpiredAnnuallyPrice(){
-    if (userCountry === 'international') {
-      return '$129.99' 
-    }
-    else if (userCountry === 'indonesia')
-      return 'IDR 790000' 
-    return '₹6999'
-  }
-
-  function getAdvanceUserPlanExpiredMonthlyPrice() {
-    if (userCountry === 'international') {
-      return '$15.99' 
-    }
-    else if (userCountry === 'indonesia')
-      return 'IDR 99000' 
-    return '₹849'
-  }
-
-  function getAdvanceUserPlanExpiredAnnuallyPrice(){
-    if (userCountry === 'international') {
-      return '$159.99' 
-    }
-    else if (userCountry === 'indonesia')
-      return 'IDR 990000' 
-    return '₹8499'
-  }
-
   function getFreePlanPrice() {
     return planType === 'international' ? '$0.00' : '₹0';
   }
 
   function showBasicButton() {
-    const button_id = getBasicButtonId();
+    const button_id = getBasicButtonId(planType,planPeriod);
     const button_text = planPeriod === 'monthly' ? 'Subscribe' : 'Buy Basic'
     return (
       <a
@@ -276,7 +167,7 @@ export default function Pricing() {
   }
 
   function showBasicUserButton() {
-    const button_id = getBasicUserButtonId();
+    const button_id = getBasicButtonId(userCountry,userPlanPeriod);
     let button_text = userFreeTrial ? 'Subscribe' : 'Buy'
     return (
       <a
@@ -288,7 +179,7 @@ export default function Pricing() {
   }
 
   function showAdvanceButton() {
-    const button_id = getAdvanceButtonId();
+    const button_id = getAdvanceButtonId(planType,planPeriod);
     const button_text = planPeriod === 'monthly' ? 'Subscribe' : 'Buy Advance'
     return (
       <a
@@ -301,7 +192,7 @@ export default function Pricing() {
   }
 
   function showAdvanceUserButton() {
-    const button_id = getAdvanceUserButtonId();
+    const button_id = getAdvanceButtonId(userCountry,userPlanPeriod);
     let button_text = userFreeTrial ? 'Subscribe' : 'Buy'
     return (
       <a
@@ -341,16 +232,16 @@ export default function Pricing() {
             </div>
             <div className="pricing-popup-content">
               <div className="monthly-price">
-               <span className="pricing-popup-slash-price"><span className='rupee'>{getBasicUserFreeTrialMonthlyPrice()}</span>/month</span> <br /> 
-               <span className="pricing-popup-offer-price"><span className='rupee'>{getBasicUserFreeTrialMonthlyOfferPrice()}</span>*/month</span>
+               <span className="pricing-popup-slash-price"><span className='rupee'>{getBasicPlanPrice(userCountry,'monthly')}</span>/month</span> <br /> 
+               <span className="pricing-popup-offer-price"><span className='rupee'>{getBasicPlanOfferPrice(userCountry,'monthly')}</span>*/month</span>
               </div>
               <div className="annual-price" style={{marginTop:'-22px'}}>
                 {
-                  userCountry==='indonesia' ? <span className='rupee'> {getBasicUserFreeTrialAnnuallyPrice()}({
-                    (getBasicUserFreeTrialAnnuallyPrice().substring(0,4)) + Math.floor((getBasicUserFreeTrialAnnuallyPrice().substring(4) / 12))
+                  userCountry==='indonesia' ? <span className='rupee'> {getBasicPlanPrice(userCountry,'annually')}({
+                    (getBasicPlanPrice(userCountry,'annually').substring(0,4)) + Math.floor((getBasicPlanPrice(userCountry,'annually').substring(4) / 12))
                     }/month)</span> :
-                  <span className='rupee' style={{marginRight:'30px'}}> {getBasicUserFreeTrialAnnuallyPrice()}({
-                    (getBasicUserFreeTrialAnnuallyPrice().substring(0,1)) + Math.floor((getBasicUserFreeTrialAnnuallyPrice().substring(1) / 12))
+                  <span className='rupee' style={{marginRight:'30px'}}> {getBasicPlanPrice(userCountry,'annually')}({
+                    (getBasicPlanPrice(userCountry,'annually').substring(0,1)) + Math.floor((getBasicPlanPrice(userCountry,'annually').substring(1) / 12))
                     }/month)</span>
                 }
               </div>
@@ -383,15 +274,15 @@ export default function Pricing() {
                   </div>
                   <div className="pricing-popup-content">
                     <div className="monthly-price">
-                      <span className='rupee'>{getBasicUserPlanExpiredMonthlyPrice()}</span>/month
+                      <span className='rupee'>{getBasicPlanPrice(userCountry,'monthly')}</span>/month
                     </div>
                     <div className="annual-price">
                     {
-                      userCountry==='indonesia' ? <span className='rupee'> {getBasicUserPlanExpiredAnnuallyPrice()}({
-                        (getBasicUserPlanExpiredAnnuallyPrice().substring(0,4)) + Math.floor((getBasicUserPlanExpiredAnnuallyPrice().substring(4) / 12))
+                      userCountry==='indonesia' ? <span className='rupee'> {getBasicPlanPrice(userCountry,'annually')}({
+                        (getBasicPlanPrice(userCountry,'annually').substring(0,4)) + Math.floor((getBasicPlanPrice(userCountry,'annually').substring(4) / 12))
                         }/month)</span> :
-                      <span className='rupee' style={{marginRight:'30px'}}> {getBasicUserPlanExpiredAnnuallyPrice()}({
-                        (getBasicUserPlanExpiredAnnuallyPrice().substring(0,1)) + Math.floor((getBasicUserPlanExpiredAnnuallyPrice().substring(1) / 12))
+                      <span className='rupee' style={{marginRight:'30px'}}> {getBasicPlanPrice(userCountry,'annually')}({
+                        (getBasicPlanPrice(userCountry,'annually').substring(0,1)) + Math.floor((getBasicPlanPrice(userCountry,'annually').substring(1) / 12))
                         }/month)</span>
                     }
                     </div>
@@ -426,16 +317,16 @@ export default function Pricing() {
             </div>
             <div className="pricing-popup-content">
               <div className="monthly-price">
-               <span className="pricing-popup-slash-price"><span className='rupee'>{getAdvanceUserFreeTrialMonthlyPrice()}</span>/month</span> <br /> 
-               <span className="pricing-popup-offer-price"><span className='rupee'>{getAdvanceUserFreeTrialMonthlyOfferPrice()}</span>*/month</span>
+               <span className="pricing-popup-slash-price"><span className='rupee'>{getAdvancePlanPrice(userCountry,'monthly')}</span>/month</span> <br /> 
+               <span className="pricing-popup-offer-price"><span className='rupee'>{getAdvancePlanOfferPrice(userCountry,'monthly')}</span>*/month</span>
               </div>
               <div className="annual-price" style={{marginTop:'-22px'}}>
                   {
-                    userCountry==='indonesia' ? <span className='rupee'> {getAdvanceUserFreeTrialAnnuallyPrice()}({
-                      (getAdvanceUserFreeTrialAnnuallyPrice().substring(0,4)) + Math.floor((getAdvanceUserFreeTrialAnnuallyPrice().substring(4) / 12))
+                    userCountry==='indonesia' ? <span className='rupee'> {getAdvancePlanPrice(userCountry,'annually')}({
+                      (getAdvancePlanPrice(userCountry,'annually').substring(0,4)) + Math.floor((getAdvancePlanPrice(userCountry,'annually').substring(4) / 12))
                       }/month)</span> :
-                    <span className='rupee' style={{marginRight:'30px'}}> {getAdvanceUserFreeTrialAnnuallyPrice()}({
-                      (getAdvanceUserFreeTrialAnnuallyPrice().substring(0,1)) + Math.floor((getAdvanceUserFreeTrialAnnuallyPrice().substring(1) / 12))
+                    <span className='rupee' style={{marginRight:'30px'}}> {getAdvancePlanPrice(userCountry,'annually')}({
+                      (getAdvancePlanPrice(userCountry,'annually').substring(0,1)) + Math.floor((getAdvancePlanPrice(userCountry,'annually').substring(1) / 12))
                       }/month)</span>
                   }
               </div>
@@ -468,15 +359,15 @@ export default function Pricing() {
                   </div>
                   <div className="pricing-popup-content">
                     <div className="monthly-price">
-                      <span className='rupee'>{getAdvanceUserPlanExpiredMonthlyPrice()}</span>/month
+                      <span className='rupee'>{getAdvancePlanPrice(userCountry,'monthly')}</span>/month
                     </div>
                     <div className="annual-price">
                     {
-                      userCountry==='indonesia' ? <span className='rupee'> {getAdvanceUserPlanExpiredAnnuallyPrice()}({
-                        (getAdvanceUserPlanExpiredAnnuallyPrice().substring(0,4)) + Math.floor((getAdvanceUserPlanExpiredAnnuallyPrice().substring(4) / 12))
+                      userCountry==='indonesia' ? <span className='rupee'> {getAdvancePlanPrice(userCountry,'annually')}({
+                        (getAdvancePlanPrice(userCountry,'annually').substring(0,4)) + Math.floor((getAdvancePlanPrice(userCountry,'annually').substring(4) / 12))
                         }/month)</span> :
-                      <span className='rupee' style={{marginRight:'30px'}}> {getAdvanceUserPlanExpiredAnnuallyPrice()}({
-                        (getAdvanceUserPlanExpiredAnnuallyPrice().substring(0,1)) + Math.floor((getAdvanceUserPlanExpiredAnnuallyPrice().substring(1) / 12))
+                      <span className='rupee' style={{marginRight:'30px'}}> {getAdvancePlanPrice(userCountry,'annually')}({
+                        (getAdvancePlanPrice(userCountry,'annually').substring(0,1)) + Math.floor((getAdvancePlanPrice(userCountry,'annually').substring(1) / 12))
                         }/month)</span>
                     }
                     </div>
@@ -527,15 +418,15 @@ export default function Pricing() {
             <th />
             <th className="pricing-header-text rupee free">{getFreePlanPrice()}</th>
             <th className={`pricing-header-text ${planPeriod === 'monthly' ? 'offer' : ''} ${planType === 'indonesia' && planPeriod === "monthly" ? "offer-indo" : ""}`}>
-              <div className='rupee'>{getBasicPlanPrice()}</div>
+              <div className='rupee'>{getBasicPlanPrice(planType,planPeriod)}</div>
               <div className="amount-slash">
                 <span className='rupee'>{getBasicPlanSlashPrice()}</span>
               </div>
               <div>
                 {planPeriod === "monthly" && (
-                  <a target='_blank' href={getBasicButtonId()} className="offer-price">
+                  <a target='_blank' href={getBasicButtonId(planType,planPeriod)} className="offer-price">
                     {"(Get at "}
-                    <span className='rupee'>{getBasicPlanOfferPrice()}</span>
+                    <span className='rupee'>{getBasicPlanOfferPrice(planType,planPeriod)}</span>
                     <br />
                     Limited offer*)
                   </a>
@@ -543,15 +434,15 @@ export default function Pricing() {
               </div>
             </th>
             <th className={`pricing-header-text ${planPeriod === 'monthly' ? 'offer' : ''} ${planType === 'indonesia' && planPeriod === "monthly" ? "offer-indo" : ""}`}>
-              <div className='rupee'>{getAdvancePlanPrice()}</div>
+              <div className='rupee'>{getAdvancePlanPrice(planType,planPeriod)}</div>
               <div className="amount-slash">
                 <span className='rupee'>{getAdvancePlanSlashPrice()}</span>
               </div>
               <div>
                 {planPeriod === "monthly" && (
-                  <a target='_blank' href={getAdvanceButtonId()} className="offer-price">
+                  <a target='_blank' href={getAdvanceButtonId(planType,planPeriod)} className="offer-price">
                     {"(Get at "}
-                    <span className='rupee'>{getAdvancePlanOfferPrice()}</span>
+                    <span className='rupee'>{getAdvancePlanOfferPrice(planType,planPeriod)}</span>
                     <br />
                     Limited offer*)
                   </a>
