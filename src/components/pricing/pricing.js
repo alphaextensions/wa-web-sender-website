@@ -12,6 +12,7 @@ import check from '../../svg/check.jpeg';
 import cancel from '../../svg/cancel.png';
 import screenshot from '../../svg/screenshot.png';
 import large from '../../svg/large.png'
+import stars from '../../svg/stars.png'
 
 export default function Pricing() {
   const [planPeriod, setPlanPeriod] = useState('monthly');
@@ -227,6 +228,9 @@ export default function Pricing() {
             <h1>Prime Sender <b>Basic Plan</b></h1>
           </div>
             <hr />
+            <div className='pricing-recommendation-msg'>
+              <img src={stars} alt="starts" /> <div className="recommendation-msg-content">Recommended - Value for Money</div>
+            </div>
             <div className="pricing-popup-slider">
               <Slider offText="Basic Monthly Plan" onText="Basic Annual Plan" setValue={userTogglePeriod} />
             </div>
@@ -269,6 +273,9 @@ export default function Pricing() {
                   <h1>Prime Sender <b>Basic Plan</b></h1>
                 </div>
                   <hr />
+                  <div className='pricing-recommendation-msg'>
+                    <img src={stars} alt="starts" /> <div className="recommendation-msg-content">Recommended - Value for Money</div>
+                  </div>
                   <div className="pricing-popup-slider">
                     <Slider offText="Basic Monthly Plan" onText="Basic Annual Plan" setValue={userTogglePeriod} />
                   </div>
@@ -312,6 +319,9 @@ export default function Pricing() {
             <h1>Prime Sender <b>Advance Plan</b></h1>
           </div>
             <hr />
+            <div className='pricing-recommendation-msg'>
+              <img src={stars} alt="starts" /> <div className="recommendation-msg-content">Recommended - Value for Money</div>
+            </div>
             <div className="pricing-popup-slider">
               <Slider offText="Basic Monthly Plan" onText="Basic Annual Plan" setValue={userTogglePeriod} />
             </div>
@@ -354,6 +364,9 @@ export default function Pricing() {
                   <h1>Prime Sender <b>Advance Plan</b></h1>
                 </div>
                   <hr />
+                  <div className='pricing-recommendation-msg'>
+                    <img src={stars} alt="starts" /> <div className="recommendation-msg-content">Recommended - Value for Money</div>
+                  </div>
                   <div className="pricing-popup-slider">
                     <Slider offText="Basic Monthly Plan" onText="Basic Annual Plan" setValue={userTogglePeriod} />
                   </div>
