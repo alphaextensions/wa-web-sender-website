@@ -19,11 +19,9 @@ export default function Pricing() {
   const [userPlanPeriod, setUserPlanPeriod] = useState('annually');
   const [planType, setPlanType] = useState('international');
   const [basicButton, setBasicButton] = useState('international');
-  const [userFreeTrial,setUserFreeTrial] = useState(false)
-  const [userPlanExpired,setUserPlanExpired] = useState(false)
+  const [userLastPlan,setUserLastPlan] = useState(null)
   const [userCountry,setUserCountry] = useState('')
-  const [isUserBasic,setIsUserBasic] = useState(false)
-  const [isUserAdvance,setIsUserAdvance] = useState(false)
+  const [userType,setUserType] = useState(null)
 
   const location = useLocation(); 
   const getParams = () => {
@@ -34,18 +32,14 @@ export default function Pricing() {
 
     setUserCountry(country)
     if(lastPlan==='freeTrial'){
-      setUserFreeTrial(true)
-      setUserPlanExpired(false)
+      setUserLastPlan('freeTrial')
     }else if(lastPlan==='planExpired'){
-      setUserPlanExpired(true)
-      setUserFreeTrial(false)
+      setUserLastPlan('planExpired')
     }
     if(currentPlan==='basic'){
-      setIsUserBasic(true)
-      setIsUserAdvance(false)
+      setUserType('basic')
     }else if(currentPlan==='advance'){
-      setIsUserAdvance(true)
-      setIsUserBasic(false)
+      setUserType('advance')
     }
   
     if (lastPlan || country || currentPlan) {
@@ -167,9 +161,9 @@ export default function Pricing() {
     );
   }
 
-  function showBasicUserButton() {
-    const button_id = getBasicButtonId(userCountry,userPlanPeriod);
-    let button_text = userFreeTrial ? 'Subscribe' : 'Buy'
+  function showUserButton() {
+    const button_id = userType==='basic' ? getBasicButtonId(userCountry,userPlanPeriod) : getAdvanceButtonId(userCountry,userPlanPeriod);
+    let button_text = userLastPlan==='freeTrial' ? 'Subscribe' : 'Buy'
     return (
       <a
         href={button_id}
@@ -192,18 +186,6 @@ export default function Pricing() {
     );
   }
 
-  function showAdvanceUserButton() {
-    const button_id = getAdvanceButtonId(userCountry,userPlanPeriod);
-    let button_text = userFreeTrial ? 'Subscribe' : 'Buy'
-    return (
-      <a
-        href={button_id}
-        target="_blank">
-        {button_text}
-      </a>
-    );
-  }
-
   function renderResultTabs() {
     var india = (planType == "india") ? 'active' : '';
     var indonesia = (planType == "indonesia") ? 'active' : '';
@@ -217,190 +199,71 @@ export default function Pricing() {
     );
   }
 
+  function generatePricingPopup() {
+    return (
+      <>
+        <div className="pricing-popup-overlay"></div>
+        <div className="pricing-popup" style={userLastPlan === 'planExpired'  ? { background: '#EDF9F3' } : null}>
+          <div className="pricing-popup-header">
+            <img src={large} alt="Prime-Sender" />
+            <h1>Prime Sender <b>{userType.charAt(0).toUpperCase() + userType.slice(1)} Plan</b></h1>
+          </div>
+          <hr />
+          <div className='pricing-recommendation-msg'>
+            <img src={stars} alt="starts" />
+            <div className="recommendation-msg-content">Recommended - Value for Money</div>
+          </div>
+          <div className="pricing-popup-slider">
+            <Slider offText="Basic Monthly Plan" onText="Basic Annual Plan" setValue={userTogglePeriod} />
+          </div>
+          <div className="pricing-popup-content">
+            <div className="monthly-price">
+              <span className={userLastPlan==='freeTrial' ? 'pricing-popup-slash-price' : 'rupee'}><span className='rupee'>
+                { userType==='basic' ? getBasicPlanPrice(userCountry, 'monthly') : getAdvancePlanPrice(userCountry,'monthly') }</span>/month</span> <br />
+                { userLastPlan==='freeTrial' && (
+                    <span className="pricing-popup-offer-price"><span className='rupee'>
+                    { userType==='basic' ? getBasicPlanOfferPrice(userCountry, 'monthly') : getAdvancePlanOfferPrice(userCountry,'monthly') }</span>*/month
+                    </span>
+                )}
+            </div>
+            <div className="annual-price" style={userLastPlan === 'freeTrial' ? { marginTop: '-22px' }: null}>
+              {
+                userCountry === 'indonesia' ?
+                  <span className='rupee'> 
+                    {userType === 'basic' ? getBasicPlanPrice(userCountry, 'annually') : getAdvancePlanPrice(userCountry, 'annually')}({
+                      (userType === 'basic' ? getBasicPlanPrice(userCountry, 'annually').substring(0, 4) : getAdvancePlanPrice(userCountry, 'annually').substring(0, 4)) +
+                      Math.floor((userType === 'basic' ? getBasicPlanPrice(userCountry, 'annually').substring(4) : getAdvancePlanPrice(userCountry, 'annually').substring(4)) / 12)
+                    }/month)</span> :
+                  <span className='rupee' style={{ marginRight: '30px' }}> 
+                    {userType === 'basic' ? getBasicPlanPrice(userCountry, 'annually') : getAdvancePlanPrice(userCountry, 'annually')}({
+                      (userType === 'basic' ? getBasicPlanPrice(userCountry, 'annually').substring(0, 1) : getAdvancePlanPrice(userCountry, 'annually').substring(0, 1)) +
+                      Math.floor((userType === 'basic' ? getBasicPlanPrice(userCountry, 'annually').substring(1) : getAdvancePlanPrice(userCountry, 'annually').substring(1)) / 12)
+                    }/month)</span>
+              }
+            </div>
+          </div>
+          <div className="pricing-popup-btn">
+            <button>{showUserButton()}</button>
+          </div>
+          <div className="pricing-popup-footer">
+            <div className="pricing-popup-footer-icon"><span>i</span></div>
+            <div className="pricing-popup-footer-content">
+              <span>{userPlanPeriod === 'monthly' && userLastPlan==='freeTrial' ? "*Discount applicable for the first month" : ""}</span>
+              {
+                userPlanPeriod === 'monthly' ?
+                  "By subscribing, you agree to auto-deductions every month according to your plan type which will extend your plan type by a month. By purchasing the premium plan, you agree to our Terms of Service and Privacy Policy" :
+                  "By purchasing the premium plan, you agree to our Terms of Service and Privacy Policy"
+              }
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  }
+
   return (
     <div className="pricing">
-      {
-        userFreeTrial && isUserBasic && <>
-        <div className="pricing-popup-overlay"></div>
-        <div className="pricing-popup">
-          <div className="pricing-popup-header">
-            <img src={large} alt="Prime-Sender" />
-            <h1>Prime Sender <b>Basic Plan</b></h1>
-          </div>
-            <hr />
-            <div className='pricing-recommendation-msg'>
-              <img src={stars} alt="starts" /> <div className="recommendation-msg-content">Recommended - Value for Money</div>
-            </div>
-            <div className="pricing-popup-slider">
-              <Slider offText="Basic Monthly Plan" onText="Basic Annual Plan" setValue={userTogglePeriod} />
-            </div>
-            <div className="pricing-popup-content">
-              <div className="monthly-price">
-               <span className="pricing-popup-slash-price"><span className='rupee'>{getBasicPlanPrice(userCountry,'monthly')}</span>/month</span> <br /> 
-               <span className="pricing-popup-offer-price"><span className='rupee'>{getBasicPlanOfferPrice(userCountry,'monthly')}</span>*/month</span>
-              </div>
-              <div className="annual-price" style={{marginTop:'-22px'}}>
-                {
-                  userCountry==='indonesia' ? <span className='rupee'> {getBasicPlanPrice(userCountry,'annually')}({
-                    (getBasicPlanPrice(userCountry,'annually').substring(0,4)) + Math.floor((getBasicPlanPrice(userCountry,'annually').substring(4) / 12))
-                    }/month)</span> :
-                  <span className='rupee' style={{marginRight:'30px'}}> {getBasicPlanPrice(userCountry,'annually')}({
-                    (getBasicPlanPrice(userCountry,'annually').substring(0,1)) + Math.floor((getBasicPlanPrice(userCountry,'annually').substring(1) / 12))
-                    }/month)</span>
-                }
-              </div>
-            </div>
-            <div className="pricing-popup-btn">
-              <button>{showBasicUserButton()}</button>
-            </div>
-            <div className="pricing-popup-footer">
-                <div className="pricing-popup-footer-icon"><span>i</span></div>
-                <div className="pricing-popup-footer-content">
-                  <span>*Discount applicable for the first month</span>
-                  By subscribing, you agree to auto-deductions every month according to your plan type which will extend your plan type by a month. By purchasing the premium plan, you agree to our Terms of Service and Privacy Policy
-                </div>
-            </div>
-        </div>
-      </>
-      }
-
-      {
-        userPlanExpired && isUserBasic && <>
-        <div className="pricing-popup-overlay"></div>
-              <div className="pricing-popup" style={{background:'#EDF9F3'}}>
-                <div className="pricing-popup-header">
-                  <img src={large} alt="Prime-Sender" />
-                  <h1>Prime Sender <b>Basic Plan</b></h1>
-                </div>
-                  <hr />
-                  <div className='pricing-recommendation-msg'>
-                    <img src={stars} alt="starts" /> <div className="recommendation-msg-content">Recommended - Value for Money</div>
-                  </div>
-                  <div className="pricing-popup-slider">
-                    <Slider offText="Basic Monthly Plan" onText="Basic Annual Plan" setValue={userTogglePeriod} />
-                  </div>
-                  <div className="pricing-popup-content">
-                    <div className="monthly-price">
-                      <span className='rupee'>{getBasicPlanPrice(userCountry,'monthly')}</span>/month
-                    </div>
-                    <div className="annual-price">
-                    {
-                      userCountry==='indonesia' ? <span className='rupee'> {getBasicPlanPrice(userCountry,'annually')}({
-                        (getBasicPlanPrice(userCountry,'annually').substring(0,4)) + Math.floor((getBasicPlanPrice(userCountry,'annually').substring(4) / 12))
-                        }/month)</span> :
-                      <span className='rupee' style={{marginRight:'30px'}}> {getBasicPlanPrice(userCountry,'annually')}({
-                        (getBasicPlanPrice(userCountry,'annually').substring(0,1)) + Math.floor((getBasicPlanPrice(userCountry,'annually').substring(1) / 12))
-                        }/month)</span>
-                    }
-                    </div>
-                  </div>
-                  <div className="pricing-popup-btn">
-                    <button>{showBasicUserButton()}</button>
-                  </div>
-                  <div className="pricing-popup-footer">
-                      <div className="pricing-popup-footer-icon"><span>i</span></div>
-                      <div className="pricing-popup-footer-content">
-                        <span></span>
-                        {
-                          userPlanPeriod==='monthly'? "By subscribing, you agree to auto-deductions every month according to your plan type which will extend your plan type by a month. By purchasing the premium plan, you agree to our Terms of Service and Privacy Policy" : "By purchasing the premium plan, you agree to our Terms of Service and Privacy Policy"
-                        }
-                      </div>
-                  </div>
-              </div>
-        </>
-      }
-
-      {
-        userFreeTrial && isUserAdvance && <>
-        <div className="pricing-popup-overlay"></div>
-        <div className="pricing-popup">
-          <div className="pricing-popup-header">
-            <img src={large} alt="Prime-Sender" />
-            <h1>Prime Sender <b>Advance Plan</b></h1>
-          </div>
-            <hr />
-            <div className='pricing-recommendation-msg'>
-              <img src={stars} alt="starts" /> <div className="recommendation-msg-content">Recommended - Value for Money</div>
-            </div>
-            <div className="pricing-popup-slider">
-              <Slider offText="Basic Monthly Plan" onText="Basic Annual Plan" setValue={userTogglePeriod} />
-            </div>
-            <div className="pricing-popup-content">
-              <div className="monthly-price">
-               <span className="pricing-popup-slash-price"><span className='rupee'>{getAdvancePlanPrice(userCountry,'monthly')}</span>/month</span> <br /> 
-               <span className="pricing-popup-offer-price"><span className='rupee'>{getAdvancePlanOfferPrice(userCountry,'monthly')}</span>*/month</span>
-              </div>
-              <div className="annual-price" style={{marginTop:'-22px'}}>
-                  {
-                    userCountry==='indonesia' ? <span className='rupee'> {getAdvancePlanPrice(userCountry,'annually')}({
-                      (getAdvancePlanPrice(userCountry,'annually').substring(0,4)) + Math.floor((getAdvancePlanPrice(userCountry,'annually').substring(4) / 12))
-                      }/month)</span> :
-                    <span className='rupee' style={{marginRight:'30px'}}> {getAdvancePlanPrice(userCountry,'annually')}({
-                      (getAdvancePlanPrice(userCountry,'annually').substring(0,1)) + Math.floor((getAdvancePlanPrice(userCountry,'annually').substring(1) / 12))
-                      }/month)</span>
-                  }
-              </div>
-            </div>
-            <div className="pricing-popup-btn">
-              <button>{showAdvanceUserButton()}</button>
-            </div>
-            <div className="pricing-popup-footer">
-                <div className="pricing-popup-footer-icon"><span>i</span></div>
-                <div className="pricing-popup-footer-content">
-                  <span>*Discount applicable for the first month</span>
-                  By subscribing, you agree to auto-deductions every month according to your plan type which will extend your plan type by a month. By purchasing the premium plan, you agree to our Terms of Service and Privacy Policy
-                </div>
-            </div>
-        </div>
-      </>
-      }
-
-      {
-        userPlanExpired && isUserAdvance && <>
-        <div className="pricing-popup-overlay"></div>
-              <div className="pricing-popup" style={{background:'#EDF9F3'}}>
-                <div className="pricing-popup-header">
-                  <img src={large} alt="Prime-Sender" />
-                  <h1>Prime Sender <b>Advance Plan</b></h1>
-                </div>
-                  <hr />
-                  <div className='pricing-recommendation-msg'>
-                    <img src={stars} alt="starts" /> <div className="recommendation-msg-content">Recommended - Value for Money</div>
-                  </div>
-                  <div className="pricing-popup-slider">
-                    <Slider offText="Basic Monthly Plan" onText="Basic Annual Plan" setValue={userTogglePeriod} />
-                  </div>
-                  <div className="pricing-popup-content">
-                    <div className="monthly-price">
-                      <span className='rupee'>{getAdvancePlanPrice(userCountry,'monthly')}</span>/month
-                    </div>
-                    <div className="annual-price">
-                    {
-                      userCountry==='indonesia' ? <span className='rupee'> {getAdvancePlanPrice(userCountry,'annually')}({
-                        (getAdvancePlanPrice(userCountry,'annually').substring(0,4)) + Math.floor((getAdvancePlanPrice(userCountry,'annually').substring(4) / 12))
-                        }/month)</span> :
-                      <span className='rupee' style={{marginRight:'30px'}}> {getAdvancePlanPrice(userCountry,'annually')}({
-                        (getAdvancePlanPrice(userCountry,'annually').substring(0,1)) + Math.floor((getAdvancePlanPrice(userCountry,'annually').substring(1) / 12))
-                        }/month)</span>
-                    }
-                    </div>
-                  </div>
-                  <div className="pricing-popup-btn">
-                    <button>{showAdvanceUserButton()}</button>
-                  </div>
-                  <div className="pricing-popup-footer">
-                      <div className="pricing-popup-footer-icon"><span>i</span></div>
-                      <div className="pricing-popup-footer-content">
-                        <span></span>
-                        {
-                          userPlanPeriod==='monthly'? "By subscribing, you agree to auto-deductions every month according to your plan type which will extend your plan type by a month. By purchasing the premium plan, you agree to our Terms of Service and Privacy Policy" : "By purchasing the premium plan, you agree to our Terms of Service and Privacy Policy"
-                        }
-                      </div>
-                  </div>
-              </div>
-        </>
-      }
-
+      {userLastPlan && generatePricingPopup()}
       <h1 className="price-header">Our Pricing</h1>
       <div style={{ background: '#009A88', borderRadius: '5px', textAlign: 'center', color: '#fff', padding: '12px', width: '100%', maxWidth: '980px', fontWeight: 'bold', fontSize: '20px' }}>
         Early Bird Offer For New User - Extra 30% OFF. Use Code ‘NEWUSER30’

@@ -64,7 +64,7 @@
   font-weight: bold;
 }
 .pricing-recommendation-msg .recommendation-msg-content{
-  background: linear-gradient(180deg, #AAFDB2 0%, #FFCD00 0.01%, rgba(255, 205, 2, 0) 100%);
+  background: linear-gradient(180deg, #FFCD00 40%, rgba(255, 205, 2, 0) 110%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -156,7 +156,7 @@
   justify-content: center;
 }
 .pricing-popup-footer-content{
-  font-size:12px;
+  font-size:11px;
   flex:1;
 }
 .pricing-popup-footer-content span{
