@@ -21,7 +21,7 @@ export default function Pricing() {
   const [basicButton, setBasicButton] = useState('international');
   const [userLastPlan,setUserLastPlan] = useState(null)
   const [userCountry,setUserCountry] = useState('')
-  const [userType,setUserType] = useState(null)
+  const [userPlan,setUserPlan] = useState(null)
 
   const location = useLocation(); 
   const getParams = () => {
@@ -31,16 +31,8 @@ export default function Pricing() {
     const currentPlan = params.get('currentPlan')
 
     setUserCountry(country)
-    if(lastPlan==='freeTrial'){
-      setUserLastPlan('freeTrial')
-    }else if(lastPlan==='planExpired'){
-      setUserLastPlan('planExpired')
-    }
-    if(currentPlan==='basic'){
-      setUserType('basic')
-    }else if(currentPlan==='advance'){
-      setUserType('advance')
-    }
+    setUserLastPlan(lastPlan)
+    setUserPlan(currentPlan)
   
     if (lastPlan || country || currentPlan) {
       window.history.replaceState(null, '', window.location.pathname);
@@ -162,7 +154,7 @@ export default function Pricing() {
   }
 
   function showUserButton() {
-    const button_id = userType==='basic' ? getBasicButtonId(userCountry,userPlanPeriod) : getAdvanceButtonId(userCountry,userPlanPeriod);
+    const button_id = userPlan==='basic' ? getBasicButtonId(userCountry,userPlanPeriod) : getAdvanceButtonId(userCountry,userPlanPeriod);
     let button_text = userLastPlan==='freeTrial' ? 'Subscribe' : 'Buy'
     return (
       <a
@@ -200,13 +192,14 @@ export default function Pricing() {
   }
 
   function generatePricingPopup() {
+    let capPlan = userPlan.charAt(0).toUpperCase() + userPlan.slice(1)
     return (
       <>
         <div className="pricing-popup-overlay"></div>
         <div className="pricing-popup" style={userLastPlan === 'planExpired'  ? { background: '#EDF9F3' } : null}>
           <div className="pricing-popup-header">
             <img src={large} alt="Prime-Sender" />
-            <h1>Prime Sender <b>{userType.charAt(0).toUpperCase() + userType.slice(1)} Plan</b></h1>
+            <h1>Prime Sender <b>{capPlan} Plan</b></h1>
           </div>
           <hr />
           <div className='pricing-recommendation-msg'>
@@ -219,10 +212,10 @@ export default function Pricing() {
           <div className="pricing-popup-content">
             <div className="monthly-price">
               <span className={userLastPlan==='freeTrial' ? 'pricing-popup-slash-price' : 'rupee'}><span className='rupee'>
-                { userType==='basic' ? getBasicPlanPrice(userCountry, 'monthly') : getAdvancePlanPrice(userCountry,'monthly') }</span>/month</span> <br />
+                { userPlan==='basic' ? getBasicPlanPrice(userCountry, 'monthly') : getAdvancePlanPrice(userCountry,'monthly') }</span>/month</span> <br />
                 { userLastPlan==='freeTrial' && (
                     <span className="pricing-popup-offer-price"><span className='rupee'>
-                    { userType==='basic' ? getBasicPlanOfferPrice(userCountry, 'monthly') : getAdvancePlanOfferPrice(userCountry,'monthly') }</span>*/month
+                    { userPlan==='basic' ? getBasicPlanOfferPrice(userCountry, 'monthly') : getAdvancePlanOfferPrice(userCountry,'monthly') }</span>*/month
                     </span>
                 )}
             </div>
@@ -230,14 +223,14 @@ export default function Pricing() {
               {
                 userCountry === 'indonesia' ?
                   <span className='rupee'> 
-                    {userType === 'basic' ? getBasicPlanPrice(userCountry, 'annually') : getAdvancePlanPrice(userCountry, 'annually')}({
-                      (userType === 'basic' ? getBasicPlanPrice(userCountry, 'annually').substring(0, 4) : getAdvancePlanPrice(userCountry, 'annually').substring(0, 4)) +
-                      Math.floor((userType === 'basic' ? getBasicPlanPrice(userCountry, 'annually').substring(4) : getAdvancePlanPrice(userCountry, 'annually').substring(4)) / 12)
+                    {userPlan === 'basic' ? getBasicPlanPrice(userCountry, 'annually') : getAdvancePlanPrice(userCountry, 'annually')}({
+                      (userPlan === 'basic' ? getBasicPlanPrice(userCountry, 'annually').substring(0, 4) : getAdvancePlanPrice(userCountry, 'annually').substring(0, 4)) +
+                      Math.floor((userPlan === 'basic' ? getBasicPlanPrice(userCountry, 'annually').substring(4) : getAdvancePlanPrice(userCountry, 'annually').substring(4)) / 12)
                     }/month)</span> :
                   <span className='rupee' style={{ marginRight: '30px' }}> 
-                    {userType === 'basic' ? getBasicPlanPrice(userCountry, 'annually') : getAdvancePlanPrice(userCountry, 'annually')}({
-                      (userType === 'basic' ? getBasicPlanPrice(userCountry, 'annually').substring(0, 1) : getAdvancePlanPrice(userCountry, 'annually').substring(0, 1)) +
-                      Math.floor((userType === 'basic' ? getBasicPlanPrice(userCountry, 'annually').substring(1) : getAdvancePlanPrice(userCountry, 'annually').substring(1)) / 12)
+                    {userPlan === 'basic' ? getBasicPlanPrice(userCountry, 'annually') : getAdvancePlanPrice(userCountry, 'annually')}({
+                      (userPlan === 'basic' ? getBasicPlanPrice(userCountry, 'annually').substring(0, 1) : getAdvancePlanPrice(userCountry, 'annually').substring(0, 1)) +
+                      Math.floor((userPlan === 'basic' ? getBasicPlanPrice(userCountry, 'annually').substring(1) : getAdvancePlanPrice(userCountry, 'annually').substring(1)) / 12)
                     }/month)</span>
               }
             </div>
