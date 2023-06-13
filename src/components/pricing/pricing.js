@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
 // Components
 import Slider from '../slider/slider';
 
@@ -23,19 +22,21 @@ export default function Pricing() {
   const [userCountry,setUserCountry] = useState('')
   const [userPlan,setUserPlan] = useState(null)
 
-  const location = useLocation(); 
   const getParams = () => {
-    const params = new URLSearchParams(location.search);
-    const lastPlan = params.get('lastPlan');
-    const country = params.get('country');
-    const currentPlan = params.get('currentPlan')
+    const urlParams = typeof window !== 'undefined' ? window.location.search : '';
+    const params = new URLSearchParams(urlParams);
+    if(params.size > 0){
+      const lastPlan = params.get('lastPlan');
+      const country = params.get('country');
+      const currentPlan = params.get('currentPlan')
 
-    setUserCountry(country)
-    setUserLastPlan(lastPlan)
-    setUserPlan(currentPlan)
-  
-    if (lastPlan || country || currentPlan) {
-      window.history.replaceState(null, '', window.location.pathname);
+      setUserCountry(country)
+      setUserLastPlan(lastPlan)
+      setUserPlan(currentPlan)
+    
+      if (lastPlan || country || currentPlan) {
+        window.history.replaceState(null, '', window.location.pathname);
+      }
     }
   };
   

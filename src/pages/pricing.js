@@ -4,7 +4,6 @@ import ws from '../svg/medium.png';
 import SmallHeader from '../components/layout/SmallHeader';
 import Footer from '../components/layout/Footer';
 import Pricing from '../components/pricing/pricing';
-import { BrowserRouter } from 'react-router-dom';
 
 
 
@@ -27,9 +26,7 @@ function PricingPage() {
             </Helmet>
             <SmallHeader/>
             <section className="container mx-auto px-8" >
-                <BrowserRouter>
                     <Pricing />
-                </BrowserRouter>
             </section>
             <Footer/>
         </React.Fragment>
