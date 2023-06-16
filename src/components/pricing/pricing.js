@@ -156,7 +156,7 @@ export default function Pricing() {
 
   function showUserButton() {
     const button_id = userPlan==='basic' ? getBasicButtonId(userCountry,userPlanPeriod) : getAdvanceButtonId(userCountry,userPlanPeriod);
-    let button_text = userLastPlan==='freeTrial' ? 'Subscribe' : 'Buy'
+    let button_text = userPlanPeriod ==='annually' ? 'Buy' : 'Subscribe'
     return (
       <a
         href={button_id}
@@ -208,7 +208,7 @@ export default function Pricing() {
             <div className="recommendation-msg-content">Recommended - Value for Money</div>
           </div>
           <div className="pricing-popup-slider">
-            <Slider offText="Basic Monthly Plan" onText="Basic Annual Plan" setValue={userTogglePeriod} />
+            <Slider offText="Monthly Plan" onText="Annual Plan" setValue={userTogglePeriod} isPopup={true} />
           </div>
           <div className="pricing-popup-content">
             <div className="monthly-price">
@@ -223,13 +223,14 @@ export default function Pricing() {
             <div className="annual-price" style={userLastPlan === 'freeTrial' ? { marginTop: '-22px' }: null}>
               {
                 userCountry === 'indonesia' ?
-                  <span className='rupee'> 
+                  <span className='rupee'>
                     {userPlan === 'basic' ? getBasicPlanPrice(userCountry, 'annually') : getAdvancePlanPrice(userCountry, 'annually')}({
                       (userPlan === 'basic' ? getBasicPlanPrice(userCountry, 'annually').substring(0, 4) : getAdvancePlanPrice(userCountry, 'annually').substring(0, 4)) +
                       Math.floor((userPlan === 'basic' ? getBasicPlanPrice(userCountry, 'annually').substring(4) : getAdvancePlanPrice(userCountry, 'annually').substring(4)) / 12)
                     }/month)</span> :
                   <span className='rupee' style={{ marginRight: '30px' }}> 
-                    {userPlan === 'basic' ? getBasicPlanPrice(userCountry, 'annually') : getAdvancePlanPrice(userCountry, 'annually')}({
+                    {userPlan === 'basic' ? getBasicPlanPrice(userCountry, 'annually') : getAdvancePlanPrice(userCountry, 'annually')}
+                    ({
                       (userPlan === 'basic' ? getBasicPlanPrice(userCountry, 'annually').substring(0, 1) : getAdvancePlanPrice(userCountry, 'annually').substring(0, 1)) +
                       Math.floor((userPlan === 'basic' ? getBasicPlanPrice(userCountry, 'annually').substring(1) : getAdvancePlanPrice(userCountry, 'annually').substring(1)) / 12)
                     }/month)</span>
@@ -242,11 +243,15 @@ export default function Pricing() {
           <div className="pricing-popup-footer">
             <div className="pricing-popup-footer-icon"><span>i</span></div>
             <div className="pricing-popup-footer-content">
-              <span>{userPlanPeriod === 'monthly' && userLastPlan==='freeTrial' ? "*Discount applicable for the first month" : ""}</span>
+              <span className='footer-instruction'>{userPlanPeriod === 'monthly' && userLastPlan==='freeTrial' ? "*Discount applicable for the first month" : ""}</span>
               {
                 userPlanPeriod === 'monthly' ?
-                  "By subscribing, you agree to auto-deductions every month according to your plan type which will extend your plan type by a month. By purchasing the premium plan, you agree to our Terms of Service and Privacy Policy" :
-                  "By purchasing the premium plan, you agree to our Terms of Service and Privacy Policy"
+                <span>
+                  By subscribing, you agree to auto-deductions every month according to your plan type which will extend your plan type by a month. By purchasing the premium plan, you agree to our <u>Terms of Service</u> and <u>Privacy Policy</u>.
+                </span>:
+                <span>
+                  By purchasing the premium plan, you agree to our <u>Terms of Service</u> and <u>Privacy Policy</u>.
+                </span>
               }
             </div>
           </div>

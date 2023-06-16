@@ -6,3 +6,6 @@
 body{
     font-family: 'PT Sans Caption', sans-serif;
 }
+.text-bold{
+    font-weight: bold;
+}
