@@ -455,7 +455,7 @@ export default function Pricing() {
             </th>
           </tr>
           <tr>
-            <th className="bold">Stop</th>
+            <th className="bold">Stop Campaign</th>
             <td>
               <img src={cancel} className="pricing-table-logo" />
             </td>
