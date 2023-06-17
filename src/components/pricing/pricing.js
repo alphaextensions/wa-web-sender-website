@@ -12,6 +12,7 @@ import cancel from '../../svg/cancel.png';
 import screenshot from '../../svg/screenshot.png';
 import large from '../../svg/large.png'
 import stars from '../../svg/stars.png'
+import recommended from '../../svg/recommended.png'
 
 export default function Pricing() {
   const [planPeriod, setPlanPeriod] = useState('monthly');
@@ -208,7 +209,11 @@ export default function Pricing() {
             <div className="recommendation-msg-content">Recommended - Value for Money</div>
           </div>
           <div className="pricing-popup-slider">
-            <Slider offText="Monthly Plan" onText="Annual Plan" setValue={userTogglePeriod} isPopup={true} />
+            {
+              userPlan==='basic' ? 
+              <Slider offTextValue="Monthly Plan" onTextValue="Annual Plan" onTextHeader="Basic" offTextHeader="Basic" setValue={userTogglePeriod}/> :
+              <Slider offTextValue="Monthly Plan" onTextValue="Annual Plan" onTextHeader="Advance" offTextHeader="Advance" setValue={userTogglePeriod}/>
+            }
           </div>
           <div className="pricing-popup-content">
             <div className="monthly-price">
@@ -220,22 +225,24 @@ export default function Pricing() {
                     </span>
                 )}
             </div>
-            <div className="annual-price" style={userLastPlan === 'freeTrial' ? { marginTop: '-22px' }: null}>
               {
                 userCountry === 'indonesia' ?
+                <div className="annual-price-indonesia" >
                   <span className='rupee'>
                     {userPlan === 'basic' ? getBasicPlanPrice(userCountry, 'annually') : getAdvancePlanPrice(userCountry, 'annually')}({
                       (userPlan === 'basic' ? getBasicPlanPrice(userCountry, 'annually').substring(0, 4) : getAdvancePlanPrice(userCountry, 'annually').substring(0, 4)) +
                       Math.floor((userPlan === 'basic' ? getBasicPlanPrice(userCountry, 'annually').substring(4) : getAdvancePlanPrice(userCountry, 'annually').substring(4)) / 12)
-                    }/month)</span> :
-                  <span className='rupee' style={{ marginRight: '30px' }}> 
+                    }/month)</span> 
+                </div> :
+                <div className="annual-price" >
+                  <span className='rupee'> 
                     {userPlan === 'basic' ? getBasicPlanPrice(userCountry, 'annually') : getAdvancePlanPrice(userCountry, 'annually')}
                     ({
                       (userPlan === 'basic' ? getBasicPlanPrice(userCountry, 'annually').substring(0, 1) : getAdvancePlanPrice(userCountry, 'annually').substring(0, 1)) +
                       Math.floor((userPlan === 'basic' ? getBasicPlanPrice(userCountry, 'annually').substring(1) : getAdvancePlanPrice(userCountry, 'annually').substring(1)) / 12)
                     }/month)</span>
+              </div>
               }
-            </div>
           </div>
           <div className="pricing-popup-btn">
             <button>{showUserButton()}</button>
@@ -280,13 +287,15 @@ export default function Pricing() {
             <th />
             <th className="pricing-header-text" style={{ padding: '24px 48px 12px !important' }}>Free</th>
             <th className="pricing-header-text" style={{ padding: '24px 48px 12px !important' }}>Basic</th>
-            <th className="pricing-header-text" style={{ padding: '24px 48px 12px !important' }}>Advance</th>
+            <th className="pricing-header-text" style={{ padding: '24px 48px 12px !important',position: 'relative' }}>
+              <img src={recommended} className='recommended-img' alt='Recommended'/>Advance
+            </th>
           </tr>
           <tr>
             <th />
             <th />
             <th colSpan={2} style={{ padding: '24px 0px' }}>
-              <Slider onText="Monthly" offText="Annually" setValue={togglePeriod} />
+              <Slider onTextHeader="Monthly" offTextHeader="Annually" setValue={togglePeriod} />
             </th>
           </tr>
           <tr>
