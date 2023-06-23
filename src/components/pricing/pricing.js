@@ -217,30 +217,56 @@ export default function Pricing() {
           </div>
           <div className="pricing-popup-content">
             <div className="monthly-price">
-              <span className={userLastPlan==='freeTrial' ? 'pricing-popup-slash-price' : 'rupee'}><span className='rupee'>
-                { userPlan==='basic' ? getBasicPlanPrice(userCountry, 'monthly') : getAdvancePlanPrice(userCountry,'monthly') }</span>/month</span> <br />
-                { userLastPlan==='freeTrial' && (
-                    <span className="pricing-popup-offer-price"><span className='rupee'>
-                    { userPlan==='basic' ? getBasicPlanOfferPrice(userCountry, 'monthly') : getAdvancePlanOfferPrice(userCountry,'monthly') }</span>*/month
+              <span className={userLastPlan==='freeTrial' ? 'pricing-popup-slash-price' : ''}>
+                  {
+                    userCountry !== 'india' ? <span>
+                    { userPlan==='basic' ? getBasicPlanPrice(userCountry, 'monthly') : getAdvancePlanPrice(userCountry,'monthly') }
+                    </span> : <span>
+                    <span className="rupee"> { userPlan==='basic' ? getBasicPlanPrice(userCountry, 'monthly').substring(0,1) : getAdvancePlanPrice(userCountry,'monthly').substring(0,1)}</span>
+                    <span>{ userPlan==='basic' ? getBasicPlanPrice(userCountry, 'monthly').substring(1) : getAdvancePlanPrice(userCountry,'monthly').substring(1) }</span>
                     </span>
-                )}
+                  }
+                  /month</span>
+                   <br />
+                  { userLastPlan==='freeTrial' && (
+                      <span className="pricing-popup-offer-price">
+                      {
+                        userCountry !== 'india' ? <span>
+                        { userPlan==='basic' ? getBasicPlanOfferPrice(userCountry, 'monthly') : getAdvancePlanOfferPrice(userCountry,'monthly') }
+                      </span> :
+                      <span>
+                      <span className='rupee'>{ userPlan==='basic' ? getBasicPlanOfferPrice(userCountry, 'monthly').substring(0,1) : getAdvancePlanOfferPrice(userCountry,'monthly').substring(0,1) }</span>
+                      <span>{ userPlan==='basic' ? getBasicPlanOfferPrice(userCountry, 'monthly').substring(1) : getAdvancePlanOfferPrice(userCountry,'monthly').substring(1) }</span>
+                    </span>
+                      }
+                      */month
+                      </span>
+                  )}
             </div>
               {
                 userCountry === 'indonesia' ?
                 <div className="annual-price-indonesia" >
-                  <span className='rupee'>
+                  <span>
                     {userPlan === 'basic' ? getBasicPlanPrice(userCountry, 'annually') : getAdvancePlanPrice(userCountry, 'annually')}({
                       (userPlan === 'basic' ? getBasicPlanPrice(userCountry, 'annually').substring(0, 4) : getAdvancePlanPrice(userCountry, 'annually').substring(0, 4)) +
                       Math.floor((userPlan === 'basic' ? getBasicPlanPrice(userCountry, 'annually').substring(4) : getAdvancePlanPrice(userCountry, 'annually').substring(4)) / 12)
                     }/month)</span> 
                 </div> :
                 <div className="annual-price" >
-                  <span className='rupee'> 
-                    {userPlan === 'basic' ? getBasicPlanPrice(userCountry, 'annually') : getAdvancePlanPrice(userCountry, 'annually')}
-                    ({
-                      (userPlan === 'basic' ? getBasicPlanPrice(userCountry, 'annually').substring(0, 1) : getAdvancePlanPrice(userCountry, 'annually').substring(0, 1)) +
+                  <span> 
+                    <span className={userCountry==='india' ? 'rupee': ''}>
+                      {userPlan === 'basic' ? getBasicPlanPrice(userCountry, 'annually').substring(0,1) : getAdvancePlanPrice(userCountry, 'annually').substring(0,1)}
+                    </span>
+                    <span>
+                      {userPlan === 'basic' ? getBasicPlanPrice(userCountry, 'annually').substring(1) : getAdvancePlanPrice(userCountry, 'annually').substring(1)}
+                    </span>
+                    (
+                      <span className={userCountry==='india' ? 'rupee': ''}>
+                      {(userPlan === 'basic' ? getBasicPlanPrice(userCountry, 'annually').substring(0, 1) : getAdvancePlanPrice(userCountry, 'annually').substring(0, 1))}
+                      </span>{
                       Math.floor((userPlan === 'basic' ? getBasicPlanPrice(userCountry, 'annually').substring(1) : getAdvancePlanPrice(userCountry, 'annually').substring(1)) / 12)
-                    }/month)</span>
+                    }
+                    /month)</span>
               </div>
               }
           </div>

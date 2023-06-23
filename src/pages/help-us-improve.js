@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState,useEffect} from 'react';
 import Layout from "../components/layout/Layout";
 import LogoIcon from "../svg/LogoIcon";
 import { Helmet } from 'react-helmet';
@@ -7,9 +7,41 @@ import Button from "../components/Button";
 import ws from '../svg/medium.png';
 import SmallHeader from '../components/layout/SmallHeader';
 import Footer from '../components/layout/Footer';
-
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics';
 
 function HelpUsImprove() {
+    const [userTrialDays,setUserTrialDays] = useState(null);
+    const [userNumber,setUserNumber] = useState(null);
+
+    const getTrialDays = () => {
+        const urlParams = typeof window !== 'undefined' ? window.location.search : '';
+        const params = new URLSearchParams(urlParams);
+        if(params.size > 0){
+            const trialDays = params.get('trialDays');
+            const number = params.get('number');
+            setUserTrialDays(trialDays);
+            setUserNumber(number);
+            if (trialDays || number) {
+                window.history.replaceState(null, '', window.location.pathname);
+            }
+        }
+    };
+
+    useEffect(() => {
+        getTrialDays();
+        if(userTrialDays!==null && userNumber!==null){
+            //add GA here
+            // console.log("UserNumber: " + userNumber + " and TrialDays: " + userTrialDays)
+            // console.log("UserNumber type: " + typeof userNumber + " and TrialDays type: " + typeof Number(userTrialDays))
+            trackCustomEvent({
+                category: 'Extension',
+                action: 'Extension Uninstallation',
+                label: userNumber,
+                value: Number(userTrialDays)
+              });
+        }
+    }, [userTrialDays]);
+
     const title =
         'Help us Improve | Prime Sender';
     const description =
