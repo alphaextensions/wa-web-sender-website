@@ -280,10 +280,10 @@ export default function Pricing() {
               {
                 userPlanPeriod === 'monthly' ?
                 <span>
-                  By subscribing, you agree to auto-deductions every month according to your plan type which will extend your plan type by a month. By purchasing the premium plan, you agree to our <u>Terms of Service</u> and <u>Privacy Policy</u>.
+                  By subscribing, you agree to auto-deductions every month according to your plan type which will extend your plan type by a month. By purchasing the premium plan, you agree to our <u><a href="https://prime-sender.com/terms-of-service/" target='_blank'>Terms of Service</a> </u> and <u><a href="https://prime-sender.com/privacy-policy" target='_blank'>Privacy Policy</a> </u>.
                 </span>:
                 <span>
-                  By purchasing the premium plan, you agree to our <u>Terms of Service</u> and <u>Privacy Policy</u>.
+                  By purchasing the premium plan, you agree to our <u><a href="https://prime-sender.com/terms-of-service/" target='_blank'>Terms of Service</a> </u> and <u><a href="https://prime-sender.com/privacy-policy" target='_blank'>Privacy Policy</a> </u>.
                 </span>
               }
             </div>
