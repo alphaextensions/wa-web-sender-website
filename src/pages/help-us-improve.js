@@ -30,9 +30,6 @@ function HelpUsImprove() {
     useEffect(() => {
         getTrialDays();
         if(userTrialDays!==null && userNumber!==null){
-            //add GA here
-            // console.log("UserNumber: " + userNumber + " and TrialDays: " + userTrialDays)
-            // console.log("UserNumber type: " + typeof userNumber + " and TrialDays type: " + typeof Number(userTrialDays))
             trackCustomEvent({
                 category: 'Extension',
                 action: 'Extension Uninstallation',
