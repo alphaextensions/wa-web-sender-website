@@ -423,6 +423,54 @@ export default function Pricing() {
             </th>
           </tr>
           <tr>
+            <th className="bold">Save Campaign Details</th>
+            <td>
+              <img src={check} className="pricing-table-logo" />
+            </td>
+            <td>
+              <img src={check} className="pricing-table-logo" />
+            </td>
+            <th>
+              <img src={check} className="pricing-table-logo" />
+            </th>
+          </tr>
+          <tr>
+            <th className="bold">Save Message Template</th>
+            <td>
+              <img src={check} className="pricing-table-logo" />
+            </td>
+            <td>
+              <img src={check} className="pricing-table-logo" />
+            </td>
+            <th>
+              <img src={check} className="pricing-table-logo" />
+            </th>
+          </tr>
+          <tr>
+            <th className="bold">Detailed Delivery Report</th>
+            <td>
+              <img src={check} className="pricing-table-logo" />
+            </td>
+            <td>
+              <img src={check} className="pricing-table-logo" />
+            </td>
+            <th>
+              <img src={check} className="pricing-table-logo" />
+            </th>
+          </tr>
+          <tr>
+            <th className="bold">Caption</th>
+            <td>
+              <img src={check} className="pricing-table-logo" />
+            </td>
+            <td>
+              <img src={check} className="pricing-table-logo" />
+            </td>
+            <th>
+              <img src={check} className="pricing-table-logo" />
+            </th>
+          </tr>
+          <tr>
             <th className="bold">Priority Support</th>
             <td>
               <img src={cancel} className="pricing-table-logo" />
