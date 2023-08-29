@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Inika&display=swap');
+#third{
+    margin-top: -7rem;
+}
+
+body{
+    font-family: 'PT Sans Caption', sans-serif;
+}
+.text-bold{
+    font-weight: bold;
+}

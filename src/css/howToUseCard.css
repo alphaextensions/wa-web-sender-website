@@ -1,0 +1,28 @@
+.ucard{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    margin-bottom: 5rem;
+    width: 25rem;
+    box-shadow: rgb(0 0 0 / 8%) 0px 10px 28px;
+}
+
+.ucard div{
+    /* border: 2px solid black; */
+    padding:20px 20px;
+}
+.ucard img{
+    border-radius: 7px 7px 0px 0px;
+}
+.ucard p {
+    white-space: pre-wrap;
+  }
+.ucard .detailedDesc{
+    text-align: left;
+}  
+@media(max-width:400px){
+    .ucard{
+        width: 15rem;
+    }
+}
